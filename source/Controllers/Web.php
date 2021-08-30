@@ -100,7 +100,7 @@ class Web extends Controller
       $data = filter_var($data['opcaoEntrevista'], FILTER_SANITIZE_STRING);
 
       if ($data == "false") {
-         $this->router->redirect('web.pegarDadosUsuario', ['aceitouTermo' => false]);
+         $this->router->redirect('web.pegarDadosUsuario', ['aceitouTermo' => 0]);
          return;
       }
 
@@ -128,6 +128,9 @@ class Web extends Controller
    public function recebeEscolhaImagemSom(array $data): void
    {
       $data = filter_var($data['opcaoTermo'], FILTER_SANITIZE_STRING);
+
+      var_dump($data);
+      die();
 
       if ($data == "false") {
          $this->router->redirect('web.pegarDadosUsuario', ['aceitouTermo' => 0]);
@@ -164,11 +167,24 @@ class Web extends Controller
     */
    public function recebeDadosUsuario(array $data): void
    {
+      $nome = filter_var($data['nome'], FILTER_SANITIZE_STRING);
+      $email = filter_var($data['email'], FILTER_VALIDATE_EMAIL);
+      $telefone = filter_var($data['telefone'], FILTER_SANITIZE_STRING);
+      $telefone = strlen($telefone) ? $telefone : null;
+
       $obDado = new Dado;
-      var_dump($obDado);
+      $obDado->nome = $nome;
+      $obDado->email = $email;
+      $obDado->telefone = $telefone; // Opcional
+      $obDado->termosAcepted_at = date('Y-m-d H:i:s');
 
-      // var_dump($data);
-      die();
+      // depois de salvar os dados, redireciona para página de questões
+      if(!$obDado->save()){
+         echo "Error ao salvar dados no banco de dados";
+         return;
+      }
 
+      echo "Parte do questionário nesse momento";
+      
    }
 }
