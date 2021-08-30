@@ -1,5 +1,8 @@
 <?php
 
+
+
+
 /**
  * Apresenta todos argumentos passados de uma 
  * forma bem atrativa
@@ -18,6 +21,19 @@ function dd()
 
       echo "<br>";
    }
+}
+
+/**
+ * Verifica se o usuário que está tentando fazer o questionário
+ * realmente seguiu os passos anteriores
+ * 
+ * @return bolean
+ */
+function verificaSeSessaoUsuarioExiste(): bool
+{
+   if (!isset($_SESSION['userId'])) return false;
+
+   return true;
 }
 
 /**

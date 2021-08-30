@@ -16,6 +16,9 @@ $this->end();
 
 <div class="container bg-white rounded" style="margin-top: 70px;">
    <div class="row pt-3 pb-3">
+      <div class="col-md-12">
+         <?= $this->insert('main/mensagem'); ?>
+      </div>
       <div class="col-md-12 text-center">
          <h2 class="mb-4">TERMO DE CONSENTIMENTO LIVRE E ESCLARECIDO (TCLE)</h2>
          <p class="ml-2 mr-2 ml-md-4 mr-md-4 text-justify">

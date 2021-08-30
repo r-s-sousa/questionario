@@ -17,6 +17,12 @@ class Questionario extends Controller
    public function __construct(Router $router)
    {
       parent::__construct($router);
+
+      // Verifica se realmente a pessoa seguiu os passos pra está aqui
+      if (!verificaSeSessaoUsuarioExiste()) {
+         setMessage('error', 'Você deve passar por <b>todos os passos</b> antes de tentar responder o questionário!');
+         $this->router->redirect('web.termoConsentimento');
+      }
    }
 
    /**

@@ -171,6 +171,9 @@ class Web extends Controller
          return;
       }
 
+      // Adiciona na sessão o usuário
+      $_SESSION['userId'] = $obDado->id;
+
       // depois de salvar os dados, redireciona para página de questões
       $this->router->redirect('questionario.inicio');
    }
