@@ -10,7 +10,7 @@ use CoffeeCode\DataLayer\DataLayer;
 class Dado extends DataLayer
 {
    /**
-    * Construtor do DAO - Dados
+    * Construtor do DAO - Dados 
     */
    public function __construct()
    {
