@@ -23,9 +23,6 @@ $router->get("/termo-de-imagem-e-som", "Web:termoDeImagemSom", "web.termoDeImage
 // vai para rota pra coleta de dados
 $router->get("/informe-seus-dados/{aceitouTermo}", "Web:pegarDadosUsuario", "web.pegarDadosUsuario");
 
-// vai para rota com o questionário em si
-$router->get("/questionario", "Web:questionario", "web.questionario");
-
 /**
  * POST
  */

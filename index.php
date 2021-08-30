@@ -18,8 +18,11 @@ $router = new Router(URL);
 // DEFINE O NAMESPACE DOS CONTROLADORES
 $router->namespace("Source\Controllers");
 
-// QUESTIONÁRIO
+// TERMOS E INICIO
 require_once __DIR__."/source/routes/web_routes.php";
+
+// QUESTIONARIO
+require_once __DIR__."/source/routes/questionario_routes.php";
 
 // ERRORS
 require_once __DIR__."/source/routes/errors_routes.php";

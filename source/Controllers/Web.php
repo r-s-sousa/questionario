@@ -172,7 +172,7 @@ class Web extends Controller
       }
 
       // depois de salvar os dados, redireciona para página de questões
-      $this->router->redirect('web.questionario');
+      $this->router->redirect('questionario.inicio');
    }
 
    /**
