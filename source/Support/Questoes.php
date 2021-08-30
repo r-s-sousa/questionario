@@ -1,6 +1,6 @@
 <?php
 
-namespace Source\Suport;
+namespace Source\Support;
 
 /**
  * Questões serão manejadas por aqui

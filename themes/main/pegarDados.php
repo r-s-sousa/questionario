@@ -33,7 +33,10 @@ $this->end();
                      </div>
                   </div>
                </div>
-               <div class="col-md-12 d-flex justify-content-center mt-3">
+               <div class="offset-2 col-8 mt-3">
+                  <?= $this->insert('main/mensagem'); ?>
+               </div>
+               <div class="col-md-12 d-flex justify-content-center">
                   <button type="reset" class="btn btn-outline-success mr-2">Limpar campos</button>
                   <button type="submit" class="btn btn-outline-info">Ir para o questionário</button>
                </div>

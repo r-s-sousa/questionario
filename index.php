@@ -3,6 +3,9 @@
 // MOSTRA OS ERROS
 ini_set('display_errors', "1");
 
+// INICIA A SESSÃO
+session_start();
+
 // INLCUI A CLASSE ROUTER
 use CoffeeCode\Router\Router;
 

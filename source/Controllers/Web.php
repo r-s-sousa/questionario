@@ -2,11 +2,8 @@
 
 namespace Source\Controllers;
 
-// ENGINE PLATES
-
 use CoffeeCode\Router\Router;
-use League\Plates\Engine;
-use Source\Models\Dado;
+use Source\Support\DadoHelper;
 
 /**
  * Controlador das rotas iniciais
@@ -129,9 +126,6 @@ class Web extends Controller
    {
       $data = filter_var($data['opcaoTermo'], FILTER_SANITIZE_STRING);
 
-      var_dump($data);
-      die();
-
       if ($data == "false") {
          $this->router->redirect('web.pegarDadosUsuario', ['aceitouTermo' => 0]);
          return;
@@ -167,24 +161,28 @@ class Web extends Controller
     */
    public function recebeDadosUsuario(array $data): void
    {
-      $nome = filter_var($data['nome'], FILTER_SANITIZE_STRING);
-      $email = filter_var($data['email'], FILTER_VALIDATE_EMAIL);
-      $telefone = filter_var($data['telefone'], FILTER_SANITIZE_STRING);
-      $telefone = strlen($telefone) ? $telefone : null;
+      // Recebe o DAO obDado a partir do que foi passado no formulário
+      $obDado = (new DadoHelper($data))->getObDado();
 
-      $obDado = new Dado;
-      $obDado->nome = $nome;
-      $obDado->email = $email;
-      $obDado->telefone = $telefone; // Opcional
-      $obDado->termosAcepted_at = date('Y-m-d H:i:s');
-
-      // depois de salvar os dados, redireciona para página de questões
-      if(!$obDado->save()){
-         echo "Error ao salvar dados no banco de dados";
+      // Se der error ao salvar
+      if (!$obDado->save()) {
+         setMessage('error', "<strong>Error</strong> ao salvar dados!");
+         $this->router->redirect('web.pegarDadosUsuario', ['aceitouTermo' => $obDado->termoUsoImagem]);
          return;
       }
 
-      echo "Parte do questionário nesse momento";
-      
+      // depois de salvar os dados, redireciona para página de questões
+      $this->router->redirect('web.questionario');
    }
+
+   /**
+    * Página com o questionario a ser respondido
+    *
+    * @return void
+    */
+   public function questionario(): void
+   {
+      echo "questionário aqui!";
+   }
+   
 }
