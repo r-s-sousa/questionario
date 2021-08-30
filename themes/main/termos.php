@@ -81,7 +81,7 @@ $this->end();
 <div class="container">
    <div class="row">
       <div class="offset-3 col-6 text-center mt-3 mb-3">
-         <a href="<?= $router->route('web.home'); ?>" class="btn btn-info">Página inicial</a>
+         <a href="<?= $router->route('web.termoConsentimento'); ?>" class="btn btn-info">Página inicial</a>
       </div>
    </div>
 </div>
