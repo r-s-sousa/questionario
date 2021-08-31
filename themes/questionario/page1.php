@@ -84,7 +84,7 @@ $this->end();
    <div class="container">
       <div class="row">
          <div class="col-12 mt-3 mb-3 text-center">
-            <button type="submit" class="btn btn-outline-success">Próximo bloco</button>
+            <button type="submit" class="btn btn-outline-success">Próxima página</button>
          </div>
       </div>
    </div>
