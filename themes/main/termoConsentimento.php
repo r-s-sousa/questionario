@@ -20,6 +20,10 @@ $this->end();
          <?= $this->insert('main/mensagem'); ?>
       </div>
       <div class="col-md-12 text-center">
+         <p>
+            <img src="<?= asset('imgs/logo.png'); ?>" alt="logo unb" class="img-fluid">
+         </p>
+
          <h2 class="mb-4">TERMO DE CONSENTIMENTO LIVRE E ESCLARECIDO (TCLE)</h2>
          <p class="ml-2 mr-2 ml-md-4 mr-md-4 text-justify">
             <span style="margin-left: 25px;"></span> O projeto de pesquisa visa a compreensão da política de financiamento e impactos de pesquisas sobre Doenças Tropicais Negligenciadas, com foco na temática de dengue, com o intuito de subsidiar a tomada de decisão e a análise das estratégias de fomento à pesquisa desenvolvidas pelo Ministério da Saúde.
@@ -63,13 +67,9 @@ $this->end();
          <p class="ml-2 mr-2 ml-md-4 mr-md-4 text-justify">
             <span style="margin-left: 25px;"></span> Este documento (TCLE) foi elaborado em duas VIAS. Uma foi assinada pela pesquisadora responsável e enviada juntamente com o e-mail do convite para participar desta pesquisa. A outra via é sua e caso concorde em participar, é importante que o (a) sr. (a) guarde uma cópia em seus arquivos.
          </p>
-         <p class="ml-2 mr-2 ml-md-4 mr-md-4 text-justify">
-            Pesquisadora - Assinatura:
-         </p>
 
-         <p class="ml-2 mr-2 ml-md-4 mr-md-4 text-justify">
-            <img style="margin-top: -10px;" src="<?= asset('imgs/assinatura.png'); ?>" class="img-fluid" width="300px" alt="Assinatura">
-         </p>
+
+
 
          <p class="ml-2 mr-2 ml-md-4 mr-md-4 text-justify">
             <span style="margin-left: 25px;"></span>
@@ -80,19 +80,40 @@ $this->end();
 </div>
 
 <div class="container">
-   <div class="row">
+   <div class="row" style="background-color: #cccccc;">
       <div class="col-md-12 mt-3">
          <form action="<?= $router->route('web.recebeEscolhaInicial'); ?>" method="post">
-            <input type="radio" name="opcaoTermo" id="op1" value="true">
-            <label for="op1">Declaro que <b>concordo</b> em participar da pesquisa.</label>
+            <label><input type="radio" name="opcaoTermo" id="op1" value="true"> Declaro que <b>concordo</b> em participar da pesquisa.</label>
             <br>
-            <input type="radio" name="opcaoTermo" id="op2" value="false" checked>
-            <label for="op2"><b>Não concordo</b> em participar pesquisa.</label>
+
+            <label for="op2"><input type="radio" name="opcaoTermo" id="op2" value="false" checked> <b>Não concordo</b> em participar pesquisa.</label>
             <br>
             <div class="text-center m-4">
                <button type="submit" class="btn btn-info">Prosseguir</button>
             </div>
          </form>
+      </div>
+   </div>
+   <div class="row bg-white rounded">
+      <div class="container">
+         <div class="col-md-12 text-center">
+            <p class="ml-2 mr-2 ml-md-4 mr-md-4">
+               <img style="margin-bottom: -57px;" src="<?= asset('imgs/assinatura.png'); ?>" class="img-fluid" width="300px" alt="Assinatura">
+            </p>
+            <p class="ml-2 mr-2 ml-md-4 mr-md-4">
+               <b>
+                  <br>
+                  Gabriela Bardelini Tavares Melo
+                  <br>
+                  Pesquisadora Responsável
+               </b>
+            </p>
+            <p class="font-italic text-left">
+               <b>Endereço:</b> Programa de Pós-Graduação em Ciências e Tecnologias em Saúde. Faculdade de Ceilândia – Universidade de Brasília. Centro Metropolitano, conjunto A, lote 01, Brasília – DF. CEP: 72220-900 <br>
+               <b>E-mail:</b> gabrielabtm@gmail.com <br>
+               <b>Telefone:</b> (61) 98361-3554
+            </p>
+         </div>
       </div>
    </div>
 </div>
@@ -104,14 +125,3 @@ $this->end();
 // $this->end();
 ?>
 <!-- END_FOOTER -->
-
-<?php $this->start('scripts'); ?>
-
-<script>
-   $(document).ready(function() {
-      document.getElementById('home').classList.add('active');
-      // $('#footerTermos').addClass('fixed-bottom');
-   });
-</script>
-
-<?php $this->stop(); ?>
