@@ -64,6 +64,14 @@ $this->end();
             <span style="margin-left: 25px;"></span> Este documento (TCLE) foi elaborado em duas VIAS. Uma foi assinada pela pesquisadora responsável e enviada juntamente com o e-mail do convite para participar desta pesquisa. A outra via é sua e caso concorde em participar, é importante que o (a) sr. (a) guarde uma cópia em seus arquivos.
          </p>
          <p class="ml-2 mr-2 ml-md-4 mr-md-4 text-justify">
+            Pesquisadora - Assinatura:
+         </p>
+
+         <p class="ml-2 mr-2 ml-md-4 mr-md-4 text-justify">
+            <img style="margin-top: -10px;" src="<?= asset('imgs/assinatura.png'); ?>" class="img-fluid" width="300px" alt="Assinatura">
+         </p>
+
+         <p class="ml-2 mr-2 ml-md-4 mr-md-4 text-justify">
             <span style="margin-left: 25px;"></span>
             Ao clicar na opção “Declaro que concordo em participar da pesquisa”, o (a) sr. (a) concordará em participar desta pesquisa nos termos deste TCLE. Caso não concorde em participar, clique na opção “Não concordo em participar da pesquisa”.
          </p>
@@ -82,7 +90,7 @@ $this->end();
             <label for="op2"><b>Não concordo</b> em participar pesquisa.</label>
             <br>
             <div class="text-center m-4">
-               <button type="submit" class="btn btn-info" >Prosseguir</button>
+               <button type="submit" class="btn btn-info">Prosseguir</button>
             </div>
          </form>
       </div>
