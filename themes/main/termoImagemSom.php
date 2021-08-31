@@ -11,6 +11,9 @@ $this->end();
 <div id="termo2" class="container bg-white p-2 rounded" style="margin-top: 70px;">
    <div class="row mt-3 mb-3">
       <div class="col-md-12 text-center">
+         <p>
+            <img src="<?= asset('imgs/logo.png'); ?>" alt="logo unb" class="img-fluid">
+         </p>
          <h2 class="mb-4">TERMO DE AUTORIZAÇÃO PARA UTILIZAÇÃO DE IMAGEM E SOM DE VOZ PARA FINS DE PESQUISA</h2>
          <p class="ml-2 mr-2 ml-md-4 mr-md-4 text-justify">
             <span style="margin-left: 25px;"></span> Autorizo a utilização da minha imagem e som de voz, na qualidade de entrevistado(a) na pesquisa intitulada “Avaliação de impacto das pesquisas sobre Doenças Tropicais Negligenciadas no Brasil”, sob responsabilidade de Gabriela Bardelini Tavares Melo, aluna de doutorado do Programa de Pós-Graduação em Ciências e Tecnologias em Saúde (PPGCTS) da Universidade de Brasília – Faculdade de Ceilândia, sob orientação de Marcos Takashi Obara e coorientação de Antonia de Jesus Angulo Tuesta, ambos professores da Universidade de Brasília.
@@ -32,7 +35,7 @@ $this->end();
 </div>
 
 <div class="container">
-   <div class="row">
+   <div class="row" style="background-color: #cccccc;">
       <div class="col-md-12 mt-3">
          <form action="<?= $router->route('web.recebeEscolhaImagemSom'); ?>" method="post">
             <label for="op1"><input type="radio" name="opcaoTermo" id="op1" value="true"> Declaro que autorizo, livre e espontaneamente, o uso para fins de pesquisa, nos termos acima descritos, da minha imagem e som de voz.</label>
@@ -43,6 +46,29 @@ $this->end();
                <button type="submit" class="btn btn-info">Prosseguir</button>
             </div>
          </form>
+      </div>
+   </div>
+   
+   <div class="row bg-white rounded">
+      <div class="container">
+         <div class="col-md-12 text-center">
+            <p class="ml-2 mr-2 ml-md-4 mr-md-4">
+               <img style="margin-bottom: -57px;" src="<?= asset('imgs/assinatura.png'); ?>" class="img-fluid" width="300px" alt="Assinatura">
+            </p>
+            <p class="ml-2 mr-2 ml-md-4 mr-md-4">
+               <b>
+                  <br>
+                  Gabriela Bardelini Tavares Melo
+                  <br>
+                  Pesquisadora Responsável
+               </b>
+            </p>
+            <p class="font-italic text-left">
+               <b>Endereço:</b> Programa de Pós-Graduação em Ciências e Tecnologias em Saúde. Faculdade de Ceilândia – Universidade de Brasília. Centro Metropolitano, conjunto A, lote 01, Brasília – DF. CEP: 72220-900 <br>
+               <b>E-mail:</b> gabrielabtm@gmail.com <br>
+               <b>Telefone:</b> (61) 98361-3554
+            </p>
+         </div>
       </div>
    </div>
 </div>

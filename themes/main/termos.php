@@ -11,6 +11,9 @@ $this->end();
 <div id="termo1" class="container bg-white p-2">
    <div class="row mt-3 mb-3">
       <div class="col-md-12 text-center">
+         <p>
+            <img src="<?= asset('imgs/logo.png'); ?>" alt="logo unb" class="img-fluid">
+         </p>
          <h1 class="mb-4">Termos de consentimento</h1>
          <p class="ml-2 mr-2 ml-md-4 mr-md-4 text-justify">
             <span style="margin-left: 25px;"></span> O projeto de pesquisa visa a compreensão da política de financiamento e impactos de pesquisas sobre Doenças Tropicais Negligenciadas, com foco na temática de dengue, com o intuito de subsidiar a tomada de decisão e a análise das estratégias de fomento à pesquisa desenvolvidas pelo Ministério da Saúde.
@@ -61,18 +64,43 @@ $this->end();
 <div id="termo2" class="d-none container bg-white p-2">
    <div class="row mt-3 mb-3">
       <div class="col-md-12 text-center">
+         <p>
+            <img src="<?= asset('imgs/logo.png'); ?>" alt="logo unb" class="img-fluid">
+         </p>
          <h1 class="mb-4">Termo de uso de imagem e som</h1>
          <p class="ml-2 mr-2 ml-md-4 mr-md-4 text-justify">
             <span style="margin-left: 25px;"></span> Autorizo a utilização da minha imagem e som de voz, na qualidade de entrevistado(a) na pesquisa intitulada “Avaliação de impacto das pesquisas sobre Doenças Tropicais Negligenciadas no Brasil”, sob responsabilidade de Gabriela Bardelini Tavares Melo, aluna de doutorado do Programa de Pós-Graduação em Ciências e Tecnologias em Saúde (PPGCTS) da Universidade de Brasília – Faculdade de Ceilândia, sob orientação de Marcos Takashi Obara e coorientação de Antonia de Jesus Angulo Tuesta, ambos professores da Universidade de Brasília.
          </p>
          <p class="ml-2 mr-2 ml-md-4 mr-md-4 text-justify">
-            <span style="margin-left: 25px;"></span> Minha imagem e som de voz podem ser utilizadas apenas para análise por parte da equipe da pesquisa. 
+            <span style="margin-left: 25px;"></span> Minha imagem e som de voz podem ser utilizadas apenas para análise por parte da equipe da pesquisa.
          </p>
          <p class="ml-2 mr-2 ml-md-4 mr-md-4 text-justify">
-            <span style="margin-left: 25px;"></span> Tenho ciência de que não haverá divulgação da minha imagem nem som de voz por qualquer meio de comunicação, sejam elas televisão, rádio ou internet, exceto nas atividades vinculadas ao ensino e a pesquisa explicitadas anteriormente. Tenho ciência também de que a guarda e demais procedimentos de segurança com relação às imagens e sons de voz são de responsabilidade da pesquisadora responsável, e ficarão arquivadas por um período de cinco anos. Após isso, serão destruídas.  
+            <span style="margin-left: 25px;"></span> Tenho ciência de que não haverá divulgação da minha imagem nem som de voz por qualquer meio de comunicação, sejam elas televisão, rádio ou internet, exceto nas atividades vinculadas ao ensino e a pesquisa explicitadas anteriormente. Tenho ciência também de que a guarda e demais procedimentos de segurança com relação às imagens e sons de voz são de responsabilidade da pesquisadora responsável, e ficarão arquivadas por um período de cinco anos. Após isso, serão destruídas.
          </p>
          <p class="ml-2 mr-2 ml-md-4 mr-md-4 text-justify">
-            <span style="margin-left: 25px;"></span> Este documento (Termo de Consentimento Livre e Esclarecido - TCLE) foi elaborado em duas VIAS. Uma foi assinada pela pesquisadora responsável e enviada juntamente com o e-mail de convite para participar da entrevista. A outra via é sua e é importante que o (a) sr. (a) guarde uma cópia em seus arquivos. 
+            <span style="margin-left: 25px;"></span> Este documento (Termo de Consentimento Livre e Esclarecido - TCLE) foi elaborado em duas VIAS. Uma foi assinada pela pesquisadora responsável e enviada juntamente com o e-mail de convite para participar da entrevista. A outra via é sua e é importante que o (a) sr. (a) guarde uma cópia em seus arquivos.
+         </p>
+      </div>
+   </div>
+</div>
+<div class="container">
+   <div class="row bg-white rounded">
+      <div class="col-md-12 text-center">
+         <p style="margin-top: -40px;" class="ml-2 mr-2 ml-md-4 mr-md-4">
+            <img style="margin-bottom: -57px;" src="<?= asset('imgs/assinatura.png'); ?>" class="img-fluid" width="300px" alt="Assinatura">
+         </p>
+         <p class="ml-2 mr-2 ml-md-4 mr-md-4">
+            <b>
+               <br>
+               Gabriela Bardelini Tavares Melo
+               <br>
+               Pesquisadora Responsável
+            </b>
+         </p>
+         <p class="font-italic text-left">
+            <b>Endereço:</b> Programa de Pós-Graduação em Ciências e Tecnologias em Saúde. Faculdade de Ceilândia – Universidade de Brasília. Centro Metropolitano, conjunto A, lote 01, Brasília – DF. CEP: 72220-900 <br>
+            <b>E-mail:</b> gabrielabtm@gmail.com <br>
+            <b>Telefone:</b> (61) 98361-3554
          </p>
       </div>
    </div>
@@ -88,7 +116,7 @@ $this->end();
 
 <?= $this->start('scripts'); ?>
 <script>
-   function termoConsentimento(){
+   function termoConsentimento() {
       $('#termo2').removeClass('d-none');
       $('#termo2').addClass('d-none');
       $('#termo1').removeClass('d-none');
@@ -96,7 +124,8 @@ $this->end();
       $('#btnImagemSom').removeClass('bg-secondary');
       // $('#footerTermos').removeClass('fixed-bottom');
    }
-   function termoUsoDeImagem(){
+
+   function termoUsoDeImagem() {
       $('#termo1').removeClass('d-none');
       $('#termo1').addClass('d-none');
       $('#termo2').removeClass('d-none');
