@@ -54,8 +54,14 @@ class Questionario extends Controller
          case '3':
             echo $this->view->render("questionario/page3", ['title' => "Questionário Bloco I"]);
             break;
-         default:
+         case '4':
             echo $this->view->render("questionario/page4", ['title' => "Questionário Bloco I"]);
+            break;
+         case '5':
+            echo $this->view->render("questionario/page5", ['title' => "Questionário Bloco I"]);
+            break;
+         default:
+            echo $this->view->render("questionario/page1", ['title' => "Questionário Bloco I"]);
             break;
       }
    }
