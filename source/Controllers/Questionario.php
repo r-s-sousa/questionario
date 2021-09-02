@@ -149,6 +149,10 @@ class Questionario extends Controller
                'blocoId' => '5'
             ]);
             break;
+            
+         case '14':
+            $this->router->redirect('web.finalizarPesquisa');
+            break;
 
          default:
             echo $this->view->render("questionario/page1", [
