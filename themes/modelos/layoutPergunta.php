@@ -6,8 +6,8 @@ $this->end();
 ?>
 
 <form action="<?= $router->route('questionario.salvar'); ?>" method="post">
-   <input type="hidden" name="blocoId" value="1">
-   <input type="hidden" name="page" value="4">
+   <input type="hidden" name="blocoId" value="<?= $blocoId; ?>">
+   <input type="hidden" name="page" value="<?= $page; ?>">
 
    <div class="container bg-white rounded" style="margin-top: 70px;">
       <div class="row pt-3">
@@ -18,9 +18,9 @@ $this->end();
 
       <?= $this->section('content'); ?>
 
-      <div class="row">
-         <div class="col-12 mt-3 mb-3 text-center">
-            <button type="submit" class="btn btn-outline-success">Próxima página</button>
+      <div class="row mt-4 bg-secondary">
+         <div class="col-12 mt-3 mb-3 text-center text-white">
+            <button type="submit" class="btn btn-outline-light">Próxima página</button>
          </div>
       </div>
    </div>

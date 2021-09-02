@@ -1,5 +1,4 @@
-
-<?php $this->layout('modelos/layoutPergunta', ['title' => $title]);
+<?php $this->layout('modelos/layoutPergunta', ['title' => $title, 'blocoId' => $blocoId, 'page' => $page]);
 
 $this->insert('modelos/base', [
    'conteudo' => '
