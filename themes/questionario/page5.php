@@ -16,7 +16,7 @@ $this->end();
 
 <form action="<?= $router->route('questionario.salvar'); ?>" method="post">
    <input type="hidden" name="blocoId" value="2">
-   <input type="hidden" name="page" value="5">
+   <input type="hidden" name="page" value="6">
 
    <div class="container bg-white rounded" style="margin-top: 70px;">
       <div class="row pt-3 pb-3">

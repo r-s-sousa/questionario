@@ -8,18 +8,36 @@ $this->end();
 ?>
 <!-- END_HEADER -->
 
+<?= $this->start('styles'); ?>
+<style>
+
+</style>
+<?= $this->end(); ?>
+
 <form action="<?= $router->route('questionario.salvar'); ?>" method="post">
-   <input type="hidden" name="blocoId" value="1">
-   <input type="hidden" name="page" value="4">
-   
+   <input type="hidden" name="blocoId" value="4">
+   <input type="hidden" name="page" value="10">
+
    <div class="container bg-white rounded" style="margin-top: 70px;">
       <div class="row pt-3 pb-3">
          <div class="col-md-12 text-left">
-            <h2 class="mb-4 text-center">BLOCO I – INFORMAÇÕES GERAIS </h2>
+            <h2 class="mb-4 text-center">BLOCO IV – DIVULGAÇÃO DA PESQUISA</h2>
+            <h6>As perguntas desse bloco são a respeito da sua participação ou de outros membros da equipe em eventos científicos (congressos, fóruns, simpósios, oficinas, seminários etc.) para divulgação dos resultados da sua pesquisa.</h6>
+         </div>
+
+         <div class="col-md-12 mt-4">
             <div class="card">
-               <div class="card-body bg-white">
+               <div class="card-body">
                   <p class="card-text">
-                     1. Nome do(a) coordenador(a) da pesquisa*: <input class="form-control-sm" type="text" name="q1">
+                     28. Apresentou os resultados da pesquisa profissionais de saúde*?
+                     <br>
+                     <label class="mt-2 ml-3"><input onchange="mudou(28)" type="radio" name="q28" value="Sim"> Sim</label>
+                     <br>
+                     <label class="ml-3"><input onchange="mudou(28)" type="radio" name="q28" value="Não"> Não</label>
+                     <br>
+                     <label class="ml-3"><input onchange="mudou(28)" type="radio" name="q28" value="Não sei/Não lembro"> Não sei/Não lembro</label>
+                     <br>
+                     <label class="ml-3"><input onchange="mudou(28)" type="radio" name="q28" value="Prefiro não responder"> Prefiro não responder</label>
                   </p>
                </div>
             </div>
@@ -29,23 +47,13 @@ $this->end();
             <div class="card">
                <div class="card-body">
                   <p class="card-text">
-                     2. Principal Grande Área de Atuação*:
+                     28.1. Se sim, informe a quantidade ou marque uma das opções.
                      <br>
-                     <label class="mt-2 ml-3"><input type="radio" name="q2" value="Ciências Exatas e da Terra"> Ciências Exatas e da Terra</label>
+                     <label class="ml-3"><input type="radio" name="q28.1" value="Não sei/Não lembro"> Não sei/Não lembro</label>
                      <br>
-                     <label class="ml-3"><input type="radio" name="q2" value="Engenharias"> Engenharias</label>
+                     <label class="ml-3"><input type="radio" name="q28.1" value="Prefiro não responder"> Prefiro não responder</label>
                      <br>
-                     <label class="ml-3"><input type="radio" name="q2" value="Ciências Agrárias"> Ciências Agrárias</label>
-                     <br>
-                     <label class="ml-3"><input type="radio" name="q2" value="Ciências Humanas"> Ciências Humanas</label>
-                     <br>
-                     <label class="ml-3"><input type="radio" name="q2" value="Ciência Biológicas"> Ciência Biológicas</label>
-                     <br>
-                     <label class="ml-3"><input type="radio" name="q2" value="Ciências da Saúde"> Ciências Sociais Aplicadas</label>
-                     <br>
-                     <label class="ml-3"><input type="radio" name="q2" value="Linguística, Letras e Artes"> Linguística, Letras e Artes</label>
-                     <br>
-                     <label class="ml-3">Outras: <input class="form-control-sm" type="text" name="q2Outras"></label>
+                     <label class="ml-3"> Quantidade: <input type="text" class="form-control-sm" name="28.1Outro"></label>
                   </p>
                </div>
             </div>
@@ -55,7 +63,15 @@ $this->end();
             <div class="card">
                <div class="card-body">
                   <p class="card-text">
-                     3. Principal Subárea de Atuação: <input class="form-control-sm" type="text" name="q3">
+                     29. Apresentou os resultados da pesquisa para formuladores de políticas e tomadores de decisão em saúde*?
+                     <br>
+                     <label class="mt-2 ml-3"><input onchange="mudou(29)" type="radio" name="q29" value="Sim"> Sim</label>
+                     <br>
+                     <label class="ml-3"><input onchange="mudou(29)" type="radio" name="q29" value="Não"> Não</label>
+                     <br>
+                     <label class="ml-3"><input onchange="mudou(29)" type="radio" name="q29" value="Não sei/Não lembro"> Não sei/Não lembro</label>
+                     <br>
+                     <label class="ml-3"><input onchange="mudou(29)" type="radio" name="q29" value="Prefiro não responder"> Prefiro não responder</label>
                   </p>
                </div>
             </div>
@@ -65,34 +81,24 @@ $this->end();
             <div class="card">
                <div class="card-body">
                   <p class="card-text">
-                     4. Telefones para contato com DDD (preferencialmente celular)*: <input class="form-control-sm" type="text" name="q4">
+                     29.1. Se sim, informe a quantidade, ou marque uma das opções:
+                     <br>
+                     <label class="ml-3"><input type="radio" name="q29.1" value="Não sei/Não lembro"> Não sei/Não lembro</label>
+                     <br>
+                     <label class="ml-3"><input type="radio" name="q29.1" value="Prefiro não responder"> Prefiro não responder</label>
+                     <br>
+                     <label class="ml-3"> Quantidade: <input type="text" class="form-control-sm" name="29.1Outro"></label>
                   </p>
                </div>
             </div>
          </div>
 
-         <div class="col-md-12 mt-4">
-            <div class="card">
-               <div class="card-body">
-                  <p class="card-text">
-                     5. Nome do edital no qual a pesquisa foi contemplada*:
-                     <br>
-                     <label class="mt-2 ml-3"><input type="radio" name="q5" value="Edital MCT/CNPq/MS-SCTIE-DECIT nº 025/2006 – Doenças Negligenciadas."> Edital MCT/CNPq/MS-SCTIE-DECIT nº 025/2006 – Doenças Negligenciadas.</label>
-                     <br>
-                     <label class="ml-3"><input type="radio" name="q5" value="Edital MCT/CNPq/CTI-Saúde/MS/SCTIE/DECIT nº 034/2008 – Doenças Negligenciadas."> Edital MCT/CNPq/CTI-Saúde/MS/SCTIE/DECIT nº 034/2008 – Doenças Negligenciadas. </label>
-                     <br>
-                     <label class="ml-3"><input type="radio" name="q5" value="Chamada MCTI/CNPq/MS-SCTIE-Decit nº 40/2012 – Pesquisa em Doenças Negligenciadas"> Chamada MCTI/CNPq/MS-SCTIE-Decit nº 40/2012 – Pesquisa em Doenças Negligenciadas</label>
-                  </p>
+         <div class="container">
+            <div class="row">
+               <div class="col-12 mt-3 mb-3 text-center">
+                  <button type="submit" class="btn btn-outline-success">Próxima página</button>
                </div>
             </div>
-         </div>
-      </div>
-   </div>
-
-   <div class="container">
-      <div class="row">
-         <div class="col-12 mt-3 mb-3 text-center">
-            <button type="submit" class="btn btn-outline-success">Próxima página</button>
          </div>
       </div>
    </div>
