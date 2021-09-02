@@ -1,18 +1,4 @@
-<?php $this->layout('_theme', ['title' => $title]); ?>
-
-<!-- HEADER -->
-<?php
-$this->start('navbar');
-$this->insert('main/partials/navbar');
-$this->end();
-?>
-<!-- END_HEADER -->
-
-<?= $this->start('styles'); ?>
-<style>
-
-</style>
-<?= $this->end(); ?>
+<?php $this->layout('_theme', ['title' => $title]); $this->start('navbar'); $this->insert('main/partials/navbar'); $this->end(); ?>
 
 <form action="<?= $router->route('questionario.salvar'); ?>" method="post">
    <input type="hidden" name="blocoId" value="1">
