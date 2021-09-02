@@ -1,6 +1,5 @@
 <?php $this->layout('modelos/layoutPergunta', ['title' => $title]);
 
-// PÁGINA 3
 $this->insert('modelos/primaria', [
    'id' => '12',
    'pergunta' => '12. Para execução da pesquisa, foram estabelecidas parcerias com outras instituições (qualquer tipo de instituição: ex. outras universidades, secretaria de saúde municipal, secretaria de saúde estadual)*?',

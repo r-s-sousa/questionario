@@ -1,6 +1,5 @@
 <?php $this->layout('modelos/layoutPergunta', ['title' => $title]);
 
-// PÁGINA 3
 $this->insert('modelos/primaria', [
    'id' => '14',
    'pergunta' => '14. Publicou artigos científicos em periódicos nacionais ou internacionais*?',

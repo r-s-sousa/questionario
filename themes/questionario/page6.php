@@ -1,23 +1,46 @@
-17. Quantos pessoas faziam parte da equipe de pesquisa*? Informe a quantidade ou marque uma das opções.
-secondaria Quantidade
+<?php $this->layout('modelos/layoutPergunta', ['title' => $title]);
 
-18. Na sua equipe tinham pesquisadores visitantes*?
-primaria
+$this->insert('modelos/secondaria', [
+   'id' => '17',
+   'pergunta' => '17. Quantos pessoas faziam parte da equipe de pesquisa*? Informe a quantidade ou marque uma das opções.',
+   'classe' => 'Quantidade'
+]);
 
-18.1. Se sim, informe a quantidade de pesquisadores visitantes ou marque uma
-secondaria Quantidade
+$this->insert('modelos/primaria', [
+   'id' => '18',
+   'pergunta' => '18. Na sua equipe tinham pesquisadores visitantes*?'
+]);
 
-18.2. Se sim, informe a quantidade de pesquisadores visitantes ou marque uma
-secondaria Instituições
+$this->insert('modelos/secondaria', [
+   'id' => '18.1',
+   'pergunta' => '18.1. Se sim, informe a quantidade de pesquisadores visitantes ou marque uma',
+   'classe' => 'Quantidade'
+]);
 
-19. Na sua equipe tinham pesquisadores bolsistas de produtividade*?
-primaria
+$this->insert('modelos/secondaria', [
+   'id' => '18.2',
+   'pergunta' => '18.2. Se sim, informe a quantidade de pesquisadores visitantes ou marque uma',
+   'classe' => 'Quantidade'
+]);
 
-19.1. Se sim, informe a quantidade de pesquisadores visitantes ou marque uma
-secondaria Quantidade
+$this->insert('modelos/primaria', [
+   'id' => '19',
+   'pergunta' => '19. Na sua equipe tinham pesquisadores bolsistas de produtividade*?'
+]);
 
-20. Na sua equipe tinham pesquisadores de pós-doutorado*?
-primaria
+$this->insert('modelos/secondaria', [
+   'id' => '19.1',
+   'pergunta' => '19.1. Se sim, informe a quantidade de pesquisadores visitantes ou marque uma',
+   'classe' => 'Quantidade'
+]);
 
-20.1. Se sim, informe a quantidade ou marque uma das opções.
-secondaria Quantidade
+$this->insert('modelos/primaria', [
+   'id' => '20',
+   'pergunta' => '20. Na sua equipe tinham pesquisadores de pós-doutorado*?'
+]);
+
+$this->insert('modelos/secondaria', [
+   'id' => '20.1',
+   'pergunta' => '20.1. Se sim, informe a quantidade ou marque uma das opções.',
+   'classe' => 'Quantidade'
+]);

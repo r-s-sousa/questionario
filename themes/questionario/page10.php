@@ -1,55 +1,108 @@
-30. Os resultados da sua pesquisa ajudaram a formular, produzir ou foram citados em:
-Apenas definindo o tema
+<?php $this->layout('modelos/layoutPergunta', ['title' => $title]);
 
-30.1. Protocolos Clínicos*?
-primaria
+$this->insert('modelos/base', [
+   'conteudo' => '
+   <p class="card-text">
+      <b>30. Os resultados da sua pesquisa ajudaram a formular, produzir ou foram citados em:</b>
+   </p>
+   '
+]);
 
-30.1.1. Se sim, informe os nomes dos protocolos ou marque uma das opções*.
+$this->insert('modelos/primaria', [
+   'id' => '30.1',
+   'pergunta' => '30.1. Protocolos Clínicos*?',
+]);
 
-30.2. Manuais de saúde*?
-primaria
+$this->insert('modelos/secondaria', [
+   'id' => '30.1.1',
+   'pergunta' => '30.1.1. Se sim, informe os nomes dos protocolos ou marque uma das opções*.',
+   'classe' => 'Nomes'
+]);
 
-30.2.1. Se sim, informe os nomes dos manuais ou marque uma das opções*.
-secondaria - nomes
+$this->insert('modelos/primaria', [
+   'id' => '30.2',
+   'pergunta' => '30.2. Manuais de saúde*?',
+]);
 
-30.3. Diretrizes em saúde*?
-primaria
+$this->insert('modelos/secondaria', [
+   'id' => '30.2.1',
+   'pergunta' => '30.2.1. Se sim, informe os nomes dos manuais ou marque uma das opções*.',
+   'classe' => 'Nomes'
+]);
 
-30.3.1. Se sim, informe os nomes dos manuais ou marque uma das opções.
-secondaria - nomes
+$this->insert('modelos/primaria', [
+   'id' => '30.3',
+   'pergunta' => '30.3. Diretrizes em saúde*?',
+]);
 
-30.4. Guias de Atenção à Saúde*?
-primaria
+$this->insert('modelos/secondaria', [
+   'id' => '30.3.1',
+   'pergunta' => '30.3.1. Se sim, informe os nomes dos manuais ou marque uma das opções.',
+   'classe' => 'Quantidade'
+]);
 
-30.4.1. Se sim, informe os nomes dos Guias de Atenção à Saúde ou marque uma das opções*.
-secondaria - Guias
+$this->insert('modelos/primaria', [
+   'id' => '30.4',
+   'pergunta' => '30.4. Guias de Atenção à Saúde*?',
+]);
 
-30.5. Portarias*? 
-primaria
+$this->insert('modelos/secondaria', [
+   'id' => '30.4.1',
+   'pergunta' => '30.4.1. Se sim, informe os nomes dos Guias de Atenção à Saúde ou marque uma das opções*.',
+   'classe' => 'Nomes'
+]);
 
-30.5.1. Se sim, informe os números e anos das Portarias ou marque uma das opções*. Informe a quantidade ou marque uma das opções:
-secondaria - quantidade
+$this->insert('modelos/primaria', [
+   'id' => '30.5',
+   'pergunta' => '30.5. Portarias*? ',
+]);
 
-30.6. Programas de saúde*?
-primaria
+$this->insert('modelos/secondaria', [
+   'id' => '30.5.1',
+   'pergunta' => '30.5.1. Se sim, informe os números e anos das Portarias ou marque uma das opções*. Informe a quantidade ou marque uma das opções:',
+   'classe' => 'Quantidade'
+]);
 
-30.6.1. Se sim, informe os nomes dos Programas de Saúde ou marque uma das opções*.
-secondaria - Programas
+$this->insert('modelos/primaria', [
+   'id' => '30.6',
+   'pergunta' => '30.6. Programas de saúde*?',
+]);
 
-30.7. Políticas de saúde ou de outras áreas*: 
-primaria
+$this->insert('modelos/secondaria', [
+   'id' => '30.6.1',
+   'pergunta' => '30.6.1. Se sim, informe os nomes dos Programas de Saúde ou marque uma das opções*.',
+   'classe' => 'Nomes'
+]);
 
-30.7.1. Se sim, informe os nomes das Políticas de Saúde ou marque uma das opções*.
-secondaria - Políticas
+$this->insert('modelos/primaria', [
+   'id' => '30.7',
+   'pergunta' => '30.7. Políticas de saúde ou de outras áreas*: ',
+]);
 
-30.8. Materiais educativos/informativos para profissionais de saúde ou gestores de saúde*? 
-primaria
+$this->insert('modelos/secondaria', [
+   'id' => '30.7.1',
+   'pergunta' => '30.7.1. Se sim, informe os nomes das Políticas de Saúde ou marque uma das opções*.',
+   'classe' => 'Nomes'
+]);
 
-30.8.1. Se sim, informe os nomes materiais educativos/informativos para profissionais de saúde ou gestores de saúde ou marque uma das opções*.
-secondaria - materiais
+$this->insert('modelos/primaria', [
+   'id' => '30.8',
+   'pergunta' => '30.8. Materiais educativos/informativos para profissionais de saúde ou gestores de saúde*?',
+]);
 
-30.9. Materiais educativos/informativos para população em geral*?
-primaria
+$this->insert('modelos/secondaria', [
+   'id' => '30.8.1',
+   'pergunta' => '30.8.1. Se sim, informe os nomes materiais educativos/informativos para profissionais de saúde ou gestores de saúde ou marque uma das opções*.',
+   'classe' => 'Nomes'
+]);
 
-30.9.1. Se sim, informe os nomes dos materiais educativos/informativos para a população em geral ou marque uma das opções.
-secondaria - materiais
+$this->insert('modelos/primaria', [
+   'id' => '30.9',
+   'pergunta' => '30.9. Materiais educativos/informativos para população em geral*?',
+]);
+
+$this->insert('modelos/secondaria', [
+   'id' => '30.9.1',
+   'pergunta' => '30.9.1. Se sim, informe os nomes dos materiais educativos/informativos para a população em geral ou marque uma das opções.',
+   'classe' => 'Quantidade'
+]);
