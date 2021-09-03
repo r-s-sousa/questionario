@@ -1,17 +1,17 @@
 <?php $this->layout('modelos/layoutPergunta', ['title' => $title, 'blocoId' => $blocoId, 'page' => $page]);
 
-$this->insert('modelos/base', [
-   'conteudo' => '
-   <p class="card-text">
-      1. Nome do(a) coordenador(a) da pesquisa*: <input class="form-control-sm" type="text" name="q1">
-   </p>
-   '
-]);
+// $this->insert('modelos/base', [
+//    'conteudo' => '
+//    <p class="card-text">
+//       1. Nome do(a) coordenador(a) da pesquisa*: <input class="form-control-sm" type="text" name="q1">
+//    </p>
+//    '
+// ]);
 
 $this->insert('modelos/base', [
    'conteudo' => '
    <p class="card-text">
-   2. Principal Grande Área de Atuação*:
+   1. Principal Grande Área de Atuação*:
    <br>
    <label class="mt-2 ml-3"><input type="radio" name="q2" value="Ciências Exatas e da Terra"> Ciências Exatas e da Terra</label>
    <br>
@@ -40,10 +40,10 @@ $this->insert('modelos/base', [
    '
 ]);
 
-$this->insert('modelos/base', [
-   'conteudo' => '
-   <p class="card-text">
-      4. Telefones para contato com DDD (preferencialmente celular)*: <input class="form-control-sm" type="text" name="q4">
-   </p>
-   '
-]);
+// $this->insert('modelos/base', [
+//    'conteudo' => '
+//    <p class="card-text">
+//       4. Telefones para contato com DDD (preferencialmente celular)*: <input class="form-control-sm" type="text" name="q4">
+//    </p>
+//    '
+// ]);

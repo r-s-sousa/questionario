@@ -14,7 +14,7 @@ $this->end();
 </style>
 <?= $this->end(); ?>
 
-<div class="container bg-white rounded" style="margin-top: 70px;">
+<div class="container bg-white rounded">
    <div class="row pt-3 pb-3">
       <div class="col-md-12 text-center">
          <h2 class="mb-4">Questionário</h2>
@@ -36,9 +36,6 @@ $this->end();
          </p>
          <p class="ml-2 mr-2 ml-md-4 mr-md-4 text-justify">
             <span style="margin-left: 25px;"></span> De antemão agradecemos por ter disponibilizado seu tempo e pela sua participação!
-         </p>
-         <p class="ml-2 mr-2 ml-md-4 mr-md-4 text-justify">
-            <span style="margin-left: 25px;"></span> Questões destacadas em vermelho são de preenchimento obrigatório
          </p>
       </div>
    </div>

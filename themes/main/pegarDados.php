@@ -8,7 +8,7 @@ $this->end();
 ?>
 <!-- END_HEADER -->
 
-<div class="container bg-white rounded" style="margin-top: 70px;">
+<div class="container bg-white rounded">
    <div class="row pt-3 pb-3">
       <div class="col-md-12 text-center">
          <h3 class="mb-2">Para dar início ao questionário, precisamos de alguns de seus dados!</h3>

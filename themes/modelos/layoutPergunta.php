@@ -9,7 +9,7 @@ $this->end();
    <input type="hidden" name="blocoId" value="<?= $blocoId; ?>">
    <input type="hidden" name="page" value="<?= $page; ?>">
 
-   <div class="container bg-white rounded" style="margin-top: 70px;">
+   <div class="container bg-white rounded">
       <div class="row pt-3">
          <div class="col-md-12 text-left">
             <h2 class="text-center"><?= $title; ?></h2>

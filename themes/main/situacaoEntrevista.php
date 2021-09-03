@@ -14,29 +14,31 @@ $this->end();
 </style>
 <?= $this->end(); ?>
 
-<div class="container bg-white rounded" style="margin-top: 70px;">
+<div class="container bg-white rounded-top">
    <div class="row pt-3 pb-3">
       <div class="col-md-12 text-center">
          <h2 class="mb-4">Deseja participar da entrevista ?</h2>
          <p class="ml-2 mr-2 ml-md-4 mr-md-4 text-justify">
-            <span style="margin-left: 25px;"></span> Prezado (a) Pesquisador (a), como informado no Termo de Consentimento Livre e Esclarecido, a pesquisa é composta por suas fases: a primeira por um questionário, no qual o (a). sr. (a) será direcionado na próxima página, e a segunda será uma entrevista virtual, com o objetivo de compreender suas perspectivas quanto aos impactos de suas pesquisas, disseminação dos resultados e sua aplicabilidade para o Sistema Único de Saúde.
+            <span style="margin-left: 25px;"></span> Prezado (a) Pesquisador (a), como informado no Termo de Consentimento Livre e Esclarecido, a pesquisa é composta por duas fases: a primeira por um questionário e a segunda uma entrevista virtual.
          </p>
          <p class="ml-2 mr-2 ml-md-4 mr-md-4 text-justify">
-            <span style="margin-left: 25px;"></span> Caso aceite participar da entrevista, entraremos em contato via e-mail ou telefone para agendá-la, conforme melhor dia e horário disponível para o (a) Sr. (a). 
+            <span style="margin-left: 25px;"></span> O questionário virtual estará disponível para resposta nas próximas páginas.
          </p>
          <p class="ml-2 mr-2 ml-md-4 mr-md-4 text-justify">
-            <span style="margin-left: 25px;"></span> Além disso, caso aceite o (a) Sr. (a) será direcionado para o Termo de Autorização de Imagem e Som de Voz para Fins de Pesquisa. 
+            <span style="margin-left: 25px;"></span> Com relação à entrevista, terá duração de aproximadamente 30 minutos pelo aplicativo Microsoft Teams. Nela conversaremos sobre os impactos da sua pesquisa, a disseminação dos resultados e sua aplicabilidade para o Sistema Único de Saúde.
          </p>
          <p class="ml-2 mr-2 ml-md-4 mr-md-4 text-justify">
-            <span style="margin-left: 25px;"></span> O (A) sr. (a). teria interesse em participar da entrevista? 
+            <span style="margin-left: 25px;"></span> Caso o (a) Sr. (a) aceite participar da entrevista, entraremos em contato por e-mail ou telefone, para agendá-la de acordo com o melhor dia e horário disponível na sua agenda. O (A) Sr. (a) também será direcionado na próxima página para o Termo de Autorização de Imagem e Som de Voz para Fins de Pesquisa.
          </p>
-         
+         <p class="ml-2 mr-2 ml-md-4 mr-md-4 text-justify">
+            <span style="margin-left: 25px;"></span> <b>O (A) Sr. (a) teria interesse em participar da entrevista virtual? </b>
+         </p>
       </div>
    </div>
 </div>
 
 <div class="container">
-   <div class="row">
+   <div class="row rounded-bottom" style="background-color: #cccccc;">
       <div class="col-md-12 mt-3">
          <form action="<?= $router->route('web.recebeEscolhaEntrevista'); ?>" method="post">
             <input type="radio" name="opcaoEntrevista" id="op1" value="true">

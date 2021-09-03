@@ -1,6 +1,6 @@
 <div class="container-fluid bg-dark text-white p-4">
    <div class="row text-center">
-      <div class="col-md-12 ">
+      <div class="col-md-12">
          <h4>Portal de privacidade</h4>
       </div>
       <div class="col-md-12 mb-4">
