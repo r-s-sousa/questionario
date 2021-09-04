@@ -1,6 +1,6 @@
 <?php $this->layout('modelos/layoutPergunta', [
-   'title' => $title, 
-   'blocoId' => $blocoId, 
+   'title' => $title,
+   'blocoId' => $blocoId,
    'page' => $page
 ]);
 
@@ -17,21 +17,22 @@ $this->insert('modelos/base', [
    <p class="card-text">
    1. Principal Grande Área de Atuação*:
    <br>
-   <label class="mt-2 ml-3"><input type="radio" name="q2" value="Ciências Exatas e da Terra"> Ciências Exatas e da Terra</label>
+   <label class="mt-2 ml-3"><input type="radio" onchange="mudouRadioSecondaria(\'q2\')" name="q2" value="Ciências Exatas e da Terra"> Ciências Exatas e da Terra</label>
    <br>
-   <label class="ml-3"><input type="radio" name="q2" value="Engenharias"> Engenharias</label>
+   <label class="ml-3"><input type="radio" onchange="mudouRadioSecondaria(\'q2\')" name="q2" value="Engenharias"> Engenharias</label>
    <br>
-   <label class="ml-3"><input type="radio" name="q2" value="Ciências Agrárias"> Ciências Agrárias</label>
+   <label class="ml-3"><input type="radio" onchange="mudouRadioSecondaria(\'q2\')" name="q2" value="Ciências Agrárias"> Ciências Agrárias</label>
    <br>
-   <label class="ml-3"><input type="radio" name="q2" value="Ciências Humanas"> Ciências Humanas</label>
+   <label class="ml-3"><input type="radio" onchange="mudouRadioSecondaria(\'q2\')" name="q2" value="Ciências Humanas"> Ciências Humanas</label>
    <br>
-   <label class="ml-3"><input type="radio" name="q2" value="Ciência Biológicas"> Ciência Biológicas</label>
+   <label class="ml-3"><input type="radio" onchange="mudouRadioSecondaria(\'q2\')" name="q2" value="Ciência Biológicas"> Ciência Biológicas</label>
    <br>
-   <label class="ml-3"><input type="radio" name="q2" value="Ciências da Saúde"> Ciências Sociais Aplicadas</label>
+   <label class="ml-3"><input type="radio" onchange="mudouRadioSecondaria(\'q2\')" name="q2" value="Ciências da Saúde"> Ciências Sociais Aplicadas</label>
    <br>
-   <label class="ml-3"><input type="radio" name="q2" value="Linguística, Letras e Artes"> Linguística, Letras e Artes</label>
+   <label class="ml-3"><input type="radio" onchange="mudouRadioSecondaria(\'q2\')" name="q2" value="Linguística, Letras e Artes"> Linguística, Letras e Artes</label>
    <br>
-   <label class="ml-3">Outras: <input class="form-control-sm" type="text" name="q2Outras"></label>
+   <label class="ml-3"><input type="radio" onchange="mudouRadioSecondaria(\'q2\')" name="q2" value="Outro"> Outro
+      <input type="text" class="form-control-sm" name="q2_Outro" id="q2_Outro" required disabled></label>
 </p>
    '
 ]);
@@ -39,7 +40,7 @@ $this->insert('modelos/base', [
 $this->insert('modelos/base', [
    'conteudo' => '
    <p class="card-text">
-      3. Principal Subárea de Atuação: <input class="form-control-sm" type="text" name="q3">
+      3. Principal Subárea de Atuação: <input class="form-control-sm" type="text" name="q3" required>
    </p>
    '
 ]);
@@ -51,3 +52,5 @@ $this->insert('modelos/base', [
 //    </p>
 //    '
 // ]);
+?>
+

@@ -48,7 +48,6 @@ $this->end();
    // }
 
    function mudouRadioSecondaria(idRadio) {
-
       var inputForRadio = document.getElementById(idRadio + "_Outro");
       var opSelecionada = $('input[name="' + idRadio + '"]:checked').attr("value");
 
@@ -58,6 +57,18 @@ $this->end();
          inputForRadio.disabled = true;
       }
    }
+
+   function opcoesOutrosEnableDisable(){
+      var inputForRadio = document.getElementById('opcao1').checked;
+      var campoParaSerAtivado = document.getElementById('opcao1Input');
+      if(inputForRadio){
+         campoParaSerAtivado.disabled = false;
+      }
+      else{
+         campoParaSerAtivado.disabled = true;
+      }
+   }
+
 </script>
 
 <?= $this->end(); ?>

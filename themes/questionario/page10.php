@@ -21,7 +21,8 @@ $this->insert('modelos/primaria', [
 $this->insert('modelos/secondaria', [
    'id' => '30.1.1',
    'pergunta' => '30.1.1. Se sim, informe os nomes dos protocolos ou marque uma das opções*.',
-   'classe' => 'Nomes'
+   'classe' => 'Nomes',
+   'grande' => true
 ]);
 
 $this->insert('modelos/primaria', [
@@ -32,7 +33,8 @@ $this->insert('modelos/primaria', [
 $this->insert('modelos/secondaria', [
    'id' => '30.2.1',
    'pergunta' => '30.2.1. Se sim, informe os nomes dos manuais ou marque uma das opções*.',
-   'classe' => 'Nomes'
+   'classe' => 'Nomes',
+   'grande' => true
 ]);
 
 $this->insert('modelos/primaria', [
@@ -43,7 +45,8 @@ $this->insert('modelos/primaria', [
 $this->insert('modelos/secondaria', [
    'id' => '30.3.1',
    'pergunta' => '30.3.1. Se sim, informe os nomes dos manuais ou marque uma das opções.',
-   'classe' => 'Nomes'
+   'classe' => 'Nomes',
+   'grande' => true
 ]);
 
 $this->insert('modelos/primaria', [
@@ -54,7 +57,8 @@ $this->insert('modelos/primaria', [
 $this->insert('modelos/secondaria', [
    'id' => '30.4.1',
    'pergunta' => '30.4.1. Se sim, informe os nomes dos Guias de Atenção à Saúde ou marque uma das opções*.',
-   'classe' => 'Nomes'
+   'classe' => 'Nomes',
+   'grande' => true
 ]);
 
 $this->insert('modelos/primaria', [
@@ -65,7 +69,8 @@ $this->insert('modelos/primaria', [
 $this->insert('modelos/secondaria', [
    'id' => '30.5.1',
    'pergunta' => '30.5.1. Se sim, informe os números e anos das Portarias ou marque uma das opções*.',
-   'classe' => 'Número e Anos das Portarias'
+   'classe' => 'Número e Anos das Portarias',
+   'grande' => true
 ]);
 
 $this->insert('modelos/primaria', [
@@ -76,7 +81,8 @@ $this->insert('modelos/primaria', [
 $this->insert('modelos/secondaria', [
    'id' => '30.6.1',
    'pergunta' => '30.6.1. Se sim, informe os nomes dos Programas de Saúde ou marque uma das opções*.',
-   'classe' => 'Nomes'
+   'classe' => 'Nomes',
+   'grande' => true
 ]);
 
 $this->insert('modelos/primaria', [
@@ -87,7 +93,8 @@ $this->insert('modelos/primaria', [
 $this->insert('modelos/secondaria', [
    'id' => '30.7.1',
    'pergunta' => '30.7.1. Se sim, informe os nomes das Políticas de Saúde ou marque uma das opções*.',
-   'classe' => 'Nomes'
+   'classe' => 'Nomes',
+   'grande' => true
 ]);
 
 $this->insert('modelos/primaria', [
@@ -98,7 +105,8 @@ $this->insert('modelos/primaria', [
 $this->insert('modelos/secondaria', [
    'id' => '30.8.1',
    'pergunta' => '30.8.1. Se sim, informe os nomes materiais educativos/informativos para profissionais de saúde ou gestores de saúde ou marque uma das opções*.',
-   'classe' => 'Nomes'
+   'classe' => 'Nomes',
+   'grande' => true
 ]);
 
 $this->insert('modelos/primaria', [
@@ -109,5 +117,6 @@ $this->insert('modelos/primaria', [
 $this->insert('modelos/secondaria', [
    'id' => '30.9.1',
    'pergunta' => '30.9.1. Se sim, informe os nomes dos materiais educativos/informativos para a população em geral ou marque uma das opções.',
-   'classe' => 'Quantidade'
+   'classe' => 'Quantidade',
+   'grande' => true
 ]);

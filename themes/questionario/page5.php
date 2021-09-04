@@ -13,7 +13,8 @@ $this->insert('modelos/primaria', [
 $this->insert('modelos/secondaria', [
    'id' => '14.1',
    'pergunta' => '14.1. Se sim, informe os títulos dos artigos ou marque uma das opções*:',
-   'classe' => 'Titulos'
+   'classe' => 'Titulos',
+   'grande' => true
 ]);
 
 $this->insert('modelos/primaria', [
@@ -24,7 +25,8 @@ $this->insert('modelos/primaria', [
 $this->insert('modelos/secondaria', [
    'id' => '15.1',
    'pergunta' => '15.1. Se sim, informe os títulos dos livros ou marque uma das opções*.',
-   'classe' => 'Livros'
+   'classe' => 'Livros',
+   'grande' => true
 ]);
 
 $this->insert('modelos/primaria', [
@@ -35,5 +37,6 @@ $this->insert('modelos/primaria', [
 $this->insert('modelos/secondaria', [
    'id' => '16.1',
    'pergunta' => '16.1. Se sim, informe os títulos dos capítulos dos livros ou marque uma das opções*.',
-   'classe' => 'Titulos'
+   'classe' => 'Titulos',
+   'grande' => true
 ]);

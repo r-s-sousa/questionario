@@ -13,15 +13,15 @@ $this->insert('modelos/primaria', [
 $this->insert('modelos/base', [
    'conteudo' => '
    <p class="card-text">
-   38.1 Se sim, assinale as opções nas quais a pesquisa gerou impacto*:
+   39 Se sim, assinale as opções nas quais a pesquisa gerou impacto*:
    <br>
    <label class="mt-2 ml-3"><input type="checkbox" name="opcoes[]" value="Mortalidade"> Mortalidade</label> <br>
    <label class="ml-3"><input type="checkbox" name="opcoes[]" value="Incidência"> Incidência</label> <br>
    <label class="ml-3"><input type="checkbox" name="opcoes[]" value="Fatores de risco"> Fatores de risco</label> <br>
-   <label class="ml-3"><input type="checkbox" name="opcoes[]" value="Determinantes sociais/culturas"> Determinantes sociais/culturas</label>
+   <label class="ml-3"><input type="checkbox" name="opcoes[]" value="Determinantes sociais/culturas"> Determinantes sociais/culturas</label> <br>
    <label class="ml-3"><input type="checkbox" name="opcoes[]" value="Determinantes ambientas"> Determinantes ambientas</label> <br>
    <label class="ml-3"><input type="checkbox" name="opcoes[]" value="Adequação (ex. adesão a protocolos clínicos)"> Adequação (ex. adesão a protocolos clínicos)</label> <br>
-   <label class="ml-3"><input type="checkbox" name="opcoes[]" value="Outros"> Outros <input type="text" class="form-control-sm" name="opcoesOutro"></label> <br>
+   <label class="ml-3"><input type="checkbox" name="opcoes[]" value="Outros" id="opcao1" onchange="opcoesOutrosEnableDisable()" > Outros <input disabled required id="opcao1Input" type="text" class="form-control-sm" name="opcoesOutro"></label> <br>
    <label class="ml-3"><input type="checkbox" name="opcoes[]" value="Não sei/Não lembro"> Não sei/Não lembro</label> <br>
    <label class="ml-3"><input type="checkbox" name="opcoes[]" value="Incidência"> Prefiro não responder</label> <br>
    </p

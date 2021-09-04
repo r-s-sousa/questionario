@@ -12,7 +12,8 @@ $this->insert('modelos/primaria', [
 $this->insert('modelos/secondaria', [
    'id' => '36.1',
    'pergunta' => '36.1. Se sim, liste as patentes ou marque uma das opções*?',
-   'classe' => 'Patentes'
+   'classe' => 'Patentes',
+   'grande' => true
 ]);
 
 $this->insert('modelos/primaria', [
@@ -23,5 +24,6 @@ $this->insert('modelos/primaria', [
 $this->insert('modelos/secondaria', [
    'id' => '37.1',
    'pergunta' => '37.1. Se sim, informe a quantidade ou marque uma das opções*?',
-   'classe' => 'Quantidade'
+   'classe' => 'Quantidade',
+   'grande' => true
 ]);
