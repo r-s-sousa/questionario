@@ -42,9 +42,9 @@ $this->end();
 </div>
 
 <div class="container">
-   <div class="row">
-      <div class="col-12 mt-3 mb-3 text-center">
-         <a href="<?= $router->route('questionario.bloco', ['page' => '1']); ?>" class="btn btn-outline-success">Continuar</a>
+   <div class="row bg-secondary">
+      <div class="col-12 mt-3 mb-3 text-center text-white">
+         <a href="<?= $router->route('questionario.bloco', ['page' => '1']); ?>" class="btn btn-outline-light">Continuar</a>
       </div>
    </div>
 </div>
