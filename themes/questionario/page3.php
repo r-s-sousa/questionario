@@ -7,7 +7,8 @@
 $this->insert('modelos/secondaria', [
    'id' => '9',
    'pergunta' => '9. Valor recebido no edital para execução da pesquisa (em reais – R$): Informe o valor ou marque uma das opções.',
-   'classe' => 'Valor: R$'
+   'classe' => 'Valor: R$',
+   'mostrarSecondaria' => true
 ]);
 
 $this->insert('modelos/primaria', [
@@ -16,7 +17,7 @@ $this->insert('modelos/primaria', [
 ]);
 
 $this->insert('modelos/secondaria', [
-   'id' => '10.1',
+   'id' => '10_1',
    'pergunta' => '10.1. Se sim, qual foi o valor recebido por outras fontes de financiamento (em reais – R$)?',
    'classe' => 'Valor: R$'
 ]);
@@ -27,7 +28,7 @@ $this->insert('modelos/primaria', [
 ]);
 
 $this->insert('modelos/secondaria', [
-   'id' => '11.1',
+   'id' => '11_1',
    'pergunta' => '11.1. Se sim, quantas pesquisas? Informe a quantidade ou marque uma das opções.',
    'classe' => 'Qtd'
 ]);

@@ -10,7 +10,7 @@ $this->insert('modelos/primaria', [
 ]);
 
 $this->insert('modelos/secondaria', [
-   'id' => '12.1',
+   'id' => '12_1',
    'pergunta' => '12.1. Se sim, liste as instituições parceiras ou marque uma das opções.',
    'classe' => 'Instituições',
    'grande' => true

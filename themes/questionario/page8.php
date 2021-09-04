@@ -11,7 +11,7 @@ $this->insert('modelos/primaria', [
 ]);
 
 $this->insert('modelos/secondaria', [
-   'id' => '26.1',
+   'id' => '26_1',
    'pergunta' => '26.1. Se sim, informe a quantidade ou marque uma das opções*.',
    'classe' => 'Quantidade'
 ]);
@@ -22,13 +22,13 @@ $this->insert('modelos/primaria', [
 ]);
 
 $this->insert('modelos/secondaria', [
-   'id' => '27.1',
+   'id' => '27_1',
    'pergunta' => '27.1. Em quantos eventos científicos nacionais? Informe a quantidade ou marque uma das opções*.',
    'classe' => 'Quantidade'
 ]);
 
 $this->insert('modelos/secondaria', [
-   'id' => '27.2',
+   'id' => '27_2',
    'pergunta' => '27.2. Em quantos eventos científicos internacionais? Informe a quantidade ou marque uma das opções*.',
    'classe' => 'Quantidade'
 ]);

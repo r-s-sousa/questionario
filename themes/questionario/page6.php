@@ -17,13 +17,13 @@ $this->insert('modelos/primaria', [
 ]);
 
 $this->insert('modelos/secondaria', [
-   'id' => '18.1',
+   'id' => '18_1',
    'pergunta' => '18.1. Se sim, informe a quantidade de pesquisadores visitantes ou marque uma',
    'classe' => 'Quantidade'
 ]);
 
 $this->insert('modelos/secondaria', [
-   'id' => '18.2',
+   'id' => '18_2',
    'pergunta' => '18.2. Se sim, informe a quantidade de pesquisadores visitantes ou marque uma',
    'classe' => 'Quantidade'
 ]);
@@ -34,7 +34,7 @@ $this->insert('modelos/primaria', [
 ]);
 
 $this->insert('modelos/secondaria', [
-   'id' => '19.1',
+   'id' => '19_1',
    'pergunta' => '19.1. Se sim, informe a quantidade de pesquisadores visitantes ou marque uma',
    'classe' => 'Quantidade'
 ]);
@@ -45,7 +45,7 @@ $this->insert('modelos/primaria', [
 ]);
 
 $this->insert('modelos/secondaria', [
-   'id' => '20.1',
+   'id' => '20_1',
    'pergunta' => '20.1. Se sim, informe a quantidade ou marque uma das opções.',
    'classe' => 'Quantidade'
 ]);
