@@ -23,7 +23,8 @@ $this->end();
 
       <div class="row mt-4 bg-secondary">
          <div class="col-12 mt-3 mb-3 text-center text-white">
-            <button type="submit" class="btn btn-outline-light">Próxima página</button>
+            <input class="btn btn-outline-light mr-4" action="action" onclick="window.history.go(-1); return false;" type="submit" value="Anterior">
+            <button type="submit" class="btn btn-outline-light">Próxima</button>
          </div>
       </div>
    </div>
@@ -58,17 +59,15 @@ $this->end();
       }
    }
 
-   function opcoesOutrosEnableDisable(){
+   function opcoesOutrosEnableDisable() {
       var inputForRadio = document.getElementById('opcao1').checked;
       var campoParaSerAtivado = document.getElementById('opcao1Input');
-      if(inputForRadio){
+      if (inputForRadio) {
          campoParaSerAtivado.disabled = false;
-      }
-      else{
+      } else {
          campoParaSerAtivado.disabled = true;
       }
    }
-
 </script>
 
 <?= $this->end(); ?>
