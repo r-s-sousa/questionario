@@ -4,13 +4,13 @@
          <p class="card-text">
             <?= $pergunta; ?>
             <br>
-            <label class="mt-2 ml-3"><input onchange="mudou(<?= $id; ?>)" type="radio" name="q<?= $id; ?>" value="Sim"> Sim</label>
+            <label class="mt-2 ml-3"><input onchange="mudou(<?= $id; ?>)" type="radio" required name="q<?= $id; ?>" value="Sim"> Sim</label>
             <br>
-            <label class="ml-3"><input onchange="mudou(<?= $id; ?>)" type="radio" name="q<?= $id; ?>" value="Não"> Não</label>
+            <label class="ml-3"><input onchange="mudou(<?= $id; ?>)" type="radio" required name="q<?= $id; ?>" value="Não"> Não</label>
             <br>
-            <label class="ml-3"><input onchange="mudou(<?= $id; ?>)" type="radio" name="q<?= $id; ?>" value="Não sei/Não lembro"> Não sei/Não lembro</label>
+            <label class="ml-3"><input onchange="mudou(<?= $id; ?>)" type="radio" required name="q<?= $id; ?>" value="Não sei/Não lembro"> Não sei/Não lembro</label>
             <br>
-            <label class="ml-3"><input onchange="mudou(<?= $id; ?>)" type="radio" name="q<?= $id; ?>" value="Prefiro não responder"> Prefiro não responder</label>
+            <label class="ml-3"><input onchange="mudou(<?= $id; ?>)" type="radio" required name="q<?= $id; ?>" value="Prefiro não responder"> Prefiro não responder</label>
          </p>
       </div>
    </div>

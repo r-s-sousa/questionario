@@ -14,6 +14,14 @@ $this->insert('modelos/base', [
    <label class="ml-3"><input type="checkbox" name="opcoes[]" value="Incidência"> Incidência</label> <br>
    <label class="ml-3"><input type="checkbox" name="opcoes[]" value="Fatores de risco"> Fatores de risco</label> <br>
    <label class="ml-3"><input type="checkbox" name="opcoes[]" value="Determinantes sociais/culturas"> Determinantes sociais/culturas</label>
+   <label class="ml-3"><input type="checkbox" name="opcoes[]" value="Determinantes ambientas"> Determinantes ambientas</label> <br>
+   <label class="ml-3"><input type="checkbox" name="opcoes[]" value="Adequação (ex. adesão a protocolos clínicos)"> Adequação (ex. adesão a protocolos clínicos)</label> <br>
+   <label class="ml-3"><input type="checkbox" name="opcoes[]" value="Outros"> Outros <input type="text" class="form-control-sm" name="opcoesOutro"></label> <br>
+   <label class="ml-3"><input type="checkbox" name="opcoes[]" value="Não sei/Não lembro"> Não sei/Não lembro</label> <br>
+   <label class="ml-3"><input type="checkbox" name="opcoes[]" value="Incidência"> Prefiro não responder</label> <br>
    </p
    '
 ]);
+
+?>
+

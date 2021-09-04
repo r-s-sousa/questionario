@@ -25,3 +25,36 @@ $this->end();
       </div>
    </div>
 </form>
+
+<?= $this->start('scripts'); ?>
+
+<script>
+   // function mudou(id) {
+   //    if (id == 10) {
+   //       var qlForm = document.getElementById('questao10.1');
+   //       var opSelecionada = $('input[name="q10"]:checked').attr("value");
+   //    } else if (id == 11) {
+   //       var qlForm = document.getElementById('questao11.1');
+   //       var opSelecionada = $('input[name="q11"]:checked').attr("value");
+   //    }
+   //    if (opSelecionada == "Sim") {
+   //       qlForm.classList.remove('d-none');
+   //    } else {
+   //       qlForm.classList.add('d-none');
+   //    }
+   // }
+
+   function mudouRadioSecondaria(idRadio) {
+
+      var inputForRadio = document.getElementById(idRadio + "_Outro");
+      var opSelecionada = $('input[name="' + idRadio + '"]:checked').attr("value");
+
+      if (opSelecionada == "Outro") {
+         inputForRadio.disabled = false;
+      } else {
+         inputForRadio.disabled = true;
+      }
+   }
+</script>
+
+<?= $this->end(); ?>

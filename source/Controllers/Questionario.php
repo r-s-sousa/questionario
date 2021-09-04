@@ -173,6 +173,9 @@ class Questionario extends Controller
     */
    public function salvarAndProximaPergunta(array $data): void
    {
+      var_dump($data);
+      die();
+
       $data = filter_var_array($data, FILTER_SANITIZE_STRING);
       $blocoId = $data['blocoId'];
       $pagina = $data['page'];

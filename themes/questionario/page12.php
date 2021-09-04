@@ -7,7 +7,7 @@ $this->insert('modelos/primaria', [
 
 $this->insert('modelos/secondaria', [
    'id' => '36.1',
-   'pergunta' => '31.1. Se sim, liste as patentes ou marque uma das opções*?',
+   'pergunta' => '36.1. Se sim, liste as patentes ou marque uma das opções*?',
    'classe' => 'Patentes'
 ]);
 

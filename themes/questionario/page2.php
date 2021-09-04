@@ -1,16 +1,5 @@
 <?php $this->layout('modelos/layoutPergunta', ['title' => $title, 'blocoId' => $blocoId, 'page' => $page]);
 
-$this->insert('modelos/primaria', [
-   'id' => '12',
-   'pergunta' => '12. Para execução da pesquisa, foram estabelecidas parcerias com outras instituições (qualquer tipo de instituição: ex. outras universidades, secretaria de saúde municipal, secretaria de saúde estadual)*?',
-]);
-
-$this->insert('modelos/secondaria', [
-   'id' => '12.1',
-   'pergunta' => '12.1. Se sim, liste as instituições parceiras ou marque uma das opções.',
-   'classe' => 'Instituições'
-]);
-
 $this->insert('modelos/base', [
    'conteudo' => '
    <p class="card-text">

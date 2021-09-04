@@ -38,7 +38,7 @@ $this->insert('modelos/primaria', [
 $this->insert('modelos/secondaria', [
    'id' => '30.3.1',
    'pergunta' => '30.3.1. Se sim, informe os nomes dos manuais ou marque uma das opções.',
-   'classe' => 'Quantidade'
+   'classe' => 'Nomes'
 ]);
 
 $this->insert('modelos/primaria', [
@@ -59,8 +59,8 @@ $this->insert('modelos/primaria', [
 
 $this->insert('modelos/secondaria', [
    'id' => '30.5.1',
-   'pergunta' => '30.5.1. Se sim, informe os números e anos das Portarias ou marque uma das opções*. Informe a quantidade ou marque uma das opções:',
-   'classe' => 'Quantidade'
+   'pergunta' => '30.5.1. Se sim, informe os números e anos das Portarias ou marque uma das opções*.',
+   'classe' => 'Número e Anos das Portarias'
 ]);
 
 $this->insert('modelos/primaria', [
