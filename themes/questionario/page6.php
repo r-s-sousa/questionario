@@ -1,4 +1,9 @@
-<?php $this->layout('modelos/layoutPergunta', ['title' => $title, 'blocoId' => $blocoId, 'page' => $page]);
+<?php $this->layout('modelos/layoutPergunta', [
+   'title' => $title,
+   'blocoId' => $blocoId,
+   'page' => $page,
+   'subtitulo' => "As perguntas desse bloco são relacionadas às pessoas que integravam a equipe responsável pela execução da pesquisa, parcerias institucionais estabelecidas e formação de recursos humanos."
+]);
 
 $this->insert('modelos/secondaria', [
    'id' => '17',

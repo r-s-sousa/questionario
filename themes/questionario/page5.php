@@ -1,4 +1,9 @@
-<?php $this->layout('modelos/layoutPergunta', ['title' => $title, 'blocoId' => $blocoId, 'page' => $page]);
+<?php $this->layout('modelos/layoutPergunta', [
+   'title' => $title, 
+   'blocoId' => $blocoId, 
+   'page' => $page, 
+   'subtitulo' => 'As perguntas desse bloco são a respeito dos produtos/resultados gerados a partir dos resultados da pesquisa.'
+]);
 
 $this->insert('modelos/primaria', [
    'id' => '14',
@@ -32,5 +37,3 @@ $this->insert('modelos/secondaria', [
    'pergunta' => '16.1. Se sim, informe os títulos dos capítulos dos livros ou marque uma das opções*.',
    'classe' => 'Titulos'
 ]);
-
-?>

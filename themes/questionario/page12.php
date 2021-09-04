@@ -1,4 +1,8 @@
-<?php $this->layout('modelos/layoutPergunta', ['title' => $title, 'blocoId' => $blocoId, 'page' => $page]);
+<?php $this->layout('modelos/layoutPergunta', [
+   'title' => $title, 
+   'blocoId' => $blocoId, 
+   'page' => $page
+]);
 
 $this->insert('modelos/primaria', [
    'id' => '36',

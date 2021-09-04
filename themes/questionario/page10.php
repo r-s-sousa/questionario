@@ -1,4 +1,9 @@
-<?php $this->layout('modelos/layoutPergunta', ['title' => $title, 'blocoId' => $blocoId, 'page' => $page]);
+<?php $this->layout('modelos/layoutPergunta', [
+   'title' => $title, 
+   'blocoId' => $blocoId, 
+   'page' => $page,
+   'subtitulo' => "As perguntas desse são sobre a utilização dos resultados da sua pesquisa na tomada de decisão informada por evidências para a saúde, ou seja, a utilização dos resultados da pesquisa para elaboração de protocolos clínicos, manuais de saúde, políticas ou programas de saúde. "
+]);
 
 $this->insert('modelos/base', [
    'conteudo' => '

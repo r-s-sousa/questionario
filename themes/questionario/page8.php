@@ -1,4 +1,9 @@
-<?php $this->layout('modelos/layoutPergunta', ['title' => $title, 'blocoId' => $blocoId, 'page' => $page]);
+<?php $this->layout('modelos/layoutPergunta', [
+   'title' => $title, 
+   'blocoId' => $blocoId, 
+   'page' => $page,
+   'subtitulo' => "As perguntas desse bloco são a respeito da sua participação ou de outros membros da equipe em eventos científicos (congressos, fóruns, simpósios, oficinas, seminários etc.) para divulgação dos resultados da sua pesquisa."
+]);
 
 $this->insert('modelos/primaria', [
    'id' => '26',

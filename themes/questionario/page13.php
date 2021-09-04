@@ -1,4 +1,9 @@
-<?php $this->layout('modelos/layoutPergunta', ['title' => $title, 'blocoId' => $blocoId, 'page' => $page]);
+<?php $this->layout('modelos/layoutPergunta', [
+   'title' => $title, 
+   'blocoId' => $blocoId, 
+   'page' => $page,
+   'subtitulo' => "As perguntas desse bloco são a respeito dos impactos da pesquisa na saúde da população."
+]);
 
 $this->insert('modelos/primaria', [
    'id' => '38',

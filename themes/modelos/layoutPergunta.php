@@ -11,8 +11,11 @@ $this->end();
 
    <div class="container bg-white rounded">
       <div class="row pt-3">
-         <div class="col-md-12 text-left">
-            <h2 class="text-center"><?= $title; ?></h2>
+         <div class="col-md-12 text-center">
+            <h2><?= $title; ?></h2>
+            <?php if (isset($subtitulo)) : ?>
+               <h5><?= $subtitulo; ?></h5>
+            <?php endif; ?>
          </div>
       </div>
 

@@ -6,7 +6,7 @@
             <?= $pergunta; ?>
             <br>
             <?php 
-               if(!isset($grande)):
+               if(isset($grande)):
             ?>
             <label class="ml-3"><input onchange="mudouRadioSecondaria('q<?= $id; ?>')" type="radio"  required name="q<?= $id; ?>"  value="Outro"> <?= $classe ?>: </label>
             <textarea class="form-control ml-3" name="q<?= $id; ?>_Outro" id="q<?= $id; ?>_Outro" rows="5" required disabled></textarea>
