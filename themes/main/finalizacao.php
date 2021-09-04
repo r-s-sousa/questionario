@@ -5,6 +5,7 @@
 $this->start('navbar');
 $this->insert('main/partials/navbar');
 $this->end();
+if(isset($_SESSION['userId'])) unset($_SESSION['userId']);
 ?>
 <!-- END_HEADER -->
 

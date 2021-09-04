@@ -160,7 +160,10 @@ class Web extends Controller
     * @return void
     */
    public function recebeDadosUsuario(array $data): void
-   {
+   {  
+      // Deleta a sessão do usuário sempre que cria um novo formulário
+      unset($_SESSION['userId']);
+
       // Recebe o DAO obDado a partir do que foi passado no formulário
       $obDado = (new DadoHelper($data))->getObDado();
 
