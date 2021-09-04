@@ -33,7 +33,7 @@ $this->insert('modelos/secondaria', [
 ]);
 
 $this->insert('modelos/secondaria', [
-   'id' => '22.1',
+   'id' => '22.2',
    'pergunta' => '22.2. Quantos Trabalhos de Conclusão de Curso foram produzidos*? Informe a quantidade ou marque uma das opções.',
    'classe' => 'Quantidade'
 ]);
