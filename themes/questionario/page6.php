@@ -8,7 +8,8 @@
 $this->insert('modelos/secondaria', [
    'id' => '17',
    'pergunta' => '17. Quantos pessoas faziam parte da equipe de pesquisa*? Informe a quantidade ou marque uma das opções.',
-   'classe' => 'Quantidade'
+   'classe' => 'Quantidade',
+   'mostrarSecondaria' => true
 ]);
 
 $this->insert('modelos/primaria', [

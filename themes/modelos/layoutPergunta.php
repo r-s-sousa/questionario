@@ -63,8 +63,8 @@ $this->end();
          var qlForm = $('#questao19_1');
          var opSelecionada = $('input[name="q19"]:checked').attr("value");
       } else if (id == 20) {
-         var qlForm = $('#questao19_1');
-         var opSelecionada = $('input[name="q19"]:checked').attr("value");
+         var qlForm = $('#questao20_1');
+         var opSelecionada = $('input[name="q20"]:checked').attr("value");
       } else if (id == 21) {
          var qlForm = $('#questao21_1');
          var qlForm2 = $('#questao21_2');
@@ -129,7 +129,7 @@ $this->end();
 
       if (opSelecionada == "Sim") {
          $(qlForm).find("*").prop('disabled', false);
-         if(qlForm2!=undefined){
+         if(qlForm2!=null){
             $(qlForm2).find("*").prop('disabled', false);
             qlForm2.removeClass('d-none');   
          }
@@ -137,7 +137,7 @@ $this->end();
          
       } else {
          $(qlForm).find("*").prop('disabled', true);
-         if(qlForm2!=undefined){
+         if(qlForm2!=null){
             $(qlForm2).find("*").prop('disabled', true);
             qlForm2.addClass('d-none');
          }
