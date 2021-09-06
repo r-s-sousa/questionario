@@ -14,10 +14,6 @@ use CoffeeCode\Router\Router;
 // INCLUI O AUTOLOAD
 require __DIR__ . "/vendor/autoload.php";
 
-$emailOb = new Email('Gabriela', 'rafael_sousa2018@outlook.com', 'rafael', 'titulo', '<h1>email</h1>');
-var_dump($emailOb->sendEmail(1));
-die();
-
 // NOVO OBJ DO TIPO ROUTER
 $router = new Router(URL);
 

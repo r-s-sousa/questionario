@@ -33,9 +33,6 @@ $this->end();
 <?= $this->start('scripts'); ?>
 
 <script>
-   var qlForm = $('#questao14_1');
-   console.log(qlForm);
-
    function mudou(id) {
       if (id == 10) {
          var qlForm = $('#questao10_1');
@@ -125,6 +122,21 @@ $this->end();
       } else if (id == 30_9) {
          var qlForm = $('#questao30_9_1');
          var opSelecionada = $('input[name="q30_9"]:checked').attr("value");
+      } else if (id == 31) {
+         var qlForm = $('#questao31_1');
+         var opSelecionada = $('input[name="q31"]:checked').attr("value");
+      } else if (id == 34) {
+         var qlForm = $('#questao34_1');
+         var opSelecionada = $('input[name="q34"]:checked').attr("value");
+      } else if (id == 35) {
+         var qlForm = $('#questao35_1');
+         var opSelecionada = $('input[name="q35"]:checked').attr("value");
+      }  else if (id == 36) {
+         var qlForm = $('#questao36_1');
+         var opSelecionada = $('input[name="q36"]:checked').attr("value");
+      } else if (id == 37) {
+         var qlForm = $('#questao37_1');
+         var opSelecionada = $('input[name="q37"]:checked').attr("value");
       }
 
       if (opSelecionada == "Sim") {
