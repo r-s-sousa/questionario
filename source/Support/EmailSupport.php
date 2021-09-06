@@ -65,10 +65,22 @@ class EmailSupport
       $questoesForPdf = [];
 
       foreach ($questoes as $pergunta => $resposta) {
-         $textoPergunta = (new Pergunta)->find('id = :id', "id=$pergunta")->fetch()->pergunta;
-         $textoPergunta = explode(" ", $textoPergunta);
-         $textoPergunta[0] = $textoPergunta[0] . " - ";
-         $textoPergunta = implode(" ", $textoPergunta);
+         $perguntaSplitada = explode("_", $pergunta);
+
+         if ($perguntaSplitada[count($perguntaSplitada) - 1] == "Outro")
+            $pergunta = str_replace('_Outro', "", $pergunta);
+
+         $textoPergunta = (new Pergunta)->find('id = :id', "id=$pergunta")->fetch();
+
+         if ($textoPergunta) {
+            $textoPergunta = $textoPergunta->pergunta;
+            $textoPergunta = explode(" ", $textoPergunta);
+            $textoPergunta[0] = $textoPergunta[0] . " - ";
+            $textoPergunta = implode(" ", $textoPergunta);
+         } else {
+            $textoPergunta = $pergunta . " - ";
+         }
+
          $textoResposta = $resposta['resposta'];
          $questoesForPdf[] = $textoPergunta . "<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>R:" . $textoResposta . "</b>";
       }

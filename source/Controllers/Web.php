@@ -84,12 +84,12 @@ class Web extends Controller
 
          // mensagem a informar para Gabriela que questionário foi finalizado
          EmailSupport::enviaEmailParaCliente($obPesquisador);
-         
+
          // mensagem a ser enviada para Pesquisador
          EmailSupport::enviaEmailParaPesquisador($obPesquisador, $obRespostas, $this->view);
 
          // Deleta a sessão do pesquisador
-         //unset($_SESSION['userId']);
+         unset($_SESSION['userId']);
       }
 
       echo $this->view->render('main/finalizacao', [
