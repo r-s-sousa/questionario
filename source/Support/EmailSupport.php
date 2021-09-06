@@ -4,7 +4,6 @@ namespace Source\Support;
 
 use Source\Models\Dado;
 use Source\Models\Pergunta;
-use Source\Models\Resposta;
 use Dompdf\Dompdf;
 
 /**
@@ -20,9 +19,8 @@ class EmailSupport
     */
    public static function enviaEmailParaCliente(Dado $obPesquisador): void
    {
-      // mensagem a ser enviada para Gabriela
       $mensagem = "O pesquisador <b>$obPesquisador->nome</b> acabou de responder o questionário!";
-      $email = new Email('Questionário', 'rafael_sousa2018@outlook.com', 'Rafael Sousa', 'Uma pessoa terminou de responder o questionário', $mensagem);
+      $email = new Email('Questionário', $_ENV['EMAILFROM'], $_ENV['EMAILNOME'], 'Uma pessoa terminou de responder o questionário', $mensagem);
       $email->sendEmail();
    }
 
@@ -33,7 +31,7 @@ class EmailSupport
     * @param array $obRespostas
     * @return void
     */
-   public static function enviaEmailParPesquisador(Dado $obPesquisador, array $obRespostas, $view): void
+   public static function enviaEmailParaPesquisador(Dado $obPesquisador, array $obRespostas, $view): void
    {
       $questoes = (new Respostas($obRespostas))->simplificarDadosRespostas();
       $questoesForPdf = self::getQuestoesWithPerguntas($questoes);
@@ -45,17 +43,15 @@ class EmailSupport
 
       // Envia email nesse momento
       $email = new Email(
-         'Gabriela',
+         $_ENV['EMAILNOME'],
          $obPesquisador->email,
          $obPesquisador->nome,
          'Questionário',
          'Segue em anexo PDF com o questionário respondido',
-         '',
          [dirname(__DIR__, 2) . "/themes/assets/questoes/questionario-$obPesquisador->id.pdf"]
       );
 
       $email->sendEmail();
-      die();
    }
 
    /**

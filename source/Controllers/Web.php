@@ -83,10 +83,11 @@ class Web extends Controller
          $obRespostas = (new Resposta)->find('idUsuario = :iu', "iu=$obPesquisador->id")->order('page')->fetch(true);
 
          // mensagem a informar para Gabriela que questionário foi finalizado
-         //EmailSupport::enviaEmailParaCliente($obPesquisador);
+         EmailSupport::enviaEmailParaCliente($obPesquisador);
+
          // mensagem a ser enviada para Pesquisador
-         EmailSupport::enviaEmailParPesquisador($obPesquisador, $obRespostas, $this->view);
-         die();
+         EmailSupport::enviaEmailParaPesquisador($obPesquisador, $obRespostas, $this->view);
+
          // Deleta a sessão do pesquisador
          unset($_SESSION['userId']);
       }

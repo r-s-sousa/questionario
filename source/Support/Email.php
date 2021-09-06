@@ -85,10 +85,11 @@ class Email
     * @param string $fromName Nome que irá aparecer na caixa de quem recebeu
     * @param string $toEmail Endereço de Email do destinatário
     * @param string $toName Nome do destinatário
-    * @param string $message Mensagem 
+    * @param string $title
+    * @param string $messageHtml
     * @param array $attachs Arquivos a serem enviados
     */
-   public function __construct($fromName, $toEmail, $toName, $title, $messageHtml, $messageText = '', $attachs = [])
+   public function __construct($fromName, $toEmail, $toName, $title, $messageHtml, $attachs = [])
    {
       // CONSTANTES DE CONFIGURAÇÃO DA CLASSE
       $this->fromEmail = 'alunodiferenciado@hotmail.com';
@@ -101,7 +102,6 @@ class Email
       $this->toName = $toName;
       $this->toEmail = $toEmail;
       $this->messageHtml = $messageHtml;
-      $this->messageText = $messageText;
       $this->attachs = $attachs;
 
       $this->setObjMail();
