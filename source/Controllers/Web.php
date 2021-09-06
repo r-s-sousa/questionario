@@ -4,8 +4,10 @@ namespace Source\Controllers;
 
 use CoffeeCode\Router\Router;
 use Source\Models\Dado;
+use Source\Models\Resposta;
 use Source\Support\DadoHelper;
 use Source\Support\Email;
+use Source\Support\EmailSupport;
 
 /**
  * Controlador das rotas iniciais
@@ -77,13 +79,14 @@ class Web extends Controller
 
          // Dados do pesquisador
          $obPesquisador = (new Dado)->find('id = :id', "id=$id")->fetch();
+         // Dados das respostas do pesquisador
+         $obRespostas = (new Resposta)->find('idUsuario = :iu', "iu=$obPesquisador->id")->fetch(true);
 
-         // mensagem a ser enviada
-         $mensagem = "O pesquisador <b>$obPesquisador->nome</b> acabou de responder o questionário!";
-         $email = new Email('Questionário', 'rafael_sousa2018@outlook.com', 'Rafael Sousa', 'Uma pessoa terminou de responder o questionário', $mensagem);
-         var_dump($email->sendEmail());
+         // mensagem a informar para Gabriela que questionário foi finalizado
+         //EmailSupport::enviaEmailParaCliente($obPesquisador);
+         // mensagem a ser enviada para Pesquisador
+         EmailSupport::enviaEmailParPesquisador($obPesquisador, $obRespostas);
          die();
-
          // Deleta a sessão do pesquisador
          unset($_SESSION['userId']);
       }

@@ -12,6 +12,7 @@ $this->insert('modelos/primaria', [
 
 $this->insert('modelos/base', [
    'conteudo' => '
+   <div class="d-none" id="questao39">
    <p class="card-text">
    39 Se sim, assinale as opções nas quais a pesquisa gerou impacto*:
    <br>
@@ -25,6 +26,7 @@ $this->insert('modelos/base', [
    <label class="ml-3"><input type="checkbox" name="opcoes[]" value="Não sei/Não lembro"> Não sei/Não lembro</label> <br>
    <label class="ml-3"><input type="checkbox" name="opcoes[]" value="Incidência"> Prefiro não responder</label> <br>
    </p
+   </div>
    '
 ]);
 

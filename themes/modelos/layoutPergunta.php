@@ -137,6 +137,9 @@ $this->end();
       } else if (id == 37) {
          var qlForm = $('#questao37_1');
          var opSelecionada = $('input[name="q37"]:checked').attr("value");
+      } else if (id == 38) {
+         var qlForm = $('#questao39');
+         var opSelecionada = $('input[name="q38"]:checked').attr("value");
       }
 
       if (opSelecionada == "Sim") {
