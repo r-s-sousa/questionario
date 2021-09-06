@@ -127,12 +127,12 @@ class Email
       $this->mailObj->Password = $this->fromPass;
 
       $this->setAttachs();
-      $this->mailObj->setFrom($this->fromEmail, $this->fromName);
+      $this->mailObj->setFrom($this->fromEmail, utf8_decode($this->fromName));
       $this->mailObj->addReplyTo($this->fromEmail, $this->fromName);
 
       $this->mailObj->addAddress($this->toEmail, $this->toName);
 
-      $this->mailObj->Subject = $this->title;
+      $this->mailObj->Subject = utf8_decode($this->title);
       // $this->mailObj->msgHTML($this->messageHtml);
       $this->mailObj->Body = utf8_decode($this->messageHtml);
    }

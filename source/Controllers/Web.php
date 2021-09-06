@@ -3,7 +3,9 @@
 namespace Source\Controllers;
 
 use CoffeeCode\Router\Router;
+use Source\Models\Dado;
 use Source\Support\DadoHelper;
+use Source\Support\Email;
 
 /**
  * Controlador das rotas iniciais
@@ -69,6 +71,23 @@ class Web extends Controller
     */
    public function finalizarPesquisa(): void
    {
+      // Enviar email nesse momento caso a pessoa tenha terminado a pesquisa
+      if (isset($_SESSION['userId'])) {
+         $id = $_SESSION['userId'];
+
+         // Dados do pesquisador
+         $obPesquisador = (new Dado)->find('id = :id', "id=$id")->fetch();
+
+         // mensagem a ser enviada
+         $mensagem = "O pesquisador <b>$obPesquisador->nome</b> acabou de responder o questionário!";
+         $email = new Email('Questionário', 'rafael_sousa2018@outlook.com', 'Rafael Sousa', 'Uma pessoa terminou de responder o questionário', $mensagem);
+         var_dump($email->sendEmail());
+         die();
+
+         // Deleta a sessão do pesquisador
+         unset($_SESSION['userId']);
+      }
+
       echo $this->view->render('main/finalizacao', [
          'title' => "Página final"
       ]);
@@ -160,7 +179,7 @@ class Web extends Controller
     * @return void
     */
    public function recebeDadosUsuario(array $data): void
-   {  
+   {
       // Deleta a sessão do usuário sempre que cria um novo formulário
       unset($_SESSION['userId']);
 
@@ -190,5 +209,4 @@ class Web extends Controller
    {
       echo "questionário aqui!";
    }
-   
 }
