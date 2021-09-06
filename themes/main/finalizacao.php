@@ -5,7 +5,6 @@
 $this->start('navbar');
 $this->insert('main/partials/navbar');
 $this->end();
-
 ?>
 <!-- END_HEADER -->
 
