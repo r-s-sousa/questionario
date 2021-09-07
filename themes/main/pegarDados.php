@@ -47,15 +47,5 @@ $this->end();
 </div>
 
 <?php $this->start('scripts'); ?>
-
-<!-- Mascarador de inputs -->
 <script src="<?= asset('js/masked.js'); ?>"></script>
-
-<!-- deixa o home active -->
-<script>
-   $(document).ready(function() {
-      document.getElementById('home').classList.add('active');
-   });
-</script>
-
 <?php $this->stop(); ?>
