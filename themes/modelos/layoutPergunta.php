@@ -31,5 +31,34 @@ $this->end();
 </form>
 
 <?= $this->start('scripts'); ?>
+
+<script>
+   $.ajax({
+      url: '<?= $router->route('questionario.getRespostas'); ?>',
+      dataType: 'json',
+      method: 'GET',
+   }).done(function(result) {
+      definirRespostas(result);
+   })
+
+   function getNamesRadios(){
+      var radios = ($('.radio'));
+      var names = [];
+      
+      for (radio of radios) {
+         names[radio.name] = radio.name;
+      }
+
+      return names;
+   }
+
+   function definirRespostas(respostas) {
+      console.log(respostas);
+      var radios = getNamesRadios();
+      for (nameRadio in radios) {
+         console.log(respostas[nameRadio]['resposta']);
+      }
+   }
+</script>
 <script src="<?= asset('js/layoutPergunta.js'); ?>"></script>
 <?= $this->end(); ?>

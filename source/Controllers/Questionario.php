@@ -4,6 +4,7 @@ namespace Source\Controllers;
 
 use CoffeeCode\Router\Router;
 use Source\Models\Resposta;
+use Source\Support\Respostas;
 
 /**
  * Controlador do Questionário
@@ -26,6 +27,17 @@ class Questionario extends Controller
       }
    }
 
+
+   public function getRespostas()
+   {
+      $respostasFormatadas = null;
+      $obRespostas = (new Resposta)->find('idUsuario = :iu', "iu={$_SESSION['userId']}")->fetch(true);
+      if(is_array($obRespostas)) $respostasFormatadas = (new Respostas($obRespostas))->simplificarDadosRespostas();
+      echo json_encode($respostasFormatadas);
+      return;
+   }
+   
+
    /**
     * Página inicial dos questionário
     *
@@ -34,6 +46,14 @@ class Questionario extends Controller
    public function inicio(): void
    {
       echo $this->view->render("questionario/inicio", ['title' => "Questionário"]);
+   }
+
+   private function getResposForPages(int $page){
+      $respostasFormatadas = null;
+      $obRespostas = (new Resposta)->find('idUsuario = :iu && page = :page', "iu={$_SESSION['userId']}&page=$page")->fetch(true);
+      if(is_array($obRespostas)) $respostasFormatadas = (new Respostas($obRespostas))->simplificarDadosRespostas();
+
+      return $respostasFormatadas;
    }
 
    /**
@@ -50,7 +70,8 @@ class Questionario extends Controller
             echo $this->view->render("questionario/page1", [
                'title' => "BLOCO I – INFORMAÇÕES GERAIS",
                'page' => '1',
-               'blocoId' => '1'
+               'blocoId' => '1',
+               'respostas' => $this->getResposForPages(1)
             ]);
             break;
 
@@ -58,7 +79,8 @@ class Questionario extends Controller
             echo $this->view->render("questionario/page2", [
                'title' => "BLOCO I – INFORMAÇÕES GERAIS",
                'page' => '2',
-               'blocoId' => '1'
+               'blocoId' => '1',
+               'respostas' => $this->getResposForPages(2)
             ]);
             break;
 
@@ -66,7 +88,8 @@ class Questionario extends Controller
             echo $this->view->render("questionario/page3", [
                'title' => "BLOCO I – INFORMAÇÕES GERAIS",
                'page' => '3',
-               'blocoId' => '1'
+               'blocoId' => '1',
+               'respostas' => $this->getResposForPages(3)
             ]);
             break;
 
@@ -74,7 +97,8 @@ class Questionario extends Controller
             echo $this->view->render("questionario/page4", [
                'title' => "BLOCO I – INFORMAÇÕES GERAIS",
                'page' => '4',
-               'blocoId' => '1'
+               'blocoId' => '1',
+               'respostas' => $this->getResposForPages(4)
             ]);
             break;
 
@@ -82,7 +106,8 @@ class Questionario extends Controller
             echo $this->view->render("questionario/page5", [
                'title' => "BLOCO II – AVANÇOS DO CONHECIMENTO",
                'page' => '5',
-               'blocoId' => '2'
+               'blocoId' => '2',
+               'respostas' => $this->getResposForPages(5)
             ]);
             break;
 
@@ -90,7 +115,8 @@ class Questionario extends Controller
             echo $this->view->render("questionario/page6", [
                'title' => "BLOCO III – EQUIPE DA PESQUISA",
                'page' => '6',
-               'blocoId' => '3'
+               'blocoId' => '3',
+               'respostas' => $this->getResposForPages(6)
             ]);
             break;
 
@@ -98,7 +124,8 @@ class Questionario extends Controller
             echo $this->view->render("questionario/page7", [
                'title' => "BLOCO III – EQUIPE DA PESQUISA",
                'page' => '7',
-               'blocoId' => '3'
+               'blocoId' => '3',
+               'respostas' => $this->getResposForPages(7)
             ]);
             break;
 
@@ -106,7 +133,8 @@ class Questionario extends Controller
             echo $this->view->render("questionario/page8", [
                'title' => "BLOCO IV – DIVULGAÇÃO DA PESQUISA",
                'page' => '8',
-               'blocoId' => '4'
+               'blocoId' => '4',
+               'respostas' => $this->getResposForPages(8)
             ]);
             break;
 
@@ -114,7 +142,8 @@ class Questionario extends Controller
             echo $this->view->render("questionario/page9", [
                'title' => "BLOCO IV – DIVULGAÇÃO DA PESQUISA",
                'page' => '9',
-               'blocoId' => '4'
+               'blocoId' => '4',
+               'respostas' => $this->getResposForPages(9)
             ]);
             break;
 
@@ -122,7 +151,8 @@ class Questionario extends Controller
             echo $this->view->render("questionario/page10", [
                'title' => "BLOCO V – TOMADA DE DECISÃO INFORMADA",
                'page' => '10',
-               'blocoId' => '5'
+               'blocoId' => '5',
+               'respostas' => $this->getResposForPages(10)
             ]);
             break;
 
@@ -130,7 +160,8 @@ class Questionario extends Controller
             echo $this->view->render("questionario/page11", [
                'title' => "BLOCO V – TOMADA DE DECISÃO INFORMADA",
                'page' => '11',
-               'blocoId' => '5'
+               'blocoId' => '5',
+               'respostas' => $this->getResposForPages(11)
             ]);
             break;
 
@@ -138,7 +169,8 @@ class Questionario extends Controller
             echo $this->view->render("questionario/page12", [
                'title' => "BLOCO V – TOMADA DE DECISÃO INFORMADA",
                'page' => '12',
-               'blocoId' => '5'
+               'blocoId' => '5',
+               'respostas' => $this->getResposForPages(12)
             ]);
             break;
 
@@ -146,7 +178,8 @@ class Questionario extends Controller
             echo $this->view->render("questionario/page13", [
                'title' => "BLOCO VI – IMPACTOS NA SAÚDE",
                'page' => '13',
-               'blocoId' => '5'
+               'blocoId' => '5',
+               'respostas' => $this->getResposForPages(13)
             ]);
             break;
             

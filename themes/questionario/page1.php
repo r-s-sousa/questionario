@@ -40,7 +40,7 @@ $this->insert('modelos/base', [
 $this->insert('modelos/base', [
    'conteudo' => '
    <p class="card-text">
-      3. Principal Subárea de Atuação: <input class="form-control-sm" type="text" name="q3" required>
+      3. Principal Subárea de Atuação: <input class="form-control-sm" type="text" name="q3" value="'.$respostas['q3']['resposta'].'" required>
    </p>
    '
 ]);
@@ -54,3 +54,10 @@ $this->insert('modelos/base', [
 // ]);
 ?>
 
+<?php $this->start('scriptsSecondarios'); ?>
+<script>
+   $(document).ready(function(){
+      $("input[name=q2][value='<?= $respostas['q2']['resposta']; ?>']").prop('checked', true);
+   })
+</script>
+<?php $this->end();?>

@@ -8,6 +8,7 @@
 $router->get("/questionario", "Questionario:inicio", "questionario.inicio");
 $router->get("/questoes/page/{page}", "Questionario:bloco", "questionario.bloco");
 
+$router->get("/respostas", "Questionario:getRespostas", "questionario.getRespostas");
 
 
 /**

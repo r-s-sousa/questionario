@@ -21,7 +21,7 @@ $this->insert('modelos/base', [
 $this->insert('modelos/base', [
    'conteudo' => '
    <p class="card-text">
-      6. Título da pesquisa*: <input class="form-control-sm" type="text" name="q6" required>
+      6. Título da pesquisa*: <input class="form-control-sm" type="text" name="q6" value="'.$respostas['q6']['resposta'].'" required>
    </p>
    '
 ]);
@@ -29,7 +29,7 @@ $this->insert('modelos/base', [
 $this->insert('modelos/base', [
    'conteudo' => '
    <p class="card-text">
-      7. Data de início da pesquisa: <input class="form-control-sm" type="date" name="q7">
+      7. Data de início da pesquisa: <input class="form-control-sm" type="date" name="q7" value="'.$respostas['q7']['resposta'].'">
    </p>
    '
 ]);
@@ -37,7 +37,17 @@ $this->insert('modelos/base', [
 $this->insert('modelos/base', [
    'conteudo' => '
    <p class="card-text">
-      8. Data de término da pesquisa: <input class="form-control-sm" type="date" name="q8">
+      8. Data de término da pesquisa: <input class="form-control-sm" type="date" name="q8" value="'.$respostas['q8']['resposta'].'">
    </p>
    '
 ]);
+
+?>
+
+<?php $this->start('scriptsSecondarios'); ?>
+<script>
+   $(document).ready(function(){
+      $("input[name=q5][value='<?= $respostas['q5']['resposta']; ?>']").prop('checked', true);
+   })
+</script>
+<?php $this->end();?>
