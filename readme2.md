@@ -13,6 +13,7 @@
 - Agradecimentos
 
 ### Funcionalidades
+- Responsividade para todos aparelhos
 - Validação dos campos de cadastro de pesquisador
 - Condicionais iniciais
 - Condicionais nas questões, criando assim árvores de decisões
@@ -28,8 +29,6 @@
 - Todos campos para entrada de valores dinâmicos são tratados antes de salvos no banco de dados
 - Todas as rotas (links) são cadastradas, para previnir de Web Scraper e mal navegação do usuário
 - Somente os pesquisadores que preencherem o formulário inicial do cadastro, poderá acessar as questões
-
-
 
 ## Gestor de Questionário
 
