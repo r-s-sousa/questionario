@@ -101,6 +101,7 @@ class EmailSupport
       $dompdf = new Dompdf();
       $html = mb_convert_encoding($html, 'HTML-ENTITIES', 'UTF-8');
       $dompdf->loadHtml($html);
+      
       // Render the HTML as PDF
       $dompdf->render();
 
