@@ -8,12 +8,6 @@ $this->end();
 ?>
 <!-- END_HEADER -->
 
-<?= $this->start('styles'); ?>
-<style>
-
-</style>
-<?= $this->end(); ?>
-
 <div class="container bg-white rounded-top">
    <div class="row pt-3 pb-3">
       <div class="col-md-12">
@@ -69,11 +63,3 @@ $this->end();
       </div>
    </div>
 </div>
-
-<!-- FOOTER -->
-<?php
-// $this->start('footer');
-// $this->insert('main/partials/footer');
-// $this->end();
-?>
-<!-- END_FOOTER -->

@@ -60,22 +60,3 @@ $this->end();
       </div>
    </div>
 </div>
-
-<!-- FOOTER -->
-<?php
-// $this->start('footer');
-// $this->insert('main/partials/footer');
-// $this->end();
-?>
-<!-- END_FOOTER -->
-
-<?php $this->start('scripts'); ?>
-
-<script>
-   $(document).ready(function() {
-      document.getElementById('home').classList.add('active');
-      // $('#footerTermos').addClass('fixed-bottom');
-   });
-</script>
-
-<?php $this->stop(); ?>

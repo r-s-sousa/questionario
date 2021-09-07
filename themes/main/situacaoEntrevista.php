@@ -8,12 +8,6 @@ $this->end();
 ?>
 <!-- END_HEADER -->
 
-<?= $this->start('styles'); ?>
-<style>
-
-</style>
-<?= $this->end(); ?>
-
 <div class="container bg-white rounded-top">
    <div class="row pt-3 pb-3">
       <div class="col-md-12 text-center">
@@ -54,13 +48,3 @@ $this->end();
       </div>
    </div>
 </div>
-
-<?php $this->start('scripts'); ?>
-
-<script>
-   $(document).ready(function() {
-      document.getElementById('home').classList.add('active');
-   });
-</script>
-
-<?php $this->stop(); ?>

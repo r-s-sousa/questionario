@@ -64,7 +64,6 @@ $this->end();
       $('#termo1').removeClass('d-none');
       $('#btnConsentimento').addClass('bg-secondary');
       $('#btnImagemSom').removeClass('bg-secondary');
-      // $('#footerTermos').removeClass('fixed-bottom');
    }
 
    function termoUsoDeImagem() {
@@ -73,15 +72,6 @@ $this->end();
       $('#termo2').removeClass('d-none');
       $('#btnImagemSom').addClass('bg-secondary');
       $('#btnConsentimento').removeClass('bg-secondary');
-      // $('#footerTermos').addClass('fixed-bottom');
    }
 </script>
 <?= $this->end(); ?>
-
-<!-- FOOTER -->
-<?php
-// $this->start('footer');
-// $this->insert('main/partials/footer_termos');
-// $this->end();
-?>
-<!-- END_FOOTER -->
