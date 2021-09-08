@@ -12,13 +12,12 @@
                if (isset($grande)) :
                ?>
                   <label class="ml-3"><input onchange="mudouRadioSecondaria('q<?= $id; ?>')" type="radio" name="q<?= $id; ?>" value="Outro" checked> <?= $classe ?>: </label>
-                  <textarea class="form-control ml-3" name="q<?= $id; ?>_Outro" id="q<?= $id; ?>_Outro" rows="5" required></textarea>
-
+                  <textarea class="form-control ml-3" name="q<?= $id; ?>_Outro" id="q<?= $id; ?>_Outro" rows="5" va required> <?= $respostas["q".$id."_Outro"]['resposta']; ?> </textarea>
                <?php
                else :
                ?>
                   <label class="ml-3"><input onchange="mudouRadioSecondaria('q<?= $id; ?>')" type="radio" name="q<?= $id; ?>" value="Outro" checked> <?= $classe ?>:
-                     <input type="text" class="form-control-sm" name="q<?= $id; ?>_Outro" id="q<?= $id; ?>_Outro" required></label>
+                  <input type="text" class="form-control-sm" name="q<?= $id; ?>_Outro" id="q<?= $id; ?>_Outro" value="<?= $respostas["q".$id."_Outro"]['resposta']; ?>" required></label>
                <?php
                endif;
                ?>
@@ -29,4 +28,4 @@
             </p>
          </div>
       </div>
-   </div>
+      </div>

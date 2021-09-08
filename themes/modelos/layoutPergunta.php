@@ -33,18 +33,20 @@ $this->end();
 <?= $this->start('scripts'); ?>
 
 <script>
-   $.ajax({
-      url: '<?= $router->route('questionario.getRespostas'); ?>',
-      dataType: 'json',
-      method: 'GET',
-   }).done(function(result) {
-      definirRespostas(result);
-   })
+   $(document).ready(function() {
+      $.ajax({
+         url: '<?= $router->route('questionario.getRespostas'); ?>',
+         dataType: 'json',
+         method: 'GET',
+      }).done(function(result) {
+         definirRespostas(result);
+      })
+   });
 
-   function getNamesRadios(){
+   function getNamesRadios() {
       var radios = ($('.radio'));
       var names = [];
-      
+
       for (radio of radios) {
          names[radio.name] = radio.name;
       }
@@ -53,10 +55,14 @@ $this->end();
    }
 
    function definirRespostas(respostas) {
-      console.log(respostas);
+      //console.log(respostas);
       var radios = getNamesRadios();
+
       for (nameRadio in radios) {
-         console.log(respostas[nameRadio]['resposta']);
+         if (respostas[nameRadio]['resposta']) {
+            $("input[name=" + nameRadio + "][value='" + respostas[nameRadio]['resposta'] + "']").trigger('click');
+            $("input[name=" + nameRadio + "][value='" + respostas[nameRadio]['resposta'] + "']").prop('checked', true);
+         }
       }
    }
 </script>
