@@ -44,7 +44,7 @@ class Respostas
             if ($key == 'blocoId')  continue;
             if ($key == 'page')  continue;
             if ($key == "opcoes") $respostaDaFila = implode(",", $respostaDaFila);
-            if ($respostaDaFila == "Outro") continue;
+            //if ($respostaDaFila == "Outro") continue;
             // Caso a resposta secondaria, seja outro, aparece apenas o valor digitado pelo usuário
             if (count(explode('_', $key)) > 1) {
                $keySeparada = explode('_', $key);

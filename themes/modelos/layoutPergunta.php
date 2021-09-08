@@ -46,9 +46,15 @@ $this->end();
 
    function getNamesRadios() {
       var radios = ($('.radio'));
+      var radios2 = ($('.radio2'));
+
       var names = [];
 
       for (radio of radios) {
+         names[radio.name] = radio.name;
+      }
+
+      for (radio of radios2) {
          names[radio.name] = radio.name;
       }
 
