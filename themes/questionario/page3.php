@@ -15,7 +15,6 @@ $this->insert('modelos/secondaria', [
 $this->insert('modelos/primaria', [
    'id' => '10',
    'pergunta' => '10. A pesquisa teve outras fontes de financiamento*?',
-   'respostas' => $respostas
 ]);
 
 $this->insert('modelos/secondaria', [
@@ -28,7 +27,6 @@ $this->insert('modelos/secondaria', [
 $this->insert('modelos/primaria', [
    'id' => '11',
    'pergunta' => '11. A partir dos resultados da sua pesquisa, foi possível o início de outras pesquisas que também receberam financiamento*?',
-   'respostas' => $respostas
 ]);
 
 $this->insert('modelos/secondaria', [

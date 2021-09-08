@@ -12,7 +12,8 @@ $this->insert('modelos/primaria', [
 $this->insert('modelos/secondaria', [
    'id' => '28_1',
    'pergunta' => '28.1. Se sim, informe a quantidade ou marque uma das opções.',
-   'classe' => 'Quantidade'
+   'classe' => 'Quantidade',
+   'respostas' => $respostas
 ]);
 
 $this->insert('modelos/primaria', [
@@ -23,5 +24,6 @@ $this->insert('modelos/primaria', [
 $this->insert('modelos/secondaria', [
    'id' => '29_1',
    'pergunta' => '29.1. Se sim, informe a quantidade, ou marque uma das opções:',
-   'classe' => 'Quantidade'
+   'classe' => 'Quantidade',
+   'respostas' => $respostas
 ]);

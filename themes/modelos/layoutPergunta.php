@@ -23,7 +23,8 @@ $this->end();
 
       <div class="row mt-4 bg-secondary">
          <div class="col-12 mt-3 mb-3 text-center text-white">
-            <input class="btn btn-outline-light mr-4" action="action" onclick="window.history.go(-1); return false;" type="submit" value="Anterior">
+            <!-- <input class="btn btn-outline-light mr-4" action="action" onclick="window.history.go(-1); return false;" type="submit" value="Anterior"> -->
+            <a href="<?= $router->route('questionario.voltarPagina', ['page'=>$page]); ?>" class="btn btn-outline-light mr-4">Anterior</a>
             <button type="submit" class="btn btn-outline-light">Próxima</button>
          </div>
       </div>

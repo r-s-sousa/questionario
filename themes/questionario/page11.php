@@ -13,7 +13,8 @@ $this->insert('modelos/secondaria', [
    'id' => '31_1',
    'pergunta' => '31.1. Se sim, liste as consultorias realizadas ou marque uma das opções*.',
    'classe' => 'Consultorias',
-   'grande' => true
+   'grande' => true,
+   'respostas' => $respostas
 ]);
 
 $this->insert('modelos/primaria', [
@@ -35,7 +36,8 @@ $this->insert('modelos/secondaria', [
    'id' => '34_1',
    'pergunta' => '34.1. Se sim, liste as palestras/apresentações/audiências públicas ou marque uma das opções*:',
    'classe' => 'Palestras',
-   'grande' => true
+   'grande' => true,
+   'respostas' => $respostas
 ]);
 
 $this->insert('modelos/primaria', [
@@ -47,5 +49,6 @@ $this->insert('modelos/secondaria', [
    'id' => '35_1',
    'pergunta' => '35.1. Se sim, liste as apresentações realizadas ou marque uma das opções*?',
    'classe' => 'Apresentações',
-   'grande' => true
+   'grande' => true,
+   'respostas' => $respostas
 ]);

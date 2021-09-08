@@ -27,16 +27,33 @@ class Questionario extends Controller
       }
    }
 
-
-   public function getRespostas()
+   /**
+    * Retorna todas as respostas do usuário que está fazendo o questionário
+    *
+    * @return void
+    */
+   public function getRespostas(): void
    {
       $respostasFormatadas = null;
       $obRespostas = (new Resposta)->find('idUsuario = :iu', "iu={$_SESSION['userId']}")->fetch(true);
-      if(is_array($obRespostas)) $respostasFormatadas = (new Respostas($obRespostas))->simplificarDadosRespostas();
+      if (is_array($obRespostas)) $respostasFormatadas = (new Respostas($obRespostas))->simplificarDadosRespostas();
+
       echo json_encode($respostasFormatadas);
       return;
    }
-   
+
+   /**
+    * Volta para página anterior a parti da página atual
+    *
+    * @param array $data
+    * @return void
+    */
+   public function voltarPagina(array $data): void
+   {
+      $page = filter_var($data['page'], FILTER_SANITIZE_STRING);
+      if (($page - 1) > 0)  $page = $page - 1;
+      $this->router->redirect('questionario.bloco', ['page' => $page]);
+   }
 
    /**
     * Página inicial dos questionário
@@ -48,10 +65,17 @@ class Questionario extends Controller
       echo $this->view->render("questionario/inicio", ['title' => "Questionário"]);
    }
 
-   private function getResposForPages(int $page){
+   /**
+    * Retorna as respostas de uma determinada pagina
+    *
+    * @param integer $page
+    * @return array|null
+    */
+   private function getResposForPages(int $page): ?array
+   {
       $respostasFormatadas = null;
       $obRespostas = (new Resposta)->find('idUsuario = :iu && page = :page', "iu={$_SESSION['userId']}&page=$page")->fetch(true);
-      if(is_array($obRespostas)) $respostasFormatadas = (new Respostas($obRespostas))->simplificarDadosRespostas();
+      if (is_array($obRespostas)) $respostasFormatadas = (new Respostas($obRespostas))->simplificarDadosRespostas();
 
       return $respostasFormatadas;
    }
@@ -62,7 +86,7 @@ class Questionario extends Controller
     * @param Array $data
     * @return void
     */
-   public function bloco(array $data)
+   public function bloco(array $data): void
    {
       switch ($data['page']) {
 
@@ -182,7 +206,7 @@ class Questionario extends Controller
                'respostas' => $this->getResposForPages(13)
             ]);
             break;
-            
+
          case '14':
             $this->router->redirect('web.finalizarPesquisa');
             break;
