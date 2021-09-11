@@ -8,6 +8,7 @@ use Source\Models\Resposta;
 use Source\Support\DadoHelper;
 use Source\Support\Email;
 use Source\Support\EmailSupport;
+use Source\Support\Termos;
 
 /**
  * Controlador das rotas iniciais
@@ -35,16 +36,13 @@ class Web extends Controller
       $termo = filter_var($data['termo'], FILTER_SANITIZE_STRING);
 
       if($termo == "consentimento"){
-
+         (new Termos($this->view))->downloadTermoConsentimento();
          return;
       }
 
-      var_dump($termo);
-      die();
-      
+      (new Termos($this->view))->downloadTermoImagemSom();
    }
    
-
    /**
     * Carrega o termo de consentimento
     *
