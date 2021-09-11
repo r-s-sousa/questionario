@@ -5,12 +5,20 @@ namespace Source\Support;
 use Dompdf\Dompdf;
 use Dompdf\Options;
 
+/**
+ * Helpers de Termos PDF
+ */
 class Termos
 {
    private $obDompdf;
    private $termo;
    private $view;
 
+   /**
+    * Construtor do Helper de Termos
+    *
+    * @param Render $view
+    */
    public function __construct($view)
    {
       $options = new Options();
@@ -19,7 +27,12 @@ class Termos
       $this->view = $view;
    }
 
-   public function downloadTermoImagemSom()
+   /**
+    * Abre um arquivo local que já está baixado com o termo de imagem e som
+    *
+    * @return void
+    */
+   public function downloadTermoImagemSom(): void
    {
       header('Content-Description: File Transfer');
       header('Content-Type: application/force-download');
@@ -27,7 +40,12 @@ class Termos
       echo file_get_contents(dirname(__DIR__,2)."/themes/modelos/forPdf/imagem-som.pdf");
    }
 
-   public function downloadTermoConsentimento()
+   /**
+    * Abre um arquivo local que já está baixado com o termo de consentimento
+    *
+    * @return void
+    */
+   public function downloadTermoConsentimento(): void
    {
       header('Content-Description: File Transfer');
       header('Content-Type: application/force-download');
@@ -35,7 +53,12 @@ class Termos
       echo file_get_contents(dirname(__DIR__,2)."/themes/modelos/forPdf/consentimento.pdf");
    }
 
-   public function gerarPdfTermoConsentimento()
+   /**
+    * Gera o pdf com o DOMPDF
+    *
+    * @return void
+    */
+   public function gerarPdfTermoConsentimento(): void
    {
       $this->termo = "consentimento";
       $html = $this->view->render('modelos/forPdf/consentimento');
@@ -43,6 +66,11 @@ class Termos
       die();
    }
 
+   /**
+    * Gera o PDF com o dompdf
+    *
+    * @return void
+    */
    public function gerarPdfTermoImagemSom()
    {
       $this->termo = "imagem-som";
@@ -51,13 +79,24 @@ class Termos
       die();
    }
 
-   private function setHtmlForPdfAndOpen(string $html)
+   /**
+    * Define o HTML do objeto dompdf
+    *
+    * @param string $html
+    * @return void
+    */
+   private function setHtmlForPdfAndOpen(string $html): void
    {
       $this->obDompdf->loadHtml($html);
       $this->abrirNoNavegador();
    }
 
-   private function abrirNoNavegador()
+   /**
+    * Responsável por renderizar e abrir no navegador
+    *
+    * @return void
+    */
+   private function abrirNoNavegador(): void
    {
       $this->obDompdf->render();
       $this->obDompdf->stream("Termo - $this->termo.pdf", ['Attachment' => false]);
