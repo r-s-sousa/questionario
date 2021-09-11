@@ -16,14 +16,16 @@ $this->end();
             <span style="margin-left: 25px;"></span> Prezado (a) pesquisador (a),
          </p>
          <p class="ml-2 mr-2 ml-md-4 mr-md-4 text-justify">
-            <span style="margin-left: 25px;"></span> Seja bem-vindo (a) ao questionário da pesquisa Avaliação do Impacto de Pesquisas sobre Doenças Tropicais Negligenciadas no Brasil.
+            <span style="margin-left: 25px;"></span> Seja bem-vindo (a) ao questionário da pesquisa <b>Avaliação do Impacto de Pesquisas sobre Doenças Tropicais Negligenciadas no Brasil.</b>
          </p>
          <p class="ml-2 mr-2 ml-md-4 mr-md-4 text-justify">
-            <span style="margin-left: 25px;"></span> Esse questionário tem o objetivo de coletar dados para avaliar os impactos produzidos pelas pesquisas sobre dengue financiadas pelo Departamento de Ciência e Tecnologia no Ministério da Saúde (Decit/MS), em parceria com o Conselho Nacional de Desenvolvimento Científico e Tecnológico nos editais MCT/CNPq/MS-SCTIE-DECIT nº 025/2006 – Doenças Negligenciadas; MCT/CNPq/CTI-Saúde/MS/SCTIE/DECIT nº 034/2008 – Doenças Negligenciadas; e MCTI/CNPq/MS-SCTIE-Decit nº 40/2012 – Pesquisa em Doenças Negligenciadas.
+            <span style="margin-left: 25px;"></span> Esse questionário tem o objetivo de coletar dados para avaliar os impactos produzidos pelas pesquisas sobre dengue financiadas pelo Departamento de Ciência e Tecnologia no Ministério da Saúde (Decit/MS), em parceria com o Conselho Nacional de Desenvolvimento Científico e Tecnológico nos editais <b>MCT/CNPq/MS-SCTIE-DECIT nº 025/2006 – Doenças Negligenciadas; MCT/CNPq/CTI-Saúde/MS/SCTIE/DECIT nº 034/2008 – Doenças Negligenciadas; e MCTI/CNPq/MS-SCTIE-Decit nº 40/2012 – Pesquisa em Doenças Negligenciadas.</b>
          </p>
-
          <p class="ml-2 mr-2 ml-md-4 mr-md-4 text-justify">
             <span style="margin-left: 25px;"></span> O questionário é composto por seis blocos de perguntas, com questões relacionadas as informações gerais do (a) coordenador (a) e da pesquisa, publicações e produtos originados da pesquisa, formação de recursos humanos, divulgação da pesquisa, utilização dos resultados da pesquisa para tomada de decisão e impactos na saúde.
+         </p>
+         <p class="ml-2 mr-2 ml-md-4 mr-md-4 text-justify">
+            <span style="margin-left: 25px;"></span> Suas respostas serão salvas automaticamente, portanto, não se preocupe caso precise retornar a alguma questão. 
          </p>
          <p class="ml-2 mr-2 ml-md-4 mr-md-4 text-justify">
             <span style="margin-left: 25px;"></span> Caso tenha alguma dúvida, pode entrar em contato com a pesquisadora responsável pelo e-mail gabrielabtm@gmail.com ou pelo telefone (61) 98361-3554 (inclusive para ligações a cobrar e mensagens de WhatsApp).

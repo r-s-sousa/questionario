@@ -23,6 +23,9 @@ $router->get("/termo-de-imagem-e-som", "Web:termoDeImagemSom", "web.termoDeImage
 // vai para rota pra coleta de dados
 $router->get("/informe-seus-dados/{aceitouTermo}", "Web:pegarDadosUsuario", "web.pegarDadosUsuario");
 
+// baixa o termo
+$router->get("/baixarTermo/{termo}", "Web:baixarTermo", "web.baixarTermo");
+
 /**
  * POST
  */

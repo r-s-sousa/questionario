@@ -82,7 +82,7 @@ $this->insert('modelos/secondaria', [
 
 $this->insert('modelos/primaria', [
    'id' => '25',
-   'pergunta' => '25. Participaram estudantes de mestrado*?'
+   'pergunta' => '25. Participaram estudantes de doutorado*?'
 ]);
 
 $this->insert('modelos/secondaria', [

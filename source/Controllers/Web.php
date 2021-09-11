@@ -25,6 +25,27 @@ class Web extends Controller
    }
 
    /**
+    * Gera o PDF com o termo solicitado
+    *
+    * @param array $data
+    * @return void
+    */
+   public function baixarTermo(array $data): void
+   {
+      $termo = filter_var($data['termo'], FILTER_SANITIZE_STRING);
+
+      if($termo == "consentimento"){
+
+         return;
+      }
+
+      var_dump($termo);
+      die();
+      
+   }
+   
+
+   /**
     * Carrega o termo de consentimento
     *
     * @return void

@@ -39,7 +39,7 @@ $this->end();
             </p>
             <p class="font-italic text-left">
                <b>Endereço:</b> Programa de Pós-Graduação em Ciências e Tecnologias em Saúde. Faculdade de Ceilândia – Universidade de Brasília. Centro Metropolitano, conjunto A, lote 01, Brasília – DF. CEP: 72220-900 <br>
-               <b>E-mail:</b> gabrielabtm@gmail.com <br>
+               <b>E-mail:</b> gabriela.btm@hotmail.com <br>
                <b>Telefone:</b> (61) 98361-3554
             </p>
          </div>
@@ -54,6 +54,7 @@ $this->end();
             <label for="op2"><input type="radio" name="opcaoTermo" id="op2" value="false" checked> Não autorizo a utilização da minha imagem e som de voz para fins da pesquisa.</label>
             <br>
             <div class="text-center m-4">
+               <a class="btn btn-warning mr-3" target="_blanck" href="<?= $router->route('web.baixarTermo', ['termo'=>"imagem-som"]); ?>">Baixar termo (pdf)</a>
                <button type="submit" class="btn btn-info">Prosseguir</button>
             </div>
          </form>
