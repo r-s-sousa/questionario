@@ -32,7 +32,7 @@ class Page
     * @param Engine $view
     * @return void
     */
-   public function carregarProximaPagina(int $page, $view): void
+   public function carregarProximaPagina(int $page, $view, $router): void
    {
       switch ($page) {
          case '1':
@@ -153,7 +153,7 @@ class Page
             break;
 
          case '14':
-            $this->router->redirect('web.finalizarPesquisa');
+            $router->redirect('web.finalizarPesquisa');
             break;
 
          default:

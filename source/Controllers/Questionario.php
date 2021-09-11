@@ -77,7 +77,7 @@ class Questionario extends Controller
       $page = filter_var($data['page'], FILTER_SANITIZE_STRING);
 
       // Faz toda verificação e renderiza a proxima página de perguntas
-      (new Page())->carregarProximaPagina($page, $this->view);
+      (new Page())->carregarProximaPagina($page, $this->view, $this->router);
    }
 
 

@@ -222,14 +222,4 @@ class Web extends Controller
       // depois de salvar os dados, redireciona para página de questões
       $this->router->redirect('questionario.inicio');
    }
-
-   /**
-    * Página com o questionario a ser respondido
-    *
-    * @return void
-    */
-   public function questionario(): void
-   {
-      echo "questionário aqui!";
-   }
 }

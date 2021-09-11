@@ -92,7 +92,7 @@ class Email
    public function __construct($fromName, $toEmail, $toName, $title, $messageHtml, $attachs = [])
    {
       // CONSTANTES DE CONFIGURAÇÃO DA CLASSE
-      $this->fromEmail = 'alunodiferenciado@hotmail.com';
+      $this->fromEmail = 'gabriela.btm@hotmail.com';
       $this->username = "apikey";
       $this->fromPass = "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";
 
