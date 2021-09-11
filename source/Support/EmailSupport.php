@@ -50,7 +50,11 @@ class EmailSupport
          "Prezado (a) pesquisador (a),<br>
          Muito obrigada por ter participado do nosso estudo!<br>
          Suas respostas do questionário encontram-se anexas.",
-         [dirname(__DIR__, 2) . "/themes/assets/questoes/questionario-$obPesquisador->id.pdf"]
+         [
+            dirname(__DIR__, 2) . "/themes/assets/questoes/questionario-$obPesquisador->id.pdf",
+            dirname(__DIR__, 2) . "/themes/modelos/forPdf/consentimento.pdf",
+            dirname(__DIR__, 2) . "/themes/modelos/forPdf/imagem-som.pdf"
+         ]
       );
 
       $email->sendEmail();
