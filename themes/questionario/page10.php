@@ -15,7 +15,7 @@ $this->insert('modelos/base', [
 
 $this->insert('modelos/primaria', [
    'id' => '30_1',
-   'pergunta' => '30.1. Protocolos Clínicos*?',
+   'pergunta' => '30.1. Protocolos Clínicos*?  Exemplo: Protocolo colaborativo - Manejo da dengue: suspeita clínica, diagnóstico e tratamento da Secretaria Municipal de Saúde de Belo Horizonte – MG',
 ]);
 
 $this->insert('modelos/secondaria', [
@@ -28,7 +28,7 @@ $this->insert('modelos/secondaria', [
 
 $this->insert('modelos/primaria', [
    'id' => '30_2',
-   'pergunta' => '30.2. Manuais de saúde*?',
+   'pergunta' => '30.2. Manuais de saúde*?  Exemplo: Manual de Diagnóstico e Manejo Clínico da Dengue do Ministério da Saúde',
 ]);
 
 $this->insert('modelos/secondaria', [
@@ -41,7 +41,7 @@ $this->insert('modelos/secondaria', [
 
 $this->insert('modelos/primaria', [
    'id' => '30_3',
-   'pergunta' => '30.3. Diretrizes em saúde*?',
+   'pergunta' => '30.3. Diretrizes em saúde*? Exemplo: Diretrizes Nacionais para a Prevenção e Controle de Epidemias de Dengue',
 ]);
 
 $this->insert('modelos/secondaria', [
@@ -54,7 +54,7 @@ $this->insert('modelos/secondaria', [
 
 $this->insert('modelos/primaria', [
    'id' => '30_4',
-   'pergunta' => '30.4. Guias de Atenção à Saúde*?',
+   'pergunta' => '30.4. Guias de Atenção à Saúde ou Vigilância em Saúde*? Exemplo: Guia de Vigilância em Saúde do Ministério da Saúde',
 ]);
 
 $this->insert('modelos/secondaria', [
@@ -67,7 +67,7 @@ $this->insert('modelos/secondaria', [
 
 $this->insert('modelos/primaria', [
    'id' => '30_5',
-   'pergunta' => '30.5. Portarias*? ',
+   'pergunta' => '30.5. Portarias*? Exemplo: Portaria GM/MS nº 1.802, de 3 de agosto de 2021 – Institui a Rede de Vigilância Alerta e Respostas às Emergências em Saúde Pública do Sistema Único de Saúde (Rede VIGIAR-SUS) no âmbito do Sistema Nacional de Vigilância Epidemiológica',
 ]);
 
 $this->insert('modelos/secondaria', [
@@ -80,7 +80,7 @@ $this->insert('modelos/secondaria', [
 
 $this->insert('modelos/primaria', [
    'id' => '30_6',
-   'pergunta' => '30.6. Programas de saúde*?',
+   'pergunta' => '30.6. Programas de saúde*? Exemplo: Programa Nacional de Controle da Dengue',
 ]);
 
 $this->insert('modelos/secondaria', [
@@ -93,7 +93,7 @@ $this->insert('modelos/secondaria', [
 
 $this->insert('modelos/primaria', [
    'id' => '30_7',
-   'pergunta' => '30.7. Políticas de saúde ou de outras áreas*: ',
+   'pergunta' => '30.7. Políticas de saúde ou de outras áreas*? Exemplo: Política Nacional de Vigilância em Saúde',
 ]);
 
 $this->insert('modelos/secondaria', [

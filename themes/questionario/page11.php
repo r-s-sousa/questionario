@@ -29,26 +29,26 @@ $this->insert('modelos/primaria', [
 
 $this->insert('modelos/primaria', [
    'id' => '34',
-   'pergunta' => '34. Foram realizadas palestras/apresentações/audiências públicas*?'
+   'pergunta' => '34. Foram realizadas apresentações ou palestras em eventos de uma forma geral ou para profissionais e gestores de saúde?'
 ]);
 
 $this->insert('modelos/secondaria', [
    'id' => '34_1',
-   'pergunta' => '34.1. Se sim, liste as palestras/apresentações/audiências públicas ou marque uma das opções*:',
-   'classe' => 'Palestras',
+   'pergunta' => '34.1. Se sim, liste as apresentações ou palestras realizadas ou marque uma das opções:',
+   'classe' => 'Apresentações ou palestras',
    'grande' => true,
    'respostas' => $respostas
 ]);
 
 $this->insert('modelos/primaria', [
    'id' => '35',
-   'pergunta' => '35. Foram realizadas apresentações sobre a pesquisa para o público em geral*?'
+   'pergunta' => '35. Foram realizadas apresentações em audiências públicas?'
 ]);
 
 $this->insert('modelos/secondaria', [
    'id' => '35_1',
-   'pergunta' => '35.1. Se sim, liste as apresentações realizadas ou marque uma das opções*?',
-   'classe' => 'Apresentações',
+   'pergunta' => '35.1. Se sim, liste as apresentações em audiências públicas ou marque uma das opções',
+   'classe' => 'Apresentações em Audiências Públicas',
    'grande' => true,
    'respostas' => $respostas
 ]);

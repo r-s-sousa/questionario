@@ -105,6 +105,14 @@ function mudou(id) {
    } else if (id == 38) {
       var qlForm = $('#questao39');
       var opSelecionada = $('input[name="q38"]:checked').attr("value");
+      if (opSelecionada == "Sim") {
+         qlForm.removeClass('d-none');
+         $("#opcao1Input").prop('disabled', true);
+      } else{
+         qlForm.addClass('d-none');
+         $("#opcao1Input").prop('disabled', true);
+      }
+      return "";
    }
 
    if (opSelecionada == "Sim") {

@@ -47,7 +47,9 @@ class EmailSupport
          $obPesquisador->email,
          $obPesquisador->nome,
          'Questionário',
-         'Segue em anexo PDF com o questionário respondido',
+         "Prezado (a) pesquisador (a),<br>
+         Muito obrigada por ter participado do nosso estudo!<br>
+         Suas respostas do questionário encontram-se anexas.",
          [dirname(__DIR__, 2) . "/themes/assets/questoes/questionario-$obPesquisador->id.pdf"]
       );
 
