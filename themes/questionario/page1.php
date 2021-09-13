@@ -7,7 +7,7 @@
 $this->insert('modelos/base', [
    'conteudo' => '
    <p class="card-text">
-   1. Principal Grande Área de Atuação*:
+   1. Qual a sua principal grande área de atuação:
    <br>
    <label class="mt-2 ml-3"><input type="radio" onchange="mudouRadioSecondaria(\'q1\')" name="q1" class="radio" value="Ciências Exatas e da Terra"> Ciências Exatas e da Terra</label>
    <br>
