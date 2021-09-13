@@ -5,13 +5,13 @@
 ]);
 
 $this->insert('modelos/primaria', [
-   'id' => '12',
-   'pergunta' => '12. Para execução da pesquisa, foram estabelecidas parcerias com outras instituições (qualquer tipo de instituição: ex. outras universidades, secretaria de saúde municipal, secretaria de saúde estadual)*?',
+   'id' => '10',
+   'pergunta' => '10. Para execução da pesquisa, foram estabelecidas parcerias com outras instituições (qualquer tipo de instituição: ex. outras universidades, secretaria de saúde municipal, secretaria de saúde estadual)*?',
 ]);
 
 $this->insert('modelos/secondaria', [
-   'id' => '12_1',
-   'pergunta' => '12.1. Se sim, liste as instituições parceiras ou marque uma das opções.',
+   'id' => '10_1',
+   'pergunta' => '10.1. Se sim, liste as instituições parceiras ou marque uma das opções.',
    'classe' => 'Instituições',
    'grande' => true,
    'respostas' => $respostas
@@ -19,7 +19,7 @@ $this->insert('modelos/secondaria', [
 
 $this->insert('modelos/base', [
    'conteudo' => '
-   13. De acordo com as definições abaixo, como você classifica sua pesquisa*?
+   11. De acordo com as definições abaixo, como você classifica sua pesquisa*?
    <br>
    <label class="mt-2 ml-3"><input type="radio" required name="q13" class="radio" value="Pesquisa Biomédica – investigam mecanismos de saúde e doença. Buscam produzir conhecimento sobre desenvolvimento de métodos diagnóstico, tratamento, métodos de prevenção de agravos e doenças, com o objetivo de melhorar a qualidade de vida dos indivíduos."> Pesquisa Biomédica – investigam mecanismos de saúde e doença. Buscam produzir conhecimento sobre desenvolvimento de métodos diagnóstico, tratamento, métodos de prevenção de agravos e doenças, com o objetivo de melhorar a qualidade de vida dos indivíduos.</label>
    <br>

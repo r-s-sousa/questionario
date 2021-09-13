@@ -14,7 +14,7 @@
                if (isset($grande)) :
                ?>
                   <label class="ml-3"><input onchange="mudouRadioSecondaria('q<?= $id; ?>')" type="radio" class="radio2" name="q<?= $id; ?>" value="Outro" checked> <?= $classe ?>: </label>
-                  <textarea class="form-control ml-3" name="q<?= $id; ?>_Outro" id="q<?= $id; ?>_Outro" rows="5" required> <?= $respostas["q" . $id . "_Outro"]['resposta']; ?> </textarea>
+                  <textarea class="form-control ml-3" name="q<?= $id; ?>_Outro" id="q<?= $id; ?>_Outro" rows="5" required><?= $respostas["q" . $id . "_Outro"]['resposta']; ?></textarea>
                <?php
 
                else :

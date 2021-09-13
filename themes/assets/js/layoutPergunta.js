@@ -1,66 +1,93 @@
 function mudou(id) {
-   if (id == 10) {
+   // ok
+   if (id == 8) {
+      var qlForm = $('#questao8_1');
+      var opSelecionada = $('input[name="q8"]:checked').attr("value");
+   } 
+   // ok
+   else if (id == 9) {
+      var qlForm = $('#questao9_1');
+      var opSelecionada = $('input[name="q9"]:checked').attr("value");
+   } 
+   // ok
+   else if (id == 10) {
       var qlForm = $('#questao10_1');
       var opSelecionada = $('input[name="q10"]:checked').attr("value");
-   } else if (id == 11) {
-      var qlForm = $('#questao11_1');
-      var opSelecionada = $('input[name="q11"]:checked').attr("value");
-   } else if (id == 12) {
+   }
+   // ok
+   else if (id == 12) {
       var qlForm = $('#questao12_1');
       var opSelecionada = $('input[name="q12"]:checked').attr("value");
-   } else if (id == 14) {
+   } 
+   // ok
+   else if (id == 13) {
+      var qlForm = $('#questao13_1');
+      var opSelecionada = $('input[name="q13"]:checked').attr("value");
+   } 
+   // ok
+   else if (id == 14) {
       var qlForm = $('#questao14_1');
       var opSelecionada = $('input[name="q14"]:checked').attr("value");
-   } else if (id == 15) {
-      var qlForm = $('#questao15_1');
-      var opSelecionada = $('input[name="q15"]:checked').attr("value");
-   } else if (id == 16) {
+   }
+   // ok
+   else if (id == 16) {
       var qlForm = $('#questao16_1');
+      var qlForm2 = $('#questao16_2');
       var opSelecionada = $('input[name="q16"]:checked').attr("value");
-   } else if (id == 18) {
+   }
+   else if (id == 17) {
+      var qlForm = $('#questao17_1');
+      var opSelecionada = $('input[name="q17"]:checked').attr("value");
+   } 
+   else if (id == 18) {
       var qlForm = $('#questao18_1');
-      var qlForm2 = $('#questao18_2');
       var opSelecionada = $('input[name="q18"]:checked').attr("value");
-   } else if (id == 19) {
+   } 
+   else if (id == 19) {
       var qlForm = $('#questao19_1');
+      var qlForm2 = $('#questao19_2');
       var opSelecionada = $('input[name="q19"]:checked').attr("value");
-   } else if (id == 20) {
+   } 
+   else if (id == 20) {
       var qlForm = $('#questao20_1');
+      var qlForm2 = $('#questao20_2');
       var opSelecionada = $('input[name="q20"]:checked').attr("value");
-   } else if (id == 21) {
+   } 
+   else if (id == 21) {
       var qlForm = $('#questao21_1');
       var qlForm2 = $('#questao21_2');
       var opSelecionada = $('input[name="q21"]:checked').attr("value");
-   } else if (id == 22) {
+   } 
+   else if (id == 22) {
       var qlForm = $('#questao22_1');
       var qlForm2 = $('#questao22_2');
       var opSelecionada = $('input[name="q22"]:checked').attr("value");
-   } else if (id == 23) {
+   } 
+   else if (id == 23) {
       var qlForm = $('#questao23_1');
       var qlForm2 = $('#questao23_2');
       var opSelecionada = $('input[name="q23"]:checked').attr("value");
-   } else if (id == 24) {
+   } 
+   else if (id == 24) {
       var qlForm = $('#questao24_1');
-      var qlForm2 = $('#questao24_2');
       var opSelecionada = $('input[name="q24"]:checked').attr("value");
-   } else if (id == 25) {
+   } 
+   else if (id == 25) {
       var qlForm = $('#questao25_1');
       var qlForm2 = $('#questao25_2');
       var opSelecionada = $('input[name="q25"]:checked').attr("value");
-   } else if (id == 26) {
+   } 
+   else if (id == 26) {
       var qlForm = $('#questao26_1');
       var opSelecionada = $('input[name="q26"]:checked').attr("value");
-   } else if (id == 27) {
+   } 
+   else if (id == 27) {
       var qlForm = $('#questao27_1');
-      var qlForm2 = $('#questao27_2');
       var opSelecionada = $('input[name="q27"]:checked').attr("value");
-   } else if (id == 28) {
-      var qlForm = $('#questao28_1');
-      var opSelecionada = $('input[name="q28"]:checked').attr("value");
-   } else if (id == 29) {
-      var qlForm = $('#questao29_1');
-      var opSelecionada = $('input[name="q29"]:checked').attr("value");
-   } else if (id == 30_1) {
+   } 
+   // parei aqui
+   else if (id == 30_1) 
+   {
       var qlForm = $('#questao30_1_1');
       var opSelecionada = $('input[name="q30_1"]:checked').attr("value");
    } else if (id == 30_2) {

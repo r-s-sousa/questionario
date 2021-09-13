@@ -5,25 +5,25 @@
 ]);
 
 $this->insert('modelos/primaria', [
-   'id' => '28',
-   'pergunta' => '28. Apresentou os resultados da pesquisa profissionais de saúde*?',
+   'id' => '26',
+   'pergunta' => '26. Apresentou os resultados da pesquisa profissionais de saúde*?',
 ]);
 
 $this->insert('modelos/secondaria', [
-   'id' => '28_1',
-   'pergunta' => '28.1. Se sim, informe a quantidade ou marque uma das opções.',
+   'id' => '26_1',
+   'pergunta' => '26.1. Se sim, informe a quantidade ou marque uma das opções.',
    'classe' => 'Quantidade',
    'respostas' => $respostas
 ]);
 
 $this->insert('modelos/primaria', [
-   'id' => '29',
-   'pergunta' => '29. Apresentou os resultados da pesquisa para formuladores de políticas e tomadores de decisão em saúde*?'
+   'id' => '27',
+   'pergunta' => '27. Apresentou os resultados da pesquisa para formuladores de políticas e tomadores de decisão em saúde*?'
 ]);
 
 $this->insert('modelos/secondaria', [
-   'id' => '29_1',
-   'pergunta' => '29.1. Se sim, informe a quantidade, ou marque uma das opções:',
+   'id' => '27_1',
+   'pergunta' => '27.1. Se sim, informe a quantidade, ou marque uma das opções:',
    'classe' => 'Quantidade',
    'respostas' => $respostas
 ]);

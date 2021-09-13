@@ -6,31 +6,31 @@
 ]);
 
 $this->insert('modelos/primaria', [
-   'id' => '26',
-   'pergunta' => '26. Publicou artigos completos, resumos expandidos ou resumo em anais de eventos científicos nacionais ou internacionais (congressos, simpósios, oficinas, seminários, etc)*?',
+   'id' => '24',
+   'pergunta' => '24. Publicou artigos completos, resumos expandidos ou resumo em anais de eventos científicos nacionais ou internacionais (congressos, simpósios, oficinas, seminários, etc)*?',
 ]);
 
 $this->insert('modelos/secondaria', [
-   'id' => '26_1',
-   'pergunta' => '26.1. Se sim, informe a quantidade ou marque uma das opções*.',
+   'id' => '24_1',
+   'pergunta' => '24.1. Se sim, informe a quantidade ou marque uma das opções*.',
    'classe' => 'Quantidade'
 ]);
 
 $this->insert('modelos/primaria', [
-   'id' => '27',
-   'pergunta' => '27. Apresentou trabalhos para divulgação dos resultados da pesquisa em eventos científicos (congressos, fóruns, simpósios, oficinas, seminários etc.)*:'
+   'id' => '25',
+   'pergunta' => '25. Apresentou trabalhos para divulgação dos resultados da pesquisa em eventos científicos (congressos, fóruns, simpósios, oficinas, seminários etc.)*:'
 ]);
 
 $this->insert('modelos/secondaria', [
-   'id' => '27_1',
-   'pergunta' => '27.1. Em quantos eventos científicos nacionais? Informe a quantidade ou marque uma das opções*.',
+   'id' => '25_1',
+   'pergunta' => '25.1. Em quantos eventos científicos nacionais? Informe a quantidade ou marque uma das opções*.',
    'classe' => 'Quantidade',
    'respostas' => $respostas
 ]);
 
 $this->insert('modelos/secondaria', [
-   'id' => '27_2',
-   'pergunta' => '27.2. Em quantos eventos científicos internacionais? Informe a quantidade ou marque uma das opções*.',
+   'id' => '25_2',
+   'pergunta' => '25.2. Em quantos eventos científicos internacionais? Informe a quantidade ou marque uma das opções*.',
    'classe' => 'Quantidade',
    'respostas' => $respostas
 ]);
