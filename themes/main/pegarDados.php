@@ -29,7 +29,7 @@ $this->end();
                      </div>
                      <div class="col-md-4 mt-2">
                         <label for="telefone">Seu telefone: </label>
-                        <input class="form-control" type="text" name="telefone" id="telefone" placeholder="(61) 9.9999-9999" data-js="phone">
+                        <input class="form-control" type="text" name="telefone" id="telefone" placeholder="(61) 9.9999-9999" data-js="phone" required>
                      </div>
                   </div>
                </div>

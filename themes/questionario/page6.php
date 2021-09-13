@@ -27,8 +27,8 @@ $this->insert('modelos/secondaria', [
 
 $this->insert('modelos/secondaria', [
    'id' => '18_2',
-   'pergunta' => '18.2. Se sim, informe a quantidade de pesquisadores visitantes ou marque uma das opções',
-   'classe' => 'Quantidade',
+   'pergunta' => '18.2. De quais instituições eram esses pesquisadores? Liste as instituições ou marque uma das opções.',
+   'classe' => 'Instituições',
    'respostas' => $respostas
 ]);
 
@@ -39,7 +39,7 @@ $this->insert('modelos/primaria', [
 
 $this->insert('modelos/secondaria', [
    'id' => '19_1',
-   'pergunta' => '19.1. Se sim, informe a quantidade de pesquisadores visitantes ou marque uma das opções',
+   'pergunta' => '19.1. Se sim, informe a quantidade de bolsistas de produtividade ou marque uma das opções:',
    'classe' => 'Quantidade',
    'respostas' => $respostas
 ]);

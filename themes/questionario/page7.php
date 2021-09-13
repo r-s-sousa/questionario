@@ -94,7 +94,7 @@ $this->insert('modelos/secondaria', [
 
 $this->insert('modelos/secondaria', [
    'id' => '25_2',
-   'pergunta' => '25.2. Quantas teses foram apresentadas*? Informe a quantidade ou marque uma das opções.',
+   'pergunta' => '25.2. Quantas teses foram produzidas*? Informe a quantidade ou marque uma das opções.',
    'classe' => 'Quantidade',
    'respostas' => $respostas
 ]);

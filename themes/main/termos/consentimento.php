@@ -45,14 +45,11 @@
 </p>
 <p class="ml-2 mr-2 ml-md-4 mr-md-4 text-justify">
    <span style="margin-left: 25px;"></span>
-   Se o (a) sr. (a) tiver qualquer dúvida em relação à pesquisa, poderá entrar com contato com a pesquisadora responsável, Gabriela Bardelini Tavares Melo, a qualquer tempo pelo telefone (61) 98361-3554, inclusive para ligação a cobrar e mensagens via WhatsApp ou pelo e-mail gabrielabtm@gmail.com ou com o pesquisador Marcos Obara Takashi, pelo telefone (61) 98132-1514 ou e-mail marcos.obara@gmail.com.
+   Se o (a) sr. (a) tiver qualquer dúvida em relação à pesquisa, poderá entrar com contato com a pesquisadora responsável, Gabriela Bardelini Tavares Melo, a qualquer tempo pelo telefone (61) 98361-3554, inclusive para ligação a cobrar e mensagens via WhatsApp ou pelo e-mail gabriela.btm@hotmail.com ou com o pesquisador Marcos Obara Takashi, pelo telefone (61) 98132-1514 ou e-mail marcos.obara@gmail.com.
 </p>
 <p class="ml-2 mr-2 ml-md-4 mr-md-4 text-justify">
    <span style="margin-left: 25px;"></span>
    Este projeto foi aprovado pelo Comitê de Ética em Pesquisa da Faculdade de Ceilândia (CEP/FCE) da Universidade de Brasília. O CEP é composto por profissionais de diferentes áreas cuja função é defender os interesses dos participantes da pesquisa em sua integridade e dignidade e contribuir no desenvolvimento da pesquisa dentro de padrões éticos. As dúvidas com relação
-</p>
-<p class="ml-2 mr-2 ml-md-4 mr-md-4 text-justify">
-   <span style="margin-left: 25px;"></span>
    à assinatura deste Termo de Consentimento Livre e Esclarecido (TCLE) ou os direitos do participante da pesquisa podem ser esclarecidos pelo telefone (61) 3107-8434 ou pelo e-mail cep.fce@gmail.com, horário de atendimento das 14h:00 às 18h:00, de segunda a sexta-feira. O CEP/FCE se localiza na Faculdade de Ceilândia, Sala AT07/66 – Prédio da Unidade de Ensino e Docência (UED) – Universidade de Brasília - Centro Metropolitano, conjunto A, lote 01, Brasília - DF. CEP: 72220-900.
 </p>
 <p class="ml-2 mr-2 ml-md-4 mr-md-4 text-justify">
