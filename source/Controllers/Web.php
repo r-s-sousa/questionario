@@ -93,11 +93,12 @@ class Web extends Controller
    public function finalizarPesquisa(): void
    {
       // Enviar email nesse momento caso a pessoa tenha terminado a pesquisa
-      if (isset($_SESSION['userId'])) {
-         $id = $_SESSION['userId'];
+      if (isset($_COOKIE['questionarioUserId'])) {
+         $id = $_COOKIE['questionarioUserId'];
 
          // Dados do pesquisador
          $obPesquisador = (new Dado)->find('id = :id', "id=$id")->fetch();
+
          // Dados das respostas do pesquisador
          $obRespostas = (new Resposta)->find('idUsuario = :iu', "iu=$obPesquisador->id")->order('page')->fetch(true);
 
@@ -107,8 +108,9 @@ class Web extends Controller
          // mensagem a ser enviada para Pesquisador
          EmailSupport::enviaEmailParaPesquisador($obPesquisador, $obRespostas, $this->view);
 
-         // Deleta a sessão do pesquisador
-         unset($_SESSION['userId']);
+         // Limpa os dados do cookies
+         setcookie('questionarioUserId');
+         setcookie('questionarioEmail');
       }
 
       echo $this->view->render('main/finalizacao', [
@@ -203,9 +205,6 @@ class Web extends Controller
     */
    public function recebeDadosUsuario(array $data): void
    {
-      // Deleta a sessão do usuário sempre que cria um novo formulário
-      unset($_SESSION['userId']);
-
       // Recebe o DAO obDado a partir do que foi passado no formulário
       $obDado = (new DadoHelper($data))->getObDado();
 
@@ -216,8 +215,13 @@ class Web extends Controller
          return;
       }
 
-      // Adiciona na sessão o usuário
-      $_SESSION['userId'] = $obDado->id;
+      // Limpa os dados do cookies
+      setcookie('questionarioUserId');
+      setcookie('questionarioEmail');
+
+      // Define o cookies pra durar 24 horas
+      setcookie('questionarioUserId', $obDado->id, (time() + (24 * 3600)));
+      setcookie('questionarioEmail', base64_encode($obDado->email), (time() + (24 * 3600)));
 
       // depois de salvar os dados, redireciona para página de questões
       $this->router->redirect('questionario.inicio');

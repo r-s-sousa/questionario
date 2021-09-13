@@ -1,7 +1,7 @@
 <?php
 
-
-
+use Example\Models\User;
+use Source\Models\Dado;
 
 /**
  * Apresenta todos argumentos passados de uma 
@@ -31,7 +31,32 @@ function dd()
  */
 function verificaSeSessaoUsuarioExiste(): bool
 {
-   if (!isset($_SESSION['userId'])) return false;
+   // Verifica se existe sessão userId
+   if (!isset($_COOKIE['questionarioUserId'])) {
+      setcookie('questionarioUserId');
+      setcookie('questionarioEmail');
+      return false;
+   }
+
+   $userId = $_COOKIE['questionarioUserId'];
+   $email = base64_decode($_COOKIE['questionarioEmail']);
+
+   // Verifica se existe esse dado no banco de dados
+   $obUser = (new Dado)->findById($userId);
+
+   // Se não existir já retorna false
+   if (!$obUser) {
+      setcookie('questionarioUserId');
+      setcookie('questionarioEmail');
+      return false;
+   }
+
+   // Verifica se é o mesmo email cadastrado, o que está na sessão
+   if ($obUser->email != $email) {
+      setcookie('questionarioUserId');
+      setcookie('questionarioEmail');
+      return false;
+   }
 
    return true;
 }
@@ -45,10 +70,7 @@ function verificaSeSessaoUsuarioExiste(): bool
  */
 function url($url = "")
 {
-   if ($url == "") {
-      return URL . "/";
-   }
-
+   if ($url == "") return URL . "/";
    return URL . "/$url";
 }
 

@@ -36,7 +36,7 @@ class Questionario extends Controller
    public function getRespostas(): void
    {
       $respostasFormatadas = null;
-      $obRespostas = (new Resposta)->find('idUsuario = :iu', "iu={$_SESSION['userId']}")->fetch(true);
+      $obRespostas = (new Resposta)->find('idUsuario = :iu', "iu={$_COOKIE['questionarioUserId']}")->fetch(true);
       if (is_array($obRespostas)) $respostasFormatadas = (new Respostas($obRespostas))->simplificarDadosRespostas();
 
       echo json_encode($respostasFormatadas);
@@ -94,7 +94,7 @@ class Questionario extends Controller
       $pagina = $data['page'];
       $dadaEmJson = json_encode($data);
 
-      $idUsuario = $_SESSION['userId'];
+      $idUsuario = $_COOKIE['questionarioUserId'];
 
       // Verifica se existe, caso exista apenas atualiza
       $obResposta = (new Resposta())->find('idUsuario = :id AND page = :page', ":id=$idUsuario&page=$pagina")->fetch();

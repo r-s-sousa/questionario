@@ -6,10 +6,6 @@ use Source\Models\Resposta;
 
 class Page
 {
-   public function __construct()
-   {
-   }
-
    /**
     * Retorna as respostas de uma determinada pagina
     *
@@ -19,7 +15,7 @@ class Page
    private function getResposForPages(int $page): ?array
    {
       $respostasFormatadas = null;
-      $obRespostas = (new Resposta)->find('idUsuario = :iu && page = :page', "iu={$_SESSION['userId']}&page=$page")->fetch(true);
+      $obRespostas = (new Resposta)->find('idUsuario = :iu && page = :page', "iu={$_COOKIE['questionarioUserId']}&page=$page")->fetch(true);
       if (is_array($obRespostas)) $respostasFormatadas = (new Respostas($obRespostas))->simplificarDadosRespostas();
 
       return $respostasFormatadas;
