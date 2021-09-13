@@ -35,14 +35,14 @@ class Web extends Controller
    {
       $termo = filter_var($data['termo'], FILTER_SANITIZE_STRING);
 
-      if($termo == "consentimento"){
+      if ($termo == "consentimento") {
          (new Termos($this->view))->downloadTermoConsentimento();
          return;
       }
 
       (new Termos($this->view))->downloadTermoImagemSom();
    }
-   
+
    /**
     * Carrega o termo de consentimento
     *
@@ -50,6 +50,12 @@ class Web extends Controller
     */
    public function termoConsentimento(): void
    {
+      // Caso o usuário esteja na memória, redireciona para o questionário
+      if (verificaSeSessaoUsuarioExiste()) {
+         $this->router->redirect('questionario.bloco', ['page' => 1]);
+         return;
+      }
+
       echo $this->view->render('main/termoConsentimento', [
          'title' => "Termo de Consentimento"
       ]);
@@ -103,10 +109,10 @@ class Web extends Controller
          $obRespostas = (new Resposta)->find('idUsuario = :iu', "iu=$obPesquisador->id")->order('page')->fetch(true);
 
          // mensagem a informar para Gabriela que questionário foi finalizado
-         EmailSupport::enviaEmailParaCliente($obPesquisador);
+         //EmailSupport::enviaEmailParaCliente($obPesquisador);
 
          // mensagem a ser enviada para Pesquisador
-         EmailSupport::enviaEmailParaPesquisador($obPesquisador, $obRespostas, $this->view);
+         //EmailSupport::enviaEmailParaPesquisador($obPesquisador, $obRespostas, $this->view);
 
          // Limpa os dados do cookies
          setcookie('questionarioUserId');
