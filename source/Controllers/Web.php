@@ -109,10 +109,10 @@ class Web extends Controller
          $obRespostas = (new Resposta)->find('idUsuario = :iu', "iu=$obPesquisador->id")->order('page')->fetch(true);
 
          // mensagem a informar para Gabriela que questionário foi finalizado
-         //EmailSupport::enviaEmailParaCliente($obPesquisador);
+         EmailSupport::enviaEmailParaCliente($obPesquisador);
 
          // mensagem a ser enviada para Pesquisador
-         //EmailSupport::enviaEmailParaPesquisador($obPesquisador, $obRespostas, $this->view);
+         EmailSupport::enviaEmailParaPesquisador($obPesquisador, $obRespostas, $this->view);
 
          // Limpa os dados do cookies
          setcookie('questionarioUserId');
