@@ -34,7 +34,7 @@ $this->insert('modelos/secondaria', [
 
 $this->insert('modelos/primaria', [
    'id' => '17',
-   'pergunta' => '19. Na sua equipe tinham pesquisadores bolsistas de produtividade*?'
+   'pergunta' => '17. Na sua equipe tinham pesquisadores bolsistas de produtividade*?'
 ]);
 
 $this->insert('modelos/secondaria', [
