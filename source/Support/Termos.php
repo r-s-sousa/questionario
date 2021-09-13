@@ -34,6 +34,11 @@ class Termos
     */
    public function downloadTermoImagemSom(): void
    {
+      // $this->termo = "imagem-som";
+      // $html = $this->view->render('modelos/forPdf/imagem-som');
+      // echo $html;
+      // die();
+
       header('Content-Description: File Transfer');
       header('Content-Type: application/force-download');
       header("Content-Disposition: attachment; filename=Termo-Imagem-Som.pdf");
@@ -47,6 +52,10 @@ class Termos
     */
    public function downloadTermoConsentimento(): void
    {
+      // $html = $this->view->render('modelos/forPdf/consentimento');
+      // echo $html;
+      // die();
+
       header('Content-Description: File Transfer');
       header('Content-Type: application/force-download');
       header("Content-Disposition: attachment; filename=Termo-Consentimento.pdf");

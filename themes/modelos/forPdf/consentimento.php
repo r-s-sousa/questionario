@@ -5,6 +5,12 @@
       <div class="col-md-12 text-center">
          <!-- TERMO DE CONSENTIMENTO -->
          <?= $this->insert('main/termos/consentimento'); ?>
+
+         <p class="ml-2 mr-2 ml-md-4 mr-md-4 text-justify">
+            <span style="margin-left: 25px;"></span>
+            Ao clicar na opção “Declaro que concordo em participar da pesquisa”, o (a) sr. (a) concordará em participar desta pesquisa nos termos deste TCLE. Caso não concorde em participar, clique na opção “Não concordo em participar da pesquisa”
+         </p>
+
       </div>
    </div>
 </div>
@@ -30,6 +36,15 @@
                <b>Telefone:</b> (61) 98361-3554
             </p>
          </div>
+      </div>
+   </div>
+   <div class="row rounded-bottom" style="background-color: #cccccc;">
+      <div class="col-md-12 mt-3">
+         <form action="<?= $router->route('web.recebeEscolhaInicial'); ?>" method="post">
+            <label><input type="radio" name="opcaoTermo" id="op1" value="true" checked> Declaro que <b>concordo</b> em participar da pesquisa.</label>
+            <br>
+            <label for="op2"><input type="radio" name="opcaoTermo" id="op2" value="false"> <b>Não concordo</b> em participar pesquisa.</label>
+         </form>
       </div>
    </div>
 </div>

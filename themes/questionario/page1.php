@@ -34,15 +34,7 @@ $this->insert('modelos/base', [
 $this->insert('modelos/base', [
    'conteudo' => '
    <p class="card-text">
-      2. Principal Área de Atuação: <input class="form-control-sm" type="text" name="q2" value="'.$respostas['q2']['resposta'].'" required>
-   </p>
-   '
-]);
-
-$this->insert('modelos/base', [
-   'conteudo' => '
-   <p class="card-text">
-      3. Principal Subárea de Atuação: <input class="form-control-sm" type="text" name="q3" value="'.$respostas['q3']['resposta'].'" required>
+      2. Qual a sua principal subárea de atuação? : <input class="form-control-sm" type="text" name="q2" value="'.$respostas['q2']['resposta'].'" required>
    </p>
    '
 ]);

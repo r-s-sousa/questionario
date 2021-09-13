@@ -5,6 +5,11 @@
       <div class="col-md-12 text-center">
          <!-- TERMO DE IMAGEM E SOM -->
          <?= $this->insert('main/termos/uso-imagem'); ?>
+
+         <p class="ml-2 mr-2 ml-md-4 mr-md-4 text-justify">
+            <span style="margin-left: 25px;"></span> Ao clicar na opção abaixo “Declaro que autorizo, livre e espontaneamente, o uso para fins de pesquisa, nos termos acima descritos, da minha imagem e som de voz”, o (a) Sr. (a) concorda em participar da entrevista virtual e ter sua imagem e voz gravadas para a pesquisa. Caso não concorde em participar, clique na opção “Não autorizo a utilização da minha imagem e som de voz para fins da pesquisa”.
+         </p>
+
       </div>
    </div>
 </div>
@@ -30,6 +35,15 @@
                <b>Telefone:</b> (61) 98361-3554
             </p>
          </div>
+      </div>
+   </div>
+   <div class="row rounded-bottom" style="background-color: #cccccc;">
+      <div class="col-md-12 mt-3 p3">
+         <form action="<?= $router->route('web.recebeEscolhaImagemSom'); ?>" method="post">
+            <label for="op1"><input type="radio" name="opcaoTermo" id="op1" value="true" checked> Declaro que autorizo, livre e espontaneamente, o uso para fins de pesquisa, nos termos acima descritos, da minha imagem e som de voz.</label>
+            <br>
+            <label for="op2"><input type="radio" name="opcaoTermo" id="op2" value="false"> Não autorizo a utilização da minha imagem e som de voz para fins da pesquisa.</label>
+         </form>
       </div>
    </div>
 </div>
