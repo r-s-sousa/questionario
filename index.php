@@ -3,7 +3,7 @@
 use Source\Support\Email;
 
 // MOSTRA OS ERROS
-//ini_set('display_errors', "1");
+ini_set('display_errors', false);
 
 // INICIA A SESSÃO
 session_start();

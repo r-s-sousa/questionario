@@ -7,15 +7,15 @@
 ]);
 
 $this->insert('modelos/primaria', [
-   'id' => '38',
-   'pergunta' => '38. A pesquisa gerou impactos na saúde, ou seja, houve alguma influência sobre indicadores de saúde (mortalidade, incidência, prevalência), determinantes sociais e ambientais, atenção e vigilância em saúde, etc*?',
+   'id' => '36',
+   'pergunta' => '36. A pesquisa gerou impactos na saúde, ou seja, houve alguma influência sobre indicadores de saúde (mortalidade, incidência, prevalência), determinantes sociais e ambientais, atenção e vigilância em saúde, etc*?',
 ]);
 
 $this->insert('modelos/base', [
    'conteudo' => '
-   <div class="d-none" id="questao38_1">
+   <div class="d-none" id="questao36_1">
    <p class="card-text">
-   38.1 Se sim, assinale as opções nas quais a pesquisa gerou impactos (diretamente ou indiretamente)*:
+   36.1 Se sim, assinale as opções nas quais a pesquisa gerou impactos (diretamente ou indiretamente)*:
    <br>
 
    <label class="mt-2 ml-3"><input type="checkbox" name="opcoes[]" 

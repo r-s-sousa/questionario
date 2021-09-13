@@ -1,35 +1,28 @@
 function mudou(id) {
-   // ok
    if (id == 8) {
       var qlForm = $('#questao8_1');
       var opSelecionada = $('input[name="q8"]:checked').attr("value");
    } 
-   // ok
    else if (id == 9) {
       var qlForm = $('#questao9_1');
       var opSelecionada = $('input[name="q9"]:checked').attr("value");
    } 
-   // ok
    else if (id == 10) {
       var qlForm = $('#questao10_1');
       var opSelecionada = $('input[name="q10"]:checked').attr("value");
    }
-   // ok
    else if (id == 12) {
       var qlForm = $('#questao12_1');
       var opSelecionada = $('input[name="q12"]:checked').attr("value");
    } 
-   // ok
    else if (id == 13) {
       var qlForm = $('#questao13_1');
       var opSelecionada = $('input[name="q13"]:checked').attr("value");
    } 
-   // ok
    else if (id == 14) {
       var qlForm = $('#questao14_1');
       var opSelecionada = $('input[name="q14"]:checked').attr("value");
    }
-   // ok
    else if (id == 16) {
       var qlForm = $('#questao16_1');
       var qlForm2 = $('#questao16_2');
@@ -85,53 +78,66 @@ function mudou(id) {
       var qlForm = $('#questao27_1');
       var opSelecionada = $('input[name="q27"]:checked').attr("value");
    } 
-   // parei aqui
-   else if (id == 30_1) 
+   else if (id == 28_1) 
    {
-      var qlForm = $('#questao30_1_1');
-      var opSelecionada = $('input[name="q30_1"]:checked').attr("value");
-   } else if (id == 30_2) {
-      var qlForm = $('#questao30_2_1');
-      var opSelecionada = $('input[name="q30_2"]:checked').attr("value");
-   } else if (id == 30_3) {
-      var qlForm = $('#questao30_3_1');
-      var opSelecionada = $('input[name="q30_3"]:checked').attr("value");
-   } else if (id == 30_4) {
-      var qlForm = $('#questao30_4_1');
-      var opSelecionada = $('input[name="q30_4"]:checked').attr("value");
-   } else if (id == 30_5) {
-      var qlForm = $('#questao30_5_1');
-      var opSelecionada = $('input[name="q30_5"]:checked').attr("value");
-   } else if (id == 30_6) {
-      var qlForm = $('#questao30_6_1');
-      var opSelecionada = $('input[name="q30_6"]:checked').attr("value");
-   } else if (id == 30_7) {
-      var qlForm = $('#questao30_7_1');
-      var opSelecionada = $('input[name="q30_7"]:checked').attr("value");
-   } else if (id == 30_8) {
-      var qlForm = $('#questao30_8_1');
-      var opSelecionada = $('input[name="q30_8"]:checked').attr("value");
-   } else if (id == 30_9) {
-      var qlForm = $('#questao30_9_1');
-      var opSelecionada = $('input[name="q30_9"]:checked').attr("value");
-   } else if (id == 31) {
-      var qlForm = $('#questao31_1');
-      var opSelecionada = $('input[name="q31"]:checked').attr("value");
-   } else if (id == 34) {
+      var qlForm = $('#questao28_1_1');
+      var opSelecionada = $('input[name="q28_1"]:checked').attr("value");
+   } 
+   else if (id == 28_2) {
+      var qlForm = $('#questao28_2_1');
+      var opSelecionada = $('input[name="q28_2"]:checked').attr("value");
+   } 
+   else if (id == 28_3) {
+      var qlForm = $('#questao28_3_1');
+      var opSelecionada = $('input[name="q28_3"]:checked').attr("value");
+   } 
+   else if (id == 28_4) {
+      var qlForm = $('#questao28_4_1');
+      var opSelecionada = $('input[name="q28_4"]:checked').attr("value");
+   } 
+   else if (id == 28_5) {
+      var qlForm = $('#questao28_5_1');
+      var opSelecionada = $('input[name="q28_5"]:checked').attr("value");
+   } 
+   else if (id == 28_6) {
+      var qlForm = $('#questao28_6_1');
+      var opSelecionada = $('input[name="q28_6"]:checked').attr("value");
+   } 
+   else if (id == 28_7) {
+      var qlForm = $('#questao28_7_1');
+      var opSelecionada = $('input[name="q28_7"]:checked').attr("value");
+   } 
+   else if (id == 28_8) {
+      var qlForm = $('#questao28_8_1');
+      var opSelecionada = $('input[name="q28_8"]:checked').attr("value");
+   } 
+   else if (id == 28_9) {
+      var qlForm = $('#questao28_9_1');
+      var opSelecionada = $('input[name="q28_9"]:checked').attr("value");
+   } 
+   else if (id == 29) {
+      var qlForm = $('#questao29_1');
+      var opSelecionada = $('input[name="q29"]:checked').attr("value");
+   } 
+   else if (id == 32) {
+      var qlForm = $('#questao32_1');
+      var opSelecionada = $('input[name="q32"]:checked').attr("value");
+   } 
+   else if (id == 33) {
+      var qlForm = $('#questao33_1');
+      var opSelecionada = $('input[name="q33"]:checked').attr("value");
+   }  
+   else if (id == 34) {
       var qlForm = $('#questao34_1');
       var opSelecionada = $('input[name="q34"]:checked').attr("value");
-   } else if (id == 35) {
+   } 
+   else if (id == 35) {
       var qlForm = $('#questao35_1');
       var opSelecionada = $('input[name="q35"]:checked').attr("value");
-   }  else if (id == 36) {
+   } 
+   else if (id == 36) {
       var qlForm = $('#questao36_1');
       var opSelecionada = $('input[name="q36"]:checked').attr("value");
-   } else if (id == 37) {
-      var qlForm = $('#questao37_1');
-      var opSelecionada = $('input[name="q37"]:checked').attr("value");
-   } else if (id == 38) {
-      var qlForm = $('#questao38_1');
-      var opSelecionada = $('input[name="q38"]:checked').attr("value");
       if (opSelecionada == "Sim") {
          qlForm.removeClass('d-none');
          $("#opcao1Input").prop('disabled', true);
