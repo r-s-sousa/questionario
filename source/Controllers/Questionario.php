@@ -52,6 +52,7 @@ class Questionario extends Controller
    public function voltarPagina(array $data): void
    {
       $page = filter_var($data['page'], FILTER_SANITIZE_STRING);
+      if (($page - 1) == 0) $this->router->redirect('questionario.inicio');   
       if (($page - 1) > 0)  $page = $page - 1;
       $this->router->redirect('questionario.bloco', ['page' => $page]);
    }
