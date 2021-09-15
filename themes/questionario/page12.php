@@ -26,6 +26,6 @@ $this->insert('modelos/secondaria', [
    'id' => '35_1',
    'pergunta' => '35.1. Se sim, informe a quantidade ou marque uma das opções*?',
    'classe' => 'Quantidade',
-   'grande' => true,
+   'tipo' => 'inteiro',
    'respostas' => $respostas
 ]);

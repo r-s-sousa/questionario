@@ -125,7 +125,7 @@ $this->insert('modelos/primaria', [
 $this->insert('modelos/secondaria', [
    'id' => '28_9_1',
    'pergunta' => '28.9.1. Se sim, informe os nomes dos materiais educativos/informativos para a população em geral ou marque uma das opções.',
-   'classe' => 'Quantidade',
+   'classe' => 'Nomes',
    'grande' => true,
    'respostas' => $respostas
 ]);

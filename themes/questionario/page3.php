@@ -22,6 +22,7 @@ $this->insert('modelos/secondaria', [
    'id' => '8_1',
    'pergunta' => '8.1. Se sim, qual foi o valor recebido por outras fontes de financiamento (em reais – R$)?',
    'classe' => 'Valor: R$',
+   'tipo' => 'float',
    'respostas' => $respostas
 ]);
 
@@ -34,5 +35,6 @@ $this->insert('modelos/secondaria', [
    'id' => '9_1',
    'pergunta' => '9.1. Se sim, quantas pesquisas? Informe a quantidade ou marque uma das opções.',
    'classe' => 'Qtd',
+   'tipo' => 'inteiro',
    'respostas' => $respostas
 ]);

@@ -9,6 +9,7 @@ $this->insert('modelos/secondaria', [
    'id' => '15',
    'pergunta' => '15. Quantos pessoas faziam parte da equipe de pesquisa*? Informe a quantidade ou marque uma das opções.',
    'classe' => 'Quantidade',
+   'tipo' => 'inteiro',
    'mostrarSecondaria' => true,
    'respostas' => $respostas
 ]);
@@ -22,6 +23,7 @@ $this->insert('modelos/secondaria', [
    'id' => '16_1',
    'pergunta' => '16.1. Se sim, informe a quantidade de pesquisadores visitantes ou marque uma das opções',
    'classe' => 'Quantidade',
+   'tipo' => 'inteiro',
    'respostas' => $respostas
 ]);
 
@@ -41,6 +43,7 @@ $this->insert('modelos/secondaria', [
    'id' => '17_1',
    'pergunta' => '17.1. Se sim, informe a quantidade de bolsistas de produtividade ou marque uma das opções:',
    'classe' => 'Quantidade',
+   'tipo' => 'inteiro',
    'respostas' => $respostas
 ]);
 
@@ -53,5 +56,6 @@ $this->insert('modelos/secondaria', [
    'id' => '18_1',
    'pergunta' => '18.1. Se sim, informe a quantidade ou marque uma das opções.',
    'classe' => 'Quantidade',
+   'tipo' => 'inteiro',
    'respostas' => $respostas
 ]);
