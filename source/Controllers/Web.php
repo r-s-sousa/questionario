@@ -121,9 +121,11 @@ class Web extends Controller
     */
    public function finalizarPesquisa(): void
    {
-      if(verificaSeSessaoUsuarioExiste()){
-         // Caso a pessoa tenha mudado de ideia, deleta os dados do pesquisador
-         if (isset($_GET['user_redirect'])) webSupport::deletarDadosUsuario($_COOKIE['questionarioUserId']);
+      if (isset($_GET['user_redirect'])) {
+         if (verificaSeSessaoUsuarioExiste()) {
+            // Caso a pessoa tenha mudado de ideia, deleta os dados do pesquisador
+            webSupport::deletarDadosUsuario($_COOKIE['questionarioUserId']);
+         }
       }
       // Enviar email nesse momento caso a pessoa tenha terminado a pesquisa
       elseif (isset($_COOKIE['questionarioUserId'])) {
@@ -177,18 +179,24 @@ class Web extends Controller
    public function recebeEscolhaEntrevista(array $data): void
    {
       $data = filter_var($data['opcaoEntrevista'], FILTER_SANITIZE_STRING);
-      
+
       $obUser = null;
       if (verificaSeSessaoUsuarioExiste()) $obUser = (new Dado)->findById($_COOKIE['questionarioUserId']);
 
       if ($data == "false") {
-         if(!$obUser) { $this->router->redirect('web.pegarDadosUsuario', ['aceitouTermo' => 0]); return; }
+         if (!$obUser) {
+            $this->router->redirect('web.pegarDadosUsuario', ['aceitouTermo' => 0]);
+            return;
+         }
          $this->router->redirect('web.pegarDadosUsuario', ['aceitouTermo' => 0, 'user_redirect' => true]);
          return;
       }
 
       // Se for usuário novo
-      if(!$obUser){ $this->router->redirect('web.termoDeImagemSom'); return; }
+      if (!$obUser) {
+         $this->router->redirect('web.termoDeImagemSom');
+         return;
+      }
 
       // Se for usuário existente
       $this->router->redirect('web.termoDeImagemSom', ['user_redirect' => true]);
@@ -225,12 +233,18 @@ class Web extends Controller
       if (verificaSeSessaoUsuarioExiste()) $obUser = (new Dado)->findById($_COOKIE['questionarioUserId']);
 
       if ($data == "false") {
-         if(!$obUser) { $this->router->redirect('web.pegarDadosUsuario', ['aceitouTermo' => 0]); return; }
+         if (!$obUser) {
+            $this->router->redirect('web.pegarDadosUsuario', ['aceitouTermo' => 0]);
+            return;
+         }
          $this->router->redirect('web.pegarDadosUsuario', ['aceitouTermo' => 0, 'user_redirect' => true]);
          return;
       }
 
-      if(!$obUser) { $this->router->redirect('web.pegarDadosUsuario', ['aceitouTermo' => 1]); return; }
+      if (!$obUser) {
+         $this->router->redirect('web.pegarDadosUsuario', ['aceitouTermo' => 1]);
+         return;
+      }
       $this->router->redirect('web.pegarDadosUsuario', ['aceitouTermo' => 1, 'user_redirect' => true]);
    }
 
