@@ -21,7 +21,7 @@ $this->end();
 
       <?= $this->section('content'); ?>
 
-      <div class="row mt-4 bg-secondary">
+      <div class="row mt-4 bg-secondary pb-2">
          <div class="col-12 mt-3 mb-3 text-center text-white">
             <!-- <input class="btn btn-outline-light mr-4" action="action" onclick="window.history.go(-1); return false;" type="submit" value="Anterior"> -->
             <a href="<?= $router->route('questionario.voltarPagina', ['page' => $page]); ?>" class="btn btn-outline-light mr-4">Anterior</a>
@@ -31,6 +31,12 @@ $this->end();
             <?php else : ?>
                <button type="submit" class="btn btn-outline-light">Próxima</button>
             <?php endif; ?>
+            <br>
+         </div>
+         <div class="col-md-12 text-center">
+            <a class="text-white font-italic" 
+            style="text-decoration: underline;" 
+            href="<?= $router->route('web.termoConsentimento', ['user_redirect' => true]); ?>">Voltar para termos iniciais</a>
          </div>
       </div>
    </div>

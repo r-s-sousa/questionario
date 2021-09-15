@@ -51,10 +51,9 @@ $this->end();
    <div class="row rounded-bottom" style="background-color: #cccccc;">
       <div class="col-md-12 mt-3">
          <form action="<?= $router->route('web.recebeEscolhaInicial'); ?>" method="post">
-            <label><input type="radio" name="opcaoTermo" id="op1" value="true"> Declaro que <b>concordo</b> em participar da pesquisa.</label>
+            <label><input type="radio" name="opcaoTermo" id="op1" value="true" <?= $obUser ? 'checked' : ''; ?> > Declaro que <b>concordo</b> em participar da pesquisa.</label>
             <br>
-
-            <label for="op2"><input type="radio" name="opcaoTermo" id="op2" value="false" checked> <b>Não concordo</b> em participar pesquisa.</label>
+            <label for="op2"><input type="radio" name="opcaoTermo" id="op2" value="false" <?= $obUser ? '' : 'checked'; ?>> <b>Não concordo</b> em participar pesquisa.</label>
             <br>
             <div class="text-center m-4">
                <a class="btn btn-warning mr-3" target="_blanck" href="<?= $router->route('web.baixarTermo', ['termo'=>"consentimento"]); ?>">Baixar termo (pdf)</a>

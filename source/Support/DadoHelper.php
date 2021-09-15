@@ -27,11 +27,17 @@ class DadoHelper
     * Construtor da classe DadoHelper
     *
     * @param array $data Array com dados recebidos do formulário
+    * @param Dado|null $obDado
     */
-   public function __construct(array $data)
+   public function __construct(array $data, ?Dado $obDado)
    {
       $this->data = $data;
-      $this->obDado = new Dado;
+
+      // Caso seja um novo usuário
+      if(!$obDado) $this->obDado = new Dado;
+
+      // Caso seja um usuário existente
+      else $this->obDado = $obDado;
 
       // Define os detalhes do obDado
       $this->setDetalhes();

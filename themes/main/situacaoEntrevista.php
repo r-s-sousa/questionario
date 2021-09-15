@@ -35,10 +35,10 @@ $this->end();
    <div class="row rounded-bottom" style="background-color: #cccccc;">
       <div class="col-md-12 mt-3">
          <form action="<?= $router->route('web.recebeEscolhaEntrevista'); ?>" method="post">
-            <input type="radio" name="opcaoEntrevista" id="op1" value="true">
+            <input type="radio" name="opcaoEntrevista" id="op1" value="true" <?= $entrevista ? "checked" : "" ?>>
             <label for="op1"><b>Sim</b></label>
             <br>
-            <input type="radio" name="opcaoEntrevista" id="op2" value="false" checked>
+            <input type="radio" name="opcaoEntrevista" id="op2" value="false" <?= $entrevista ? "" : "checked" ?>>
             <label for="op2"><b>Não</b></label>
             <br>
             <div class="text-center m-4">

@@ -1,7 +1,5 @@
 <?php
 
-use Source\Support\Email;
-
 // MOSTRA OS ERROS
 ini_set('display_errors', false);
 

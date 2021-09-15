@@ -19,17 +19,17 @@ $this->end();
                <input type="hidden" name="aceitouTermo" value="<?= $aceitouTermo; ?>">
                <div class="col-md-12 mt-2">
                   <label for="nome">Seu nome: </label>
-                  <input class="form-control" type="text" name="nome" id="nome" placeholder="Digite seu nome" required autofocus>
+                  <input class="form-control" type="text" name="nome" id="nome" placeholder="Digite seu nome" value="<?= $obUser->nome; ?>" required autofocus>
                </div>
                <div class="col-md-12">
                   <div class="row">
                      <div class="col-md-8 mt-2">
                         <label for="email">Seu email: </label>
-                        <input class="form-control" type="email" name="email" id="email" placeholder="email@email.com" required>
+                        <input class="form-control" type="email" name="email" id="email" placeholder="email@email.com" value="<?= $obUser->email; ?>" required>
                      </div>
                      <div class="col-md-4 mt-2">
                         <label for="telefone">Seu telefone: </label>
-                        <input class="form-control" type="text" name="telefone" id="telefone" placeholder="(61) 9.9999-9999" data-js="phone" required>
+                        <input class="form-control" type="text" name="telefone" id="telefone" placeholder="(61) 9.9999-9999" data-js="phone" value="<?= $obUser->telefone; ?>" required>
                      </div>
                   </div>
                </div>

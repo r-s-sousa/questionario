@@ -49,9 +49,9 @@ $this->end();
    <div class="row rounded-bottom" style="background-color: #cccccc;">
       <div class="col-md-12 mt-3">
          <form action="<?= $router->route('web.recebeEscolhaImagemSom'); ?>" method="post">
-            <label for="op1"><input type="radio" name="opcaoTermo" id="op1" value="true"> Declaro que autorizo, livre e espontaneamente, o uso para fins de pesquisa, nos termos acima descritos, da minha imagem e som de voz.</label>
+            <label for="op1"><input type="radio" name="opcaoTermo" id="op1" value="true" <?= $termoImagem ? "checked" : "" ?>> Declaro que autorizo, livre e espontaneamente, o uso para fins de pesquisa, nos termos acima descritos, da minha imagem e som de voz.</label>
             <br>
-            <label for="op2"><input type="radio" name="opcaoTermo" id="op2" value="false" checked> Não autorizo a utilização da minha imagem e som de voz para fins da pesquisa.</label>
+            <label for="op2"><input type="radio" name="opcaoTermo" id="op2" value="false" <?= $termoImagem ? "" : "checked" ?>> Não autorizo a utilização da minha imagem e som de voz para fins da pesquisa.</label>
             <br>
             <div class="text-center m-4">
                <a class="btn btn-warning mr-3" target="_blanck" href="<?= $router->route('web.baixarTermo', ['termo'=>"imagem-som"]); ?>">Baixar termo (pdf)</a>

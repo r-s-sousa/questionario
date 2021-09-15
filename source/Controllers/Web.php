@@ -9,6 +9,8 @@ use Source\Support\DadoHelper;
 use Source\Support\Email;
 use Source\Support\EmailSupport;
 use Source\Support\Termos;
+use Source\Support\webSupport;
+use stdClass;
 
 /**
  * Controlador das rotas iniciais
@@ -50,14 +52,20 @@ class Web extends Controller
     */
    public function termoConsentimento(): void
    {
+      $obUser = null;
+
       // Caso o usuário esteja na memória, redireciona para o questionário
       if (verificaSeSessaoUsuarioExiste()) {
-         $this->router->redirect('questionario.bloco', ['page' => 1]);
-         return;
+         if (!isset($_GET['user_redirect'])) {
+            $this->router->redirect('questionario.bloco', ['page' => 1]);
+            return;
+         }
+         $obUser = (new Dado)->findById($_COOKIE['questionarioUserId']);
       }
 
       echo $this->view->render('main/termoConsentimento', [
-         'title' => "Termo de Consentimento"
+         'title' => "Termo de Consentimento",
+         'obUser' => $obUser
       ]);
    }
 
@@ -83,12 +91,27 @@ class Web extends Controller
    {
       $data = filter_var($data['opcaoTermo'], FILTER_SANITIZE_STRING);
 
+      $obUser = null;
+      if (verificaSeSessaoUsuarioExiste()) $obUser = (new Dado)->findById($_COOKIE['questionarioUserId']);
+
       if ($data == "false") {
-         $this->router->redirect('web.finalizarPesquisa');
+         // caso a pessoa não tivesse fazendo o questionário
+         if (!$obUser) $this->router->redirect('web.finalizarPesquisa');
+
+         // caso a pessoa estivesse fazendo o questionário mas mudou de ideia
+         $this->router->redirect('web.finalizarPesquisa', ['user_redirect' => true]);
+
          return;
       }
 
-      $this->router->redirect('web.participaraDaEntrevista');
+      // Caso a pessoa esteja fazendo questionário pela primeira vez
+      if (!$obUser) {
+         $this->router->redirect('web.participaraDaEntrevista');
+         return;
+      }
+
+      // Caso a pessoa esteja revendo os termos
+      $this->router->redirect('web.participaraDaEntrevista', ['user_redirect' => true]);
    }
 
    /**
@@ -98,6 +121,9 @@ class Web extends Controller
     */
    public function finalizarPesquisa(): void
    {
+      // Caso a pessoa tenha mudado de ideia, deleta os dados do pesquisador
+      if (isset($_GET['user_redirect'])) webSupport::deletarDadosUsuario((int)$_COOKIE['questionarioUserId']);
+
       // Enviar email nesse momento caso a pessoa tenha terminado a pesquisa
       if (isset($_COOKIE['questionarioUserId'])) {
          $id = $_COOKIE['questionarioUserId'];
@@ -131,8 +157,13 @@ class Web extends Controller
     */
    public function participaraDaEntrevista(): void
    {
+      $entrevista = 0;
+
+      if (isset($_GET['user_redirect'])) $entrevista = (new Dado)->findById($_COOKIE['questionarioUserId'])->termoUsoImagem;
+
       echo $this->view->render('main/situacaoEntrevista', [
-         'title' => "Deseja participar da entrevista ?"
+         'title' => "Deseja participar da entrevista ?",
+         'entrevista' => $entrevista
       ]);
    }
 
@@ -145,13 +176,21 @@ class Web extends Controller
    public function recebeEscolhaEntrevista(array $data): void
    {
       $data = filter_var($data['opcaoEntrevista'], FILTER_SANITIZE_STRING);
+      
+      $obUser = null;
+      if (verificaSeSessaoUsuarioExiste()) $obUser = (new Dado)->findById($_COOKIE['questionarioUserId']);
 
       if ($data == "false") {
-         $this->router->redirect('web.pegarDadosUsuario', ['aceitouTermo' => 0]);
+         if(!$obUser) { $this->router->redirect('web.pegarDadosUsuario', ['aceitouTermo' => 0]); return; }
+         $this->router->redirect('web.pegarDadosUsuario', ['aceitouTermo' => 0, 'user_redirect' => true]);
          return;
       }
 
-      $this->router->redirect('web.termoDeImagemSom');
+      // Se for usuário novo
+      if(!$obUser){ $this->router->redirect('web.termoDeImagemSom'); return; }
+
+      // Se for usuário existente
+      $this->router->redirect('web.termoDeImagemSom', ['user_redirect' => true]);
    }
 
    /**
@@ -161,8 +200,13 @@ class Web extends Controller
     */
    public function termoDeImagemSom(): void
    {
+      $termoImagem = null;
+
+      if (isset($_GET['user_redirect'])) $termoImagem = (new Dado)->findById($_COOKIE['questionarioUserId'])->termoUsoImagem;
+
       echo $this->view->render('main/termoImagemSom', [
-         'title' => "Termo de uso de imagem e som"
+         'title' => "Termo de uso de imagem e som",
+         'termoImagem' => $termoImagem
       ]);
    }
 
@@ -176,12 +220,17 @@ class Web extends Controller
    {
       $data = filter_var($data['opcaoTermo'], FILTER_SANITIZE_STRING);
 
+      $obUser = null;
+      if (verificaSeSessaoUsuarioExiste()) $obUser = (new Dado)->findById($_COOKIE['questionarioUserId']);
+
       if ($data == "false") {
-         $this->router->redirect('web.pegarDadosUsuario', ['aceitouTermo' => 0]);
+         if(!$obUser) { $this->router->redirect('web.pegarDadosUsuario', ['aceitouTermo' => 0]); return; }
+         $this->router->redirect('web.pegarDadosUsuario', ['aceitouTermo' => 0, 'user_redirect' => true]);
          return;
       }
 
-      $this->router->redirect('web.pegarDadosUsuario', ['aceitouTermo' => 1]);
+      if(!$obUser) { $this->router->redirect('web.pegarDadosUsuario', ['aceitouTermo' => 1]); return; }
+      $this->router->redirect('web.pegarDadosUsuario', ['aceitouTermo' => 1, 'user_redirect' => true]);
    }
 
    /**
@@ -194,12 +243,16 @@ class Web extends Controller
    {
       $data = filter_var($data['aceitouTermo'], FILTER_VALIDATE_INT);
 
+      $obUser = new stdClass;
+      if (isset($_GET['user_redirect'])) $obUser = (new Dado)->findById($_COOKIE['questionarioUserId']);
+
       if ($data == 1) $data = 1;
       else $data = 0;
 
       echo $this->view->render('main/pegarDados', [
          'title' => "Preenche seus dados",
-         'aceitouTermo' => $data
+         'aceitouTermo' => $data,
+         'obUser' => $obUser
       ]);
    }
 
@@ -211,10 +264,13 @@ class Web extends Controller
     */
    public function recebeDadosUsuario(array $data): void
    {
-      // Recebe o DAO obDado a partir do que foi passado no formulário
-      $obDado = (new DadoHelper($data))->getObDado();
+      $obUser = null;
+      if (verificaSeSessaoUsuarioExiste()) $obUser = (new Dado)->findById($_COOKIE['questionarioUserId']);
 
-      // Se der error ao salvar
+      // Recebe o DAO obDado a partir do que foi passado no formulário
+      $obDado = (new DadoHelper($data, $obUser))->getObDado();
+
+      // Se der error ao salvar ou atualizar
       if (!$obDado->save()) {
          setMessage('error', "<strong>Error</strong> ao salvar dados!");
          $this->router->redirect('web.pegarDadosUsuario', ['aceitouTermo' => $obDado->termoUsoImagem]);
