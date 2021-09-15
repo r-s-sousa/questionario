@@ -121,11 +121,12 @@ class Web extends Controller
     */
    public function finalizarPesquisa(): void
    {
-      // Caso a pessoa tenha mudado de ideia, deleta os dados do pesquisador
-      if (isset($_GET['user_redirect'])) webSupport::deletarDadosUsuario((int)$_COOKIE['questionarioUserId']);
-
+      if(verificaSeSessaoUsuarioExiste()){
+         // Caso a pessoa tenha mudado de ideia, deleta os dados do pesquisador
+         if (isset($_GET['user_redirect'])) webSupport::deletarDadosUsuario($_COOKIE['questionarioUserId']);
+      }
       // Enviar email nesse momento caso a pessoa tenha terminado a pesquisa
-      if (isset($_COOKIE['questionarioUserId'])) {
+      elseif (isset($_COOKIE['questionarioUserId'])) {
          $id = $_COOKIE['questionarioUserId'];
 
          // Dados do pesquisador
@@ -244,6 +245,10 @@ class Web extends Controller
       $data = filter_var($data['aceitouTermo'], FILTER_VALIDATE_INT);
 
       $obUser = new stdClass;
+      $obUser->email = "";
+      $obUser->nome = "";
+      $obUser->telefone = "";
+
       if (isset($_GET['user_redirect'])) $obUser = (new Dado)->findById($_COOKIE['questionarioUserId']);
 
       if ($data == 1) $data = 1;

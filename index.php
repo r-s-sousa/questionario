@@ -1,7 +1,7 @@
 <?php
 
 // MOSTRA OS ERROS
-ini_set('display_errors', false);
+ini_set('display_errors', true);
 
 // INICIA A SESSÃO
 session_start();
