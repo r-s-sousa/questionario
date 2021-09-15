@@ -9,6 +9,7 @@ $this->insert('modelos/secondaria', [
    'pergunta' => '7. Valor recebido no edital para execução da pesquisa (em reais – R$): Informe o valor ou marque uma das opções.',
    'classe' => 'Valor: R$',
    'mostrarSecondaria' => true,
+   'tipo' => 'float',
    'respostas' => $respostas
 ]);
 
@@ -35,5 +36,3 @@ $this->insert('modelos/secondaria', [
    'classe' => 'Qtd',
    'respostas' => $respostas
 ]);
-
-?>
