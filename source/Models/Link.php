@@ -11,9 +11,18 @@ class Link extends DataLayer
       parent::__construct("pesquisadores_link", ['pesquisador', 'idLink', 'linkAcessado'], 'id', false);
    }
 
+   private static function deletarPesquisadores(){
+      $obPesquisadores = (new Link)->find()->fetch(true);
+      foreach($obPesquisadores as $obPesquisador){
+         $obPesquisador->destroy();
+      }
+   }
 
    public static function cadastrarPesquisadores()
    {
+      // deleta os pesquisadores e cadastra-os novamente
+      self::deletarPesquisadores();
+
       $pesquisadores = [
          'Álvaro Eduardo Eiras',
          'Amilcar Tanuri',
@@ -46,7 +55,5 @@ class Link extends DataLayer
          $obLink->linkAcessado = 0;
          $obLink->save();
       }
-
-      die();
    }
 }

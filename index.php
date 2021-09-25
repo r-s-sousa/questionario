@@ -15,6 +15,7 @@ require __DIR__ . "/vendor/autoload.php";
 
 // Salva os links referentes a cada pesquisador
 // Link::cadastrarPesquisadores();
+// die();
 
 // NOVO OBJ DO TIPO ROUTER
 $router = new Router(URL);
