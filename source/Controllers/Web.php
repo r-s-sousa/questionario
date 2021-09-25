@@ -4,6 +4,7 @@ namespace Source\Controllers;
 
 use CoffeeCode\Router\Router;
 use Source\Models\Dado;
+use Source\Models\Link;
 use Source\Models\Resposta;
 use Source\Support\DadoHelper;
 use Source\Support\Email;
@@ -63,6 +64,17 @@ class Web extends Controller
          $obUser = (new Dado)->findById($_COOKIE['questionarioUserId']);
       }
 
+      $idPesquisador = filter_input(INPUT_GET, 'idPesquisador', FILTER_SANITIZE_URL);
+      if ($idPesquisador) {
+         $obLink = (new Link)->find('idLink=:id', "id=$idPesquisador")->fetch();
+         if ($obLink) {
+            $obLink->linkAcessado = 1;
+            $obLink->save();
+            // Cria a sessão no navegador com o idPesquisador
+            $_SESSION['idPesquisadorLink'] = $obLink->id;
+         }
+      }
+
       echo $this->view->render('main/termoConsentimento', [
          'title' => "Termo de Consentimento",
          'obUser' => $obUser
@@ -95,6 +107,13 @@ class Web extends Controller
       if (verificaSeSessaoUsuarioExiste()) $obUser = (new Dado)->findById($_COOKIE['questionarioUserId']);
 
       if ($data == "false") {
+         // Salva essa informação na tabela de link
+         if(isset($_SESSION['idPesquisadorLink'])){
+            $obLink = (new Link)->findById($_SESSION['idPesquisadorLink']);
+            $obLink->termoConsentimento = 0;
+            $obLink->save();
+         }
+
          // caso a pessoa não tivesse fazendo o questionário
          if (!$obUser) $this->router->redirect('web.finalizarPesquisa');
 
@@ -106,6 +125,13 @@ class Web extends Controller
 
       // Caso a pessoa esteja fazendo questionário pela primeira vez
       if (!$obUser) {
+         // Salva essa informação na tabela de link
+         if(isset($_SESSION['idPesquisadorLink'])){
+            $obLink = (new Link)->findById($_SESSION['idPesquisadorLink']);
+            $obLink->termoConsentimento = 1;
+            $obLink->save();
+         }
+
          $this->router->redirect('web.participaraDaEntrevista');
          return;
       }

@@ -8,9 +8,13 @@ session_start();
 
 // INLCUI A CLASSE ROUTER
 use CoffeeCode\Router\Router;
+use Source\Models\Link;
 
 // INCLUI O AUTOLOAD
 require __DIR__ . "/vendor/autoload.php";
+
+// Salva os links referentes a cada pesquisador
+// Link::cadastrarPesquisadores();
 
 // NOVO OBJ DO TIPO ROUTER
 $router = new Router(URL);
