@@ -18,8 +18,8 @@ class webSupport
     */
    public static function deletarDadosUsuario(int $idObUser): void
    {
-      (new Dado)->findById($idObUser)->destroy();
-      self::deletarQuestoesUsuario($idObUser);
+      // (new Dado)->findById($idObUser)->destroy();
+      // self::deletarQuestoesUsuario($idObUser);
 
       // Limpa os dados do cookies
       setcookie('questionarioUserId');

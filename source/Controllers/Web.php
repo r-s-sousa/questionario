@@ -55,23 +55,49 @@ class Web extends Controller
    {
       $obUser = null;
 
-      // Caso o usuário esteja na memória, redireciona para o questionário
-      if (verificaSeSessaoUsuarioExiste()) {
-         if (!isset($_GET['user_redirect'])) {
-            $this->router->redirect('questionario.bloco', ['page' => 1]);
-            return;
-         }
-         $obUser = (new Dado)->findById($_COOKIE['questionarioUserId']);
-      }
-
       $idPesquisador = filter_input(INPUT_GET, 'idPesquisador', FILTER_SANITIZE_URL);
+
       if ($idPesquisador) {
+
          $obLink = (new Link)->find('idLink=:id', "id=$idPesquisador")->fetch();
-         if ($obLink) {
+         $obPesquisador = (new Dado)->findById($idPesquisador);
+
+         if ($obLink && $obPesquisador) {
             $obLink->linkAcessado = 1;
             $obLink->save();
+
             // Cria a sessão no navegador com o idPesquisador
             $_SESSION['idPesquisadorLink'] = $obLink->id;
+
+            // Limpa os dados do cookies
+            setcookie('questionarioUserId');
+            setcookie('questionarioEmail');
+            // Define o cookies pra durar 24 horas
+            setcookie('questionarioUserId', $obPesquisador->id, (time() + (24 * 3600)));
+            setcookie('questionarioEmail', base64_encode($obPesquisador->email), (time() + (24 * 3600)));
+
+            // ele só não redireciona se o usuário tiver pedido pra acessar os termos
+            if (!isset($_GET['user_redirect'])) {
+               // redireciona para página inicial das perguntas
+               $this->router->redirect('questionario.bloco', ['page' => 1]);
+               return;
+            }
+         } 
+         else {
+            die('link inválido!');
+         }
+         
+      } else {
+         // Caso o usuário esteja na memória, redireciona para o questionário
+         if (verificaSeSessaoUsuarioExiste()) {
+            if (!isset($_GET['user_redirect'])) {
+               $this->router->redirect('questionario.bloco', ['page' => 1]);
+               return;
+            }
+            $obUser = (new Dado)->findById($_COOKIE['questionarioUserId']);
+         }
+         else {
+            die('link inválido!');
          }
       }
 
@@ -108,7 +134,7 @@ class Web extends Controller
 
       if ($data == "false") {
          // Salva essa informação na tabela de link
-         if(isset($_SESSION['idPesquisadorLink'])){
+         if (isset($_SESSION['idPesquisadorLink'])) {
             $obLink = (new Link)->findById($_SESSION['idPesquisadorLink']);
             $obLink->termoConsentimento = 0;
             $obLink->save();
@@ -126,7 +152,7 @@ class Web extends Controller
       // Caso a pessoa esteja fazendo questionário pela primeira vez
       if (!$obUser) {
          // Salva essa informação na tabela de link
-         if(isset($_SESSION['idPesquisadorLink'])){
+         if (isset($_SESSION['idPesquisadorLink'])) {
             $obLink = (new Link)->findById($_SESSION['idPesquisadorLink']);
             $obLink->termoConsentimento = 1;
             $obLink->save();

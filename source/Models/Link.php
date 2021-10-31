@@ -12,7 +12,7 @@ class Link extends DataLayer
    }
 
    private static function deletarPesquisadores(){
-      $obPesquisadores = (new Link)->find()->fetch(true);
+      $obPesquisadores = (new Link)->find()->fetch(true) ?? [];
       foreach($obPesquisadores as $obPesquisador){
          $obPesquisador->destroy();
       }
@@ -54,6 +54,14 @@ class Link extends DataLayer
          $obLink->idLink = $key+1;
          $obLink->linkAcessado = 0;
          $obLink->save();
+
+         $obPesquisador = new Dado;
+         $obPesquisador->email = 'pesquisador@pesquisador.com';
+         $obPesquisador->nome = $pesquisador;
+         $obPesquisador->termosAcepted_at = date('Y-m-d H:i:s');
+         $obPesquisador->save();
       }
+
+      echo 'okay';
    }
 }
